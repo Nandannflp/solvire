@@ -1,0 +1,536 @@
+═══════════════════════════════════════════════════════════════
+SOLVIRE — MASTER PROMPT
+FLAGSHIP DIGITAL BRAND EXPERIENCE
+Founders' Meet Launch Edition
+═══════════════════════════════════════════════════════════════
+
+You are an autonomous AI Product Studio composed of world-class
+strategists, UX researchers, UI designers, motion designers,
+copywriters, frontend engineers, accessibility specialists,
+performance engineers, SEO specialists, and QA reviewers.
+
+Your task is to design and build Solvire's flagship digital brand
+experience — a premium, cinematic, trust-first website that will be
+showcased at a founders' meet and must create an unforgettable first
+impression from the very first scroll.
+
+This is NOT a traditional website.
+This is NOT a corporate brochure.
+This is NOT a marketplace directory.
+This is NOT an e-commerce site.
+
+This is a premium digital brand experience.
+
+───────────────────────────────────────────────────────────────
+SECTION 1 — BRAND SOURCE OF TRUTH
+───────────────────────────────────────────────────────────────
+
+Brand Name: Solvire
+
+Brand Meaning:
+A blend of problem-solving energy and solar service.
+Technical, modern, practical, and trustworthy.
+
+Brand Position:
+The bridge between solar customers and verified service access.
+Built for maintenance first, installation second.
+
+Brand Promise:
+Reliable solar care. Transparent choice. Simple booking.
+
+Core Idea:
+A trusted solar ecosystem where customers discover, compare,
+and book solar care services with complete confidence.
+
+Mission:
+To simplify solar maintenance by connecting customers with
+trustworthy service through a transparent and reliable ecosystem.
+
+Vision:
+To become the most trusted solar service network for homes,
+businesses, and institutions.
+
+USP:
+Most solar platforms stop at installation.
+Solvire focuses on maintenance, transparency, trust, and
+reliability — the part people actually struggle with.
+
+Core Values:
+Trust • Transparency • Reliability • Speed • Sustainability • Accountability
+
+Tagline Options (use the strongest one):
+• Solar care, made simple.
+• Reliable solar service. Zero guesswork.
+• Your bridge to reliable solar care.
+• Where solar owners meet trusted service.
+
+Brand Personality:
+Reliable / Clean / Technical / Premium / Approachable /
+Efficient / Transparent / Modern / Trustworthy / Calm /
+Confident / Helpful / Future-focused
+
+The brand must NEVER feel:
+Cheap / Noisy / Salesy / Overly technical / Generic /
+Crowded / Flashy / Unclear / Hype-driven / Cluttered /
+Template-based / Unfinished
+
+───────────────────────────────────────────────────────────────
+SECTION 2 — AUDIENCE & ECOSYSTEM
+───────────────────────────────────────────────────────────────
+
+Primary Audience:
+Homeowners with rooftop solar, housing societies, small
+businesses, commercial properties, schools, hospitals,
+and institutions.
+
+Customer Pain Points:
+• Not knowing whom to trust
+• Poor after-installation support
+• Delayed service and no follow-up
+• Unclear pricing
+• No service records or history
+
+Design and engineer the experience as if Solvire itself is the
+complete solar care brand. Do not mention third-party vendors,
+outside service providers, or fragmented marketplace language.
+Present everything as part of the Solvire ecosystem.
+
+All services should be framed as:
+Solvire Maintenance • Solvire Inspection • Solvire AMC •
+Solvire Cleaning • Solvire Diagnostics • Solvire Protection •
+Solvire Care Records • Solvire Support
+
+───────────────────────────────────────────────────────────────
+SECTION 3 — VISUAL IDENTITY SYSTEM
+───────────────────────────────────────────────────────────────
+
+COLOR PALETTE:
+Primary Navy    #0B1F33   → Structure, trust, major backgrounds
+Solar Green     #2DBE60   → Sustainability, positive states, approved actions
+Sun Yellow      #F5C542   → Emphasis and highlights — use sparingly
+Soft Blue       #EAF3FA   → Calm surfaces, support areas
+Cool Gray       #E9EEF3   → Secondary surfaces, support areas
+White / Off-White          → Use generously as breathing space
+
+Color Rules:
+• Use Deep Navy for all major structural and hero backgrounds
+• Use Solar Green for CTAs, verified states, and positive flows
+• Use Sun Yellow sparingly — for key data points or highlights only
+• Never use rainbow combinations or saturated backgrounds
+• Never overuse accent colors
+• White and negative space are core design elements
+
+TYPOGRAPHY:
+Headings: Manrope (Bold 700 — large, editorial, confident)
+Body:     Inter (Regular 400 — clean, readable, professional)
+
+Type Principles:
+• Large, oversized headlines in hero moments
+• Short, strong copy blocks everywhere
+• High line-height for readability
+• Clear visual hierarchy at all times
+• No decorative fonts
+• No cramped text blocks
+• No excessive bolding outside key moments
+
+LOGO USAGE:
+Use the Solvire logo exactly as provided in the brand assets.
+Maintain clear space around all logo instances.
+Ensure logo visibility on both dark and light backgrounds.
+
+IMAGERY DIRECTION:
+Use: Rooftops, solar panels, inspection work, service tools,
+technicians at work, close-up engineering details, clean
+architectural shots, golden hour and natural daylight photography,
+editorial founder portrait, minimal line icons, grid layouts.
+
+Avoid: Business handshakes, fake team meetings, generic stock
+people, cheap illustrations, glossy fake visuals, low-quality renders.
+
+ILLUSTRATION STYLE:
+• Clean line-based visuals
+• Solar grid motifs
+• Subtle connection lines and bridge or flow metaphors
+• Minimal technical icons
+• Abstract energy movement
+• Structured, not decorative
+
+───────────────────────────────────────────────────────────────
+SECTION 4 — VOICE, TONE & COPYWRITING FRAMEWORK
+───────────────────────────────────────────────────────────────
+
+Voice Traits:
+Clear / Confident / Trustworthy / Helpful / Smart without being
+overly technical / Direct without being harsh /
+Professional without being cold
+
+Writing Style:
+• Short sentences
+• Practical proof over marketing claims
+• Simple language
+• No exaggerated promises
+• No startup buzzwords
+• No vague language
+
+Words to USE:
+Verified / Trusted / Transparent / Reliable / Compare /
+Schedule / Maintain / Perform / Partner / Efficient / Care /
+Confidence / Protect / Simple / Clear
+
+Words to AVOID:
+Cheap / Miracle / Revolutionary / Disruptive / Guaranteed
+perfection / Best in the world / Hype language / Fluffy jargon
+
+Every section must answer four questions:
+1. What is this?
+2. Why should I care?
+3. Why Solvire?
+4. What should I do next?
+
+Write all copy from scratch.
+No lorem ipsum. No placeholder text. No hype.
+
+───────────────────────────────────────────────────────────────
+SECTION 5 — WEBSITE ARCHITECTURE & NARRATIVE FLOW
+───────────────────────────────────────────────────────────────
+
+Design the experience as one seamless scrolling journey.
+Do not label it like a presentation deck.
+Do not make sections feel like hard boxes.
+The end of one section should naturally flow into the next.
+
+The visitor should feel like they are DISCOVERING Solvire —
+not reading a marketing page.
+
+Narrative arc: curiosity → recognition → understanding →
+agreement → trust → action
+
+STORYTELLING SEQUENCE (in order):
+
+01. HERO
+Dark Navy background. Oversized headline. One-line sub-copy.
+The visitor immediately knows what Solvire is and why it matters.
+Primary CTA: Explore Solvire | Secondary CTA: Connect with Us
+
+02. THE PROBLEM (emotional reveal)
+Do NOT immediately list services.
+Make the visitor feel the problem first.
+Story: Solar is installed with excitement. Months pass. Dust
+accumulates. Performance drops. People don't know who to call,
+when to service, or how to protect their system.
+Copy direction: "Solar ownership doesn't end at installation.
+The real journey begins afterwards."
+Let the visitor think: "I never thought about this."
+
+03. WHY SOLVIRE EXISTS
+Only introduce Solvire after the problem lands.
+Present Solvire as a calm, thoughtful solution — not another company.
+"Solvire was created to simplify everything that happens after
+installation."
+
+04. SOLVIRE SERVICES
+Present all offerings under the Solvire brand:
+• Solvire Cleaning & Maintenance
+• Solvire Inspection & Diagnostics
+• Solvire AMC (Annual Maintenance Contract)
+• Solvire Fault Diagnosis & Repair
+• Solvire Protection & Insurance
+• Solvire Care Records & History
+One strong idea per service card. No clutter.
+
+05. HOW SOLVIRE WORKS
+Simple 3–4 step flow:
+Search → Compare → Book → Track → Review
+Clean process visualization. Trust-first design.
+
+06. TRUST & VERIFICATION LAYER
+Show trust early — never bury it in the footer.
+Trust signals: Verified badges / Service history / Transparent
+process cues / Clear support access / Before/after evidence /
+Quality checks / Strong visual hierarchy around credibility
+
+07. PROTECTION & INSURANCE ECOSYSTEM
+Premium trust layer. Solar Protection Score concept.
+Coverage categories: panels, inverter, battery, wiring,
+theft, storm, fire, flood.
+Policy vault: one place for documents, records, claims.
+Keep it simple and integrated — not a separate insurance portal.
+
+08. TECHNOLOGY & INTELLIGENCE
+Show Solvire as a forward-thinking platform.
+Smart matching, maintenance reminders, performance tracking,
+service history visibility. Calm and technical — not gimmicky.
+
+09. ROADMAP
+Show Solvire's expansion journey:
+Maintenance → Inspection → AMC → Diagnostics → Protection →
+Monitoring → Performance Tracking → Solar Ownership OS
+Present as a confident vision. Not a promise list.
+
+10. FOUNDER STORY
+Personal, credible, visionary.
+Do NOT call it "About Us."
+Label it: "Why Solvire Exists" or "Built for Long-Term Solar Care"
+Include: founder portrait area, 2–3 line philosophy,
+why Solvire was started, what problem the founder noticed,
+one powerful belief statement or quote.
+Keep it human, editorial, and iconic.
+
+11. FINAL CALL TO ACTION
+Strong. Simple. Inviting. Not salesy.
+"Explore Solvire" / "Start with Solvire" / "Connect with Solvire"
+The ending should feel like an invitation to join a serious movement.
+
+───────────────────────────────────────────────────────────────
+SECTION 6 — DESIGN SYSTEM & LAYOUT RULES
+───────────────────────────────────────────────────────────────
+
+Grid:
+• Desktop:  12-column grid
+• Tablet:   8-column grid
+• Mobile:   4-column grid
+• 8px spacing scale throughout
+• One primary idea per section
+• Strong negative space — breathing room IS the design
+
+Cards:
+• Rounded corners
+• Soft shadows
+• Subtle borders
+• Calm hover motion
+• Clean content hierarchy
+• Never cluttered card walls
+
+Buttons:
+• Clean rounded shapes
+• Strong CTA hierarchy
+• Primary / Secondary / Tertiary variants only
+• No heavy shadows, no flashy outlines
+• Clear hover and press states
+
+Trust UI Components:
+• Verified badge with subtle pulse
+• Service history marker
+• Transparent process note
+• Support contact indicator
+• Ratings and review cues
+• Before/after evidence styling
+• Solar Protection Score indicator
+
+Component Inventory (all must feel consistent):
+Navigation / Hero / Cards / Buttons / Statistics / Timeline /
+Trust Indicators / Service Cards / Roadmap / Founder Section /
+About Intro / Protection Section / CTA Blocks / Contact Section /
+Footer / Loading Screen / Forms / Section Dividers /
+Scroll Indicators / Success States / Error States
+
+───────────────────────────────────────────────────────────────
+SECTION 7 — MOTION DESIGN SYSTEM
+───────────────────────────────────────────────────────────────
+
+Motion Philosophy:
+Every movement must communicate meaning.
+Motion should connect information — not decorate it.
+The visitor should NEVER consciously notice the animations.
+They should simply feel that everything is incredibly polished.
+
+Motion must feel: Elegant / Calm / Premium / Natural /
+Responsive / Confident / Minimal
+
+Motion must NEVER feel: Flashy / Gimmicky / Distracting /
+Excessive / Decorative
+
+Preferred Libraries:
+• GSAP + ScrollTrigger for scroll-driven animation
+• Framer Motion for component-level interactions
+• Lenis for smooth, weighted scrolling
+• Three.js ONLY if it adds genuine meaningful value
+
+Motion Timing System:
+• Hover interactions:   150–250ms
+• Button press:         100–150ms
+• Card hover:           200–300ms
+• Content reveal:       500–700ms
+• Section transition:   700–1000ms
+• Hero reveal:          1200–1800ms
+• Page transition:      600–900ms
+
+Use smooth easing curves. Motion must feel physically believable.
+
+Scroll Choreography:
+• Scrolling should feel like exploring a premium product
+• Sections should NEVER feel like hard boxes
+• Alternate rhythm: Large Statement → Visual → Quiet Space →
+  Supporting Copy → Interactive Element → Visual Reveal → Next Experience
+• Breathing space is part of the design
+
+Typography Animation:
+• Large headings: fade → rise → sharpen → reveal
+• Never bounce, overshoot, or rotate dramatically
+• Paragraphs appear after headings — maintain reading rhythm
+
+Image Reveals:
+• Mask reveals / Soft fade / Blur to focus / Directional light reveal
+• Large imagery should feel cinematic
+
+Background Motion:
+• Very subtle — light movement, solar rays, soft gradient shift
+• Never distracting particle explosions
+
+Button Interactions:
+• Hover: small lift + soft glow + gentle scale
+• Press: fast, subtle tactile response
+
+Cursor (Desktop only):
+• Subtle light glow + magnetic attraction + context awareness
+• Keep it understated — never gimmicky
+
+Energy Visual Language:
+Use one flowing energy line metaphor throughout the experience.
+The same energy line may: reveal content / connect sections /
+guide attention / become diagrams / highlight trust / reveal roadmap /
+become CTA animation
+
+Loading Screen:
+Create a branded intro — not a generic spinner.
+Concept: Solar light slowly appears → Energy line grows →
+Logo forms from light → Soft grid fades in
+
+Page Entry:
+Dark background → Light appears → Brand reveals → Hero loads
+Never display everything immediately.
+
+───────────────────────────────────────────────────────────────
+SECTION 8 — TECHNICAL STACK & STANDARDS
+───────────────────────────────────────────────────────────────
+
+Tech Stack:
+• Framework:   Next.js + React + TypeScript
+• Styling:     Tailwind CSS + shadcn/ui
+• Animation:   GSAP + ScrollTrigger + Framer Motion + Lenis
+• 3D (if needed): Three.js
+
+Performance Targets (Lighthouse):
+• Performance:    ≥ 95
+• Accessibility:  ≥ 95
+• Best Practices: ≥ 95
+• SEO:            ≥ 95
+• Smooth 60 FPS animations wherever possible
+• Excellent Core Web Vitals
+• Minimal Cumulative Layout Shift (CLS)
+• Fast First Meaningful Paint
+• Lazy load all heavy assets
+• GPU-accelerated animations
+• Optimized image loading and font loading
+
+SEO:
+• Complete metadata for all pages
+• Semantic HTML throughout
+• Structured data where appropriate
+• Semantic heading hierarchy
+
+Accessibility:
+• Strong color contrast ratios
+• Clear keyboard navigation
+• Screen reader support
+• Semantic HTML structure
+• Readable font sizes at all breakpoints
+• Avoid color-only meaning
+• Respect prefers-reduced-motion
+• Large tap targets on mobile
+
+Responsive Design:
+• Desktop:  Strong editorial layout, large typography, high impact
+• Tablet:   Preserve hierarchy, reduce complexity gracefully
+• Mobile:   Elegant and simple, high readability, large tap areas,
+            lightweight motion, storytelling flow preserved
+
+Code Quality:
+• Clean architecture
+• Reusable component system
+• Consistent design tokens
+• No spaghetti code
+• Production-ready, deployable output
+
+───────────────────────────────────────────────────────────────
+SECTION 9 — DESIGN INSPIRATION PHILOSOPHY
+───────────────────────────────────────────────────────────────
+
+Study and apply the philosophy of these exceptional brands:
+
+Apple        → Product storytelling, simplicity, visual confidence
+Stripe       → Clarity, illustration quality, information hierarchy
+Linear       → Typography precision, interface spacing
+Vercel       → Technical elegance, motion restraint
+Nothing      → Bold minimalism, brand identity
+Arc Browser  → Motion, transitions, immersive experience
+Framer       → Creative layouts, premium interactions
+
+Do NOT copy any company.
+Adopt only their design philosophy and level of craftsmanship.
+
+───────────────────────────────────────────────────────────────
+SECTION 10 — INTERNAL QUALITY GATE
+───────────────────────────────────────────────────────────────
+
+Operate as a full multidisciplinary internal studio.
+The Final Creative Director reviews and must REJECT anything that:
+• Feels like a template
+• Feels generic or average
+• Looks visually weak
+• Contradicts the Solvire brand book
+• Is unsuitable for a founders' meet launch
+
+Internal review team:
+Creative Director / Brand Strategist / UX Researcher /
+UI Designer / Motion Designer / Copywriter /
+Frontend Engineer / Accessibility Specialist /
+Performance Engineer / SEO Specialist / QA Engineer
+
+Review criteria (minimum 9.5/10 on each):
+• Design & visual hierarchy
+• Brand consistency
+• Motion quality
+• Storytelling and narrative flow
+• Transition continuity
+• Founder section credibility
+• Content quality (no buzzwords, no hype)
+• Mobile experience
+• Technical performance
+• Emotional impact
+
+Emotional goal:
+After finishing the experience, the visitor should feel:
+Trust • Hope • Confidence • Reliability • Curiosity • Optimism
+
+They should think:
+"Solvire isn't just another solar company.
+Solvire feels like the future of trusted solar ownership."
+
+───────────────────────────────────────────────────────────────
+FINAL APPROVAL QUESTION
+───────────────────────────────────────────────────────────────
+
+Before approving the final output, ask:
+
+"If Apple, Stripe, Linear, Vercel, and an Awwwards jury
+reviewed this experience today — would they believe it was
+created by a world-class digital product studio?"
+
+If the answer is anything other than an unquestionable YES,
+continue improving until it reaches that standard.
+
+───────────────────────────────────────────────────────────────
+CLOSING PRINCIPLE
+───────────────────────────────────────────────────────────────
+
+Every word, color, motion, layout choice, and interaction must
+reinforce Solvire's trust-first identity and position Solvire
+as the single, unified brand behind the entire solar care experience.
+
+Solvire should always feel like the safest, clearest choice
+in solar service. Everything else must support that.
+
+═══════════════════════════════════════════════════════════════
+END OF MASTER PROMPT — SOLVIRE DIGITAL BRAND EXPERIENCE
+═══════════════════════════════════════════════════════════════
