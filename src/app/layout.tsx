@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import SmoothScroll from "@/components/layout/SmoothScroll";
+import { Navbar } from "@/components/layout/Navbar";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -50,9 +51,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <body
-        className={`${inter.variable} antialiased bg-[#040D17] text-white selection:bg-solar/30 font-sans`}
+        className={`${inter.variable} antialiased bg-[#050505] text-white selection:bg-solar/30 font-sans`}
       >
         <SmoothScroll>
+          <Navbar />
           {children}
         </SmoothScroll>
         <Toaster />
