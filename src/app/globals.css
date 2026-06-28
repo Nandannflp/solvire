@@ -7,7 +7,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
-  --font-heading: var(--font-manrope);
+  --font-heading: var(--font-outfit);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -43,12 +43,12 @@
   --radius-xl: calc(var(--radius) + 4px);
 
   /* Solvire Brand Colors */
-  --color-navy: #0B1F33;
-  --color-navy-light: #132D47;
-  --color-navy-dark: #071525;
-  --color-solar: #2DBE60;
-  --color-solar-light: #3DD471;
-  --color-solar-dark: #229A4D;
+  --color-navy: #040D17;
+  --color-navy-light: #0B1F33;
+  --color-navy-dark: #000000;
+  --color-solar: #10B981;
+  --color-solar-light: #34D399;
+  --color-solar-dark: #059669;
   --color-sun: #F5C542;
   --color-sun-light: #F7D26A;
   --color-soft-blue: #EAF3FA;
@@ -58,15 +58,15 @@
 :root {
   --radius: 0.75rem;
   --background: #ffffff;
-  --foreground: #0B1F33;
+  --foreground: #040D17;
   --card: #ffffff;
   --card-foreground: #0B1F33;
   --popover: #ffffff;
   --popover-foreground: #0B1F33;
-  --primary: #2DBE60;
+  --primary: #10B981;
   --primary-foreground: #ffffff;
   --secondary: #EAF3FA;
-  --secondary-foreground: #0B1F33;
+  --secondary-foreground: #040D17;
   --muted: #F8FAFB;
   --muted-foreground: #5A6B7F;
   --accent: #EAF3FA;
@@ -74,9 +74,9 @@
   --destructive: #EF4444;
   --border: #E2E8F0;
   --input: #E2E8F0;
-  --ring: #2DBE60;
-  --chart-1: #2DBE60;
-  --chart-2: #0B1F33;
+  --ring: #10B981;
+  --chart-1: #10B981;
+  --chart-2: #040D17;
   --chart-3: #F5C542;
   --chart-4: #EAF3FA;
   --chart-5: #E9EEF3;
@@ -131,14 +131,14 @@ html.lenis, html.lenis body {
 
 /* Solvire brand typography */
 .heading-display {
-  font-family: var(--font-manrope), 'Manrope', system-ui, sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-family: var(--font-outfit), 'Outfit', system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
   line-height: 1.05;
 }
 
 .heading-editorial {
-  font-family: var(--font-manrope), 'Manrope', system-ui, sans-serif;
+  font-family: var(--font-outfit), 'Outfit', system-ui, sans-serif;
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.1;
@@ -319,4 +319,39 @@ html.lenis, html.lenis body {
     opacity: 1;
     transform: none;
   }
+}
+
+/* Morph Animations & Interactivity */
+.morph-up {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  filter: blur(8px);
+}
+
+.morph-down {
+  opacity: 0;
+  transform: translateY(-60px) scale(0.95);
+  filter: blur(8px);
+}
+
+.morph-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Fluid background morphs */
+.bg-morph {
+  transition: background-color 1s ease-in-out;
+}
+
+/* Smooth clip-path reveals */
+.clip-reveal {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transition: clip-path 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clip-reveal.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
