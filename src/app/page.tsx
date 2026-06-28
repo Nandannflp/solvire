@@ -2,6 +2,7 @@ import { Section } from "@/components/layout/Section";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { WhySolvireSection } from "@/components/sections/WhySolvireSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
 
 export default function Home() {
   return (
@@ -16,9 +17,7 @@ export default function Home() {
       <WhySolvireSection />
 
       {/* 04. SERVICE EXPERIENCE */}
-      <Section id="services">
-        <h2 className="heading-editorial text-3xl md:text-5xl">Service Experience</h2>
-      </Section>
+      <ServicesSection />
       
       {/* 05. HOW SOLVIRE WORKS (Skipped in User's prompt? Wait, User asked for: Hero, Problem Discovery, Brand Purpose, Trust Layer, Service Experience, Protection Experience, Technology Experience, Roadmap, Founder Story, Final CTA, Footer. I will follow that order) */}
 
