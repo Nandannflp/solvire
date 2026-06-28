@@ -2,7 +2,6 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { WhySolvireSection } from "@/components/sections/WhySolvireSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
-import { TrustLayerSection } from "@/components/sections/TrustLayerSection";
 import { ProtectionSection } from "@/components/sections/ProtectionSection";
 import { TechnologySection } from "@/components/sections/TechnologySection";
 import { RoadmapSection } from "@/components/sections/RoadmapSection";
@@ -24,11 +23,8 @@ export default function Home() {
 
       {/* 04. SERVICE EXPERIENCE */}
       <ServicesSection />
-      
-      {/* 05. TRUST LAYER */}
-      <TrustLayerSection />
 
-      {/* 06. PROTECTION EXPERIENCE */}
+      {/* 05. PROTECTION EXPERIENCE */}
       <ProtectionSection />
 
       {/* 07. TECHNOLOGY EXPERIENCE */}
