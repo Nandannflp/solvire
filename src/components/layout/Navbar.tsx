@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import logoIcon from "../../public/logo.png";
+import logoIcon from "../../../public/logo.png";
 
 export function Navbar() {
   const { scrollY } = useScroll();

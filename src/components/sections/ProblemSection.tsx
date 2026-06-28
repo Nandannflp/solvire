@@ -1,11 +1,8 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Section } from "@/components/layout/Section";
 import { useRef } from "react";
-import { AlertTriangle, DollarSign, FileWarning } from "lucide-react";
-
-import { SyncDot } from "@/components/layout/SyncDot";
+import { AlertTriangle, Clock, XCircle } from "lucide-react";
 
 export function ProblemSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -15,52 +12,84 @@ export function ProblemSection() {
     offset: ["start end", "end start"]
   });
 
-  const cardScale = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [0.8, 1, 1, 1.4]);
-  const cardY = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [100, 0, 0, -200]);
-  const cardOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-
-  const problems = [
-    { title: "No Standards", desc: "Finding an authorized, verified solar technician is a fragmented, manual process.", delay: 0.1, icon: <AlertTriangle className="size-6" /> },
-    { title: "Hidden Costs", desc: "Maintenance visits often come with surprise fees and unverified part replacements.", delay: 0.2, icon: <DollarSign className="size-6" /> },
-    { title: "Lost Warranties", desc: "Most owners lose track of OEM warranties, voiding them when amateur repairs happen.", delay: 0.3, icon: <FileWarning className="size-6" /> }
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+  
+  const problemCards = [
+    {
+      icon: <XCircle className="w-6 h-6 text-solar" />,
+      title: "Fragmented Maintenance",
+      desc: "Owners juggle multiple contractors, losing track of service history and warranties."
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-solar" />,
+      title: "Reactive, Not Proactive",
+      desc: "Issues are only discovered after significant energy and revenue loss."
+    },
+    {
+      icon: <AlertTriangle className="w-6 h-6 text-solar" />,
+      title: "Zero Transparency",
+      desc: "No clear visibility into technician performance or asset health."
+    }
   ];
 
   return (
-    <Section id="problem" theme="navy" className="py-32 md:py-48 relative overflow-hidden md:pl-28">
-      <SyncDot />
-      {/* Subtle Noise Texture */}
-      <div className="noise-overlay" />
+    <section 
+      ref={containerRef}
+      className="relative min-h-screen py-32 flex flex-col items-center justify-center overflow-hidden bg-background"
+    >
+      {/* Editorial Background Title */}
+      <motion.div 
+        style={{ y: backgroundY }}
+        className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
+      >
+        <h2 className="font-display font-bold text-[15vw] leading-[0.8] tracking-tight text-editorial/5 whitespace-nowrap text-center">
+          THE PROBLEM
+        </h2>
+      </motion.div>
 
-      <div className="container max-w-6xl mx-auto z-10 relative" ref={containerRef}>
-        <motion.h2 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="heading-editorial text-4xl md:text-5xl lg:text-6xl text-white mb-16 leading-tight"
-        >
-          Thousands of owners <span className="text-white/40">felt</span><br className="hidden md:block" />
-          <span className="text-solar text-glow-solar">the exact same way.</span>
-        </motion.h2>
+      {/* Foreground Content */}
+      <div className="container max-w-5xl mx-auto z-10 relative px-6 md:px-12">
+        <div className="flex flex-col items-center text-center mb-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="mb-4 flex items-center gap-3"
+          >
+            <span className="text-textSecondary uppercase tracking-widest text-sm font-medium">The Current Reality</span>
+          </motion.div>
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-[56px] font-semibold text-foreground max-w-3xl leading-[1.1]"
+          >
+            Solar ownership becomes frustrating after installation.
+          </motion.h3>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
-          {problems.map((problem, index) => (
+        {/* Grayscale UI Cards with Orange Accents */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {problemCards.map((card, i) => (
             <motion.div
-              key={index}
-              style={{ scale: cardScale, y: cardY, opacity: cardOpacity }}
-              className="sleek-card p-8 rounded-xl flex flex-col items-start relative group"
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.2 + (i * 0.1) }}
+              className="bg-surface/50 border border-white/5 p-8 rounded-2xl flex flex-col items-start backdrop-blur-md hover:bg-surface transition-colors"
             >
-              <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-destructive/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="text-white/60 mb-6 group-hover:text-destructive transition-colors duration-300">
-                {problem.icon}
+              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-6">
+                {card.icon}
               </div>
-              <h3 className="font-medium text-white mb-3">{problem.title}</h3>
-              <p className="body-clean text-white/50 text-sm">{problem.desc}</p>
+              <h4 className="text-xl font-semibold text-foreground mb-3">{card.title}</h4>
+              <p className="text-textSecondary leading-relaxed">{card.desc}</p>
             </motion.div>
           ))}
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

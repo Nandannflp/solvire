@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import { Navbar } from "@/components/layout/Navbar";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Solvire | Comprehensive Solar Maintenance Ecosystem",
@@ -51,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <body
-        className={`${inter.variable} antialiased bg-[#050505] text-white selection:bg-solar/30 font-sans`}
+        className={`${GeistSans.variable} ${GeistSans.className} antialiased bg-background text-foreground selection:bg-energy/30 font-sans`}
       >
         <SmoothScroll>
           <Navbar />

@@ -1,68 +1,108 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Section } from "@/components/layout/Section";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import Image from "next/image";
 
-import { SyncDot } from "@/components/layout/SyncDot";
-
 export function FounderStorySection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+
   return (
-    <Section id="story" theme="navy" className="py-32 md:py-48 relative overflow-hidden md:pl-28">
-      <SyncDot />
-      <div className="absolute inset-0 bg-solar/5" />
-      <div className="container max-w-6xl mx-auto z-10 relative">
+    <section 
+      ref={containerRef}
+      className="relative min-h-screen py-32 flex flex-col items-center justify-center overflow-hidden bg-background"
+    >
+      {/* Editorial Background Title */}
+      <motion.div 
+        style={{ y: backgroundY }}
+        className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden"
+      >
+        <h2 className="font-display font-bold text-[12vw] leading-[0.8] tracking-tight text-editorial/5 text-center px-4 max-w-full">
+          THE PERSON BEHIND<br/>THE VISION
+        </h2>
+      </motion.div>
+
+      <div className="container max-w-5xl mx-auto z-10 relative px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
+          {/* Portrait Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 aspect-[3/4] relative rounded-3xl overflow-hidden bg-primary/50 border border-white/10"
-          >
-            {/* Placeholder for Founder Portrait - using a deep abstract gradient for now */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#040D17] to-[#1C334D] opacity-80" />
-            <div className="absolute inset-0 flex items-center justify-center p-8">
-               {/* This space is reserved for a real editorial portrait of the founder */}
-               <div className="text-center">
-                  <div className="size-16 rounded-full border border-white/20 mx-auto mb-4" />
-                  <p className="text-white/40 text-sm uppercase tracking-widest font-semibold">Founder Portrait</p>
-               </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="lg:col-span-5 relative"
           >
-            <span className="text-solar text-sm font-bold tracking-widest uppercase mb-6 block">
-              Built for Long-Term Solar Care
-            </span>
-            <h2 className="heading-editorial text-3xl md:text-4xl lg:text-5xl text-white mb-10 leading-tight">
-              "We realized the hardest part of solar wasn't buying the panels. It was keeping them running flawlessly for 25 years."
-            </h2>
+            <div className="aspect-[3/4] w-full rounded-2xl overflow-hidden relative">
+              {/* Fallback dark bg in case image is missing */}
+              <div className="absolute inset-0 bg-surface/50" />
+              {/* Replace with actual founder portrait later */}
+              <Image 
+                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=800" 
+                alt="Founder Portrait"
+                fill
+                className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
+              />
+              <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
+            </div>
+            {/* Small Snapshot Tag */}
+            <div className="absolute -bottom-6 -right-6 md:-right-12 bg-surface/90 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-2xl max-w-xs">
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3 text-sm text-textSecondary">
+                  <div className="w-1.5 h-1.5 rounded-full bg-energy" />
+                  Founder of Solvire
+                </li>
+                <li className="flex items-center gap-3 text-sm text-textSecondary">
+                  <div className="w-1.5 h-1.5 rounded-full bg-energy" />
+                  Founder of Pizza Singh Café
+                </li>
+                <li className="flex items-center gap-3 text-sm text-textSecondary">
+                  <div className="w-1.5 h-1.5 rounded-full bg-energy" />
+                  Based in Bihar, India
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+
+          {/* Founder Story Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="lg:col-span-7 flex flex-col justify-center"
+          >
+            <span className="text-textSecondary uppercase tracking-widest text-sm font-medium mb-6">Mission & Origins</span>
             
-            <div className="space-y-6 text-white/70 body-clean text-lg">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-8 leading-[1.2]">
+              Building the future of solar infrastructure.
+            </h3>
+            
+            <div className="space-y-6 text-textSecondary text-lg leading-relaxed mb-12 max-w-2xl">
               <p>
-                When solar adoption accelerated, everyone focused on installation. But we saw a massive gap: homeowners were left completely unsupported the day after the installers left.
+                The transition to renewable energy is the most important infrastructural shift of our generation. But installing solar panels is only step one. 
               </p>
               <p>
-                Solvire was built to be the operating system for the next 25 years of your solar journey. We believe that clean energy is only sustainable if the infrastructure supporting it is reliable, transparent, and easy to maintain.
+                We realized that the real challenge—and the real opportunity—lies in what happens next. Homeowners and businesses were being left in the dark, struggling with fragmented maintenance, unverified technicians, and a lack of clear diagnostics when things went wrong.
+              </p>
+              <p>
+                Solvire was built to fix this. We are creating the unified intelligence layer that connects the entire ecosystem, ensuring every solar investment is protected, monitored, and maintained to its fullest potential.
               </p>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-white/10">
-              <h4 className="text-white font-bold text-lg">Founder Name</h4>
-              <p className="text-white/50 text-sm">Founder & CEO, Solvire</p>
-            </div>
+            <blockquote className="border-l-2 border-energy pl-6 text-xl md:text-2xl text-white font-medium italic">
+              "Solar adoption isn't the finish line. Reliable ownership is."
+            </blockquote>
           </motion.div>
-          
         </div>
       </div>
-    </Section>
+    </section>
   );
 }
