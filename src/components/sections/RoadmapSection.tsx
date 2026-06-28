@@ -1,9 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Section } from "@/components/layout/Section";
 
 export function RoadmapSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start center", "end center"],
+  });
+  
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
   const steps = [
     { year: "Phase 1", title: "Maintenance & AMC", active: true },
     { year: "Phase 2", title: "Inspection & Diagnostics", active: false },
@@ -26,14 +35,13 @@ export function RoadmapSection() {
           </h2>
         </motion.div>
 
-        <div className="relative">
-          {/* Progress Line */}
+        <div className="relative" ref={containerRef}>
+          {/* Progress Line Track */}
           <div className="absolute top-0 bottom-0 left-6 md:left-1/2 w-0.5 bg-white/10 -translate-x-1/2" />
+          
+          {/* Scroll-driven Progress Line */}
           <motion.div 
-            initial={{ height: 0 }}
-            whileInView={{ height: "30%" }} // Indicating progress
-            viewport={{ once: true }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
+            style={{ height: lineHeight }}
             className="absolute top-0 left-6 md:left-1/2 w-0.5 bg-solar -translate-x-1/2 origin-top"
           />
 
