@@ -38,23 +38,26 @@ export function RoadmapSection() {
         </motion.div>
 
         <div className="relative" ref={containerRef}>
-          {/* Progress Line Track */}
-          <div className="absolute top-0 bottom-0 left-6 md:left-1/2 w-0.5 bg-white/10 -translate-x-1/2" />
-          
-          {/* Scroll-driven Progress Line */}
-          <motion.div 
-            style={{ height: lineHeight }}
-            className="absolute top-0 left-6 md:left-1/2 w-0.5 bg-solar -translate-x-1/2 origin-top"
-          />
+          {/* Track Wrapper perfectly aligned to the centers of the first and last cards (approx 52px from top/bottom) */}
+          <div className="absolute top-[52px] bottom-[52px] left-6 md:left-1/2 w-0.5 -translate-x-1/2 z-10">
+            {/* Background Track */}
+            <div className="absolute inset-0 w-full bg-white/10" />
+            
+            {/* Scroll-driven Progress Line */}
+            <motion.div 
+              style={{ height: lineHeight }}
+              className="absolute top-0 w-full bg-solar origin-top"
+            />
 
-          {/* Scroll-driven Dot */}
-          <motion.div 
-            style={{ top: lineHeight }}
-            className="absolute left-6 md:left-1/2 w-4 h-4 rounded-full -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center"
-          >
-            <motion.div style={{ backgroundColor: dotColor }} className="w-full h-full rounded-full relative z-10" />
-            <motion.div style={{ backgroundColor: pulseColor }} className="absolute size-8 rounded-full badge-pulse pointer-events-none" />
-          </motion.div>
+            {/* Scroll-driven Dot */}
+            <motion.div 
+              style={{ top: lineHeight }}
+              className="absolute left-1/2 w-4 h-4 rounded-full -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center"
+            >
+              <motion.div style={{ backgroundColor: dotColor }} className="w-full h-full rounded-full relative z-10" />
+              <motion.div style={{ backgroundColor: pulseColor }} className="absolute size-8 rounded-full badge-pulse pointer-events-none" />
+            </motion.div>
+          </div>
 
           <div className="flex flex-col gap-12">
             {steps.map((step, i) => (
