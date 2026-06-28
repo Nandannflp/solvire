@@ -26,6 +26,17 @@ export function ServicesSection() {
     { title: "Solar OS App", icon: <Smartphone className="text-solar size-6" />, description: "Monitor health, schedule services, and view your Protection Score instantly." },
   ];
 
+  const getBentoClass = (index: number) => {
+    switch (index) {
+      case 0:
+        return "lg:col-span-2 lg:row-span-2";
+      case 4:
+        return "lg:col-span-2 lg:row-span-1"; // Make the 5th item wide
+      default:
+        return "lg:col-span-1 lg:row-span-1";
+    }
+  };
+
   return (
     <Section id="services" theme="navy" className="py-32 md:py-48 bg-transparent overflow-hidden">
       <div className="container max-w-6xl mx-auto z-10 relative" ref={containerRef}>
@@ -44,21 +55,28 @@ export function ServicesSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[1fr]">
           {services.map((service, index) => (
             <motion.div
               key={index}
               style={{ scale: cardScale, y: cardY, opacity: cardOpacity }}
-              className="extreme-glass p-8 rounded-2xl card-hover flex flex-col items-start text-left relative overflow-hidden"
+              className={`extreme-glass p-8 rounded-2xl card-hover flex flex-col items-start text-left relative overflow-hidden group ${getBentoClass(index)}`}
             >
-              <div className="absolute bottom-0 right-0 w-40 h-40 bg-solar/5 rounded-full blur-3xl pointer-events-none" />
-              <div className="w-14 h-14 rounded-full bg-solar/10 flex items-center justify-center mb-6 border border-solar/20 glow-solar">
+              <div className="absolute inset-0 bg-gradient-to-br from-solar/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="absolute bottom-0 right-0 w-40 h-40 bg-solar/5 rounded-full blur-3xl pointer-events-none transition-all duration-500 group-hover:bg-solar/10 group-hover:scale-150" />
+              
+              <div className={`w-14 h-14 rounded-full bg-solar/10 flex items-center justify-center mb-6 border border-solar/20 glow-solar transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] ${index === 0 || index === 4 ? 'lg:w-16 lg:h-16 lg:mb-8' : ''}`}>
                 {service.icon}
               </div>
-              <h3 className="font-semibold text-xl text-white mb-3">{service.title}</h3>
-              <p className="body-clean text-white/70 text-sm leading-relaxed">
+              
+              <h3 className={`font-semibold text-white mb-3 transition-colors duration-300 group-hover:text-solar ${index === 0 || index === 4 ? 'text-2xl' : 'text-xl'}`}>{service.title}</h3>
+              
+              <p className={`body-clean text-white/70 leading-relaxed ${index === 0 || index === 4 ? 'text-base lg:text-lg lg:max-w-md' : 'text-sm'}`}>
                 {service.description}
               </p>
+
+              {/* Cyberpunk accent corner */}
+              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-white/0 group-hover:border-solar/40 transition-colors duration-300 rounded-tr-2xl m-4 pointer-events-none" />
             </motion.div>
           ))}
         </div>

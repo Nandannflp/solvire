@@ -1,27 +1,19 @@
 import type { Metadata } from "next";
-import { Manrope, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-});
-
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Solvire — Reliable Solar Care. Zero Guesswork.",
+  title: "Solvire | Comprehensive Solar Maintenance Ecosystem",
   description:
-    "Solvire is the trusted bridge between solar customers and verified service. Maintenance, inspection, protection — everything that happens after installation.",
+    "Protect and optimize your solar asset with our 5-point verified network, deep diagnostics, and end-to-end management.",
   keywords: [
     "Solvire",
     "solar maintenance",
@@ -56,9 +48,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <body
-        className={`${manrope.variable} ${inter.variable} antialiased bg-background text-foreground`}
+        className={`${inter.variable} antialiased bg-[#040D17] text-white selection:bg-solar/30 font-sans`}
       >
         <SmoothScroll>
           {children}
