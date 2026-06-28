@@ -4,6 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import logoIcon from "../../../public/logo.png";
 
 export function JoinFutureSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -64,7 +66,7 @@ export function JoinFutureSection() {
         >
           {/* Pulsing Logo Indicator */}
           <div className="w-16 h-16 mx-auto bg-surface rounded-2xl flex items-center justify-center border border-white/10 shadow-[0_0_50px_rgba(45,190,96,0.15)] relative mb-8">
-            <span className="font-display font-bold text-xl text-white">S</span>
+            <Image src={logoIcon} alt="Solvire Logo" className="w-8 h-8 object-contain" />
             <div className="absolute inset-0 rounded-2xl border border-energy/40 animate-[ping_2.5s_ease-in-out_infinite]" />
           </div>
         </motion.div>
