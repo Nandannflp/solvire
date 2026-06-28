@@ -7,7 +7,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
-  --font-heading: var(--font-outfit);
+  --font-heading: var(--font-manrope);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -43,14 +43,9 @@
   --radius-xl: calc(var(--radius) + 4px);
 
   /* Solvire Brand Colors */
-  --color-navy: #040D17;
-  --color-navy-light: #0B1F33;
-  --color-navy-dark: #000000;
-  --color-solar: #10B981;
-  --color-solar-light: #34D399;
-  --color-solar-dark: #059669;
+  --color-navy: #0B1F33;
+  --color-solar: #2DBE60;
   --color-sun: #F5C542;
-  --color-sun-light: #F7D26A;
   --color-soft-blue: #EAF3FA;
   --color-cool-gray: #E9EEF3;
 }
@@ -58,28 +53,49 @@
 :root {
   --radius: 0.75rem;
   --background: #ffffff;
-  --foreground: #040D17;
+  --foreground: #0B1F33;
   --card: #ffffff;
   --card-foreground: #0B1F33;
   --popover: #ffffff;
   --popover-foreground: #0B1F33;
-  --primary: #10B981;
+  --primary: #0B1F33;
   --primary-foreground: #ffffff;
   --secondary: #EAF3FA;
-  --secondary-foreground: #040D17;
-  --muted: #F8FAFB;
+  --secondary-foreground: #0B1F33;
+  --muted: #E9EEF3;
   --muted-foreground: #5A6B7F;
-  --accent: #EAF3FA;
+  --accent: #F5C542;
   --accent-foreground: #0B1F33;
   --destructive: #EF4444;
   --border: #E2E8F0;
   --input: #E2E8F0;
-  --ring: #10B981;
-  --chart-1: #10B981;
-  --chart-2: #040D17;
+  --ring: #2DBE60;
+  --chart-1: #2DBE60;
+  --chart-2: #0B1F33;
   --chart-3: #F5C542;
   --chart-4: #EAF3FA;
   --chart-5: #E9EEF3;
+}
+
+.dark {
+  --background: #0B1F33;
+  --foreground: #ffffff;
+  --card: rgba(255, 255, 255, 0.05);
+  --card-foreground: #ffffff;
+  --popover: #0B1F33;
+  --popover-foreground: #ffffff;
+  --primary: #2DBE60;
+  --primary-foreground: #ffffff;
+  --secondary: #1C334D;
+  --secondary-foreground: #ffffff;
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: #EAF3FA;
+  --accent: #F5C542;
+  --accent-foreground: #0B1F33;
+  --destructive: #EF4444;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: #2DBE60;
 }
 
 @layer base {
@@ -131,21 +147,21 @@ html.lenis, html.lenis body {
 
 /* Solvire brand typography */
 .heading-display {
-  font-family: var(--font-outfit), 'Outfit', system-ui, sans-serif;
+  font-family: var(--font-manrope), system-ui, sans-serif;
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1.05;
 }
 
 .heading-editorial {
-  font-family: var(--font-outfit), 'Outfit', system-ui, sans-serif;
+  font-family: var(--font-manrope), system-ui, sans-serif;
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.1;
 }
 
 .body-clean {
-  font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1.7;
