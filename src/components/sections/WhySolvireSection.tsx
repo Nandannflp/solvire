@@ -11,17 +11,6 @@ export function WhySolvireSection() {
       </div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-solar/20 bg-solar/10 text-solar text-sm font-semibold mb-8"
-        >
-          <span className="size-2 rounded-full bg-solar badge-pulse" />
-          The Solution
-        </motion.div>
-
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
