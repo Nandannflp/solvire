@@ -12,6 +12,8 @@ export function RoadmapSection() {
   });
   
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const dotColor = useTransform(scrollYProgress, [0, 0.85, 1], ["#2DBE60", "#2DBE60", "#F5C542"]);
+  const pulseColor = useTransform(scrollYProgress, [0, 0.85, 1], ["rgba(45,190,96,0.2)", "rgba(45,190,96,0.2)", "rgba(245,197,66,0.2)"]);
 
   const steps = [
     { year: "Phase 1", title: "Maintenance & AMC", active: true },
@@ -45,6 +47,15 @@ export function RoadmapSection() {
             className="absolute top-0 left-6 md:left-1/2 w-0.5 bg-solar -translate-x-1/2 origin-top"
           />
 
+          {/* Scroll-driven Dot */}
+          <motion.div 
+            style={{ top: lineHeight }}
+            className="absolute left-6 md:left-1/2 w-4 h-4 rounded-full -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center"
+          >
+            <motion.div style={{ backgroundColor: dotColor }} className="w-full h-full rounded-full relative z-10" />
+            <motion.div style={{ backgroundColor: pulseColor }} className="absolute size-8 rounded-full badge-pulse pointer-events-none" />
+          </motion.div>
+
           <div className="flex flex-col gap-12">
             {steps.map((step, i) => (
               <motion.div
@@ -59,10 +70,8 @@ export function RoadmapSection() {
               >
                 <div className="hidden md:block w-5/12" />
                 
-                {/* Node */}
-                <div className={`absolute left-6 md:left-1/2 size-4 rounded-full -translate-x-1/2 flex items-center justify-center ${step.active ? 'bg-solar' : 'bg-transparent border-2 border-white/20'}`}>
-                  {step.active && <div className="size-8 rounded-full bg-solar/20 badge-pulse absolute" />}
-                </div>
+                {/* Node Waypoint */}
+                <div className="absolute left-6 md:left-1/2 size-4 rounded-full -translate-x-1/2 flex items-center justify-center bg-transparent border-2 border-white/20 z-0" />
 
                 <div className="w-full md:w-5/12 pl-16 md:pl-0">
                   <div className={`p-6 rounded-2xl border ${step.active ? 'bg-white/10 border-solar/30 shadow-md backdrop-blur-sm' : 'bg-transparent border-transparent'}`}>
