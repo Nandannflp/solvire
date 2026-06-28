@@ -149,9 +149,21 @@ export function SolutionSection() {
               className={`absolute ${node.pos} z-20 flex flex-col items-center gap-4`}
             >
               <div className="relative group cursor-pointer">
-                <div className="absolute inset-0 bg-energy/20 rounded-full blur-xl group-hover:bg-energy/40 transition-colors duration-500" />
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-surface/90 backdrop-blur-md border border-white/10 flex items-center justify-center shadow-2xl relative z-10 group-hover:scale-110 group-hover:border-energy/50 transition-all duration-300">
-                  {node.icon}
+                {/* Green Ambient Light (Outer) */}
+                <div className="absolute inset-0 bg-energy/20 rounded-full blur-2xl group-hover:bg-energy/40 transition-colors duration-500" />
+                
+                {/* Glass Object */}
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/5 backdrop-blur-2xl border border-white/20 flex items-center justify-center shadow-[inset_0_0_20px_rgba(255,255,255,0.1),0_8px_32px_rgba(45,190,96,0.2)] relative z-10 group-hover:scale-110 group-hover:border-white/40 transition-all duration-500 overflow-hidden">
+                  
+                  {/* Specular Top Highlight */}
+                  <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent pointer-events-none" />
+                  
+                  {/* Moving Light Reflection (Sweeps on Hover) */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-1000 ease-in-out pointer-events-none" />
+                  
+                  <div className="relative z-20">
+                    {node.icon}
+                  </div>
                 </div>
               </div>
               <span className="text-white text-sm md:text-base font-medium tracking-wide bg-background/50 px-3 py-1 rounded-full backdrop-blur-sm border border-white/5">
