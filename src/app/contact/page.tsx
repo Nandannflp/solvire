@@ -1,0 +1,93 @@
+"use client";
+
+import Link from "next/link";
+import { ArrowLeft, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export default function ContactPage() {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // This would connect to an actual form handler later
+    alert("Message sent! We will get back to you shortly.");
+  };
+
+  return (
+    <div className="relative min-h-screen bg-background py-32 px-6 md:px-12 overflow-hidden">
+      {/* Editorial Background Title */}
+      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
+        <h2 className="font-display font-bold text-[16vw] leading-[0.8] tracking-tight text-editorial/5 whitespace-nowrap text-center">
+          CONTACT
+        </h2>
+      </div>
+
+      <div className="container max-w-4xl mx-auto relative z-10">
+        <Link href="/" className="inline-flex items-center text-textSecondary hover:text-white transition-colors mb-16 text-sm font-medium group">
+          <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+          Back to Home
+        </Link>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div>
+            <h1 className="text-4xl md:text-5xl font-semibold text-white mb-6">Get in touch</h1>
+            <p className="text-textSecondary leading-relaxed mb-12">
+              Whether you're a homeowner looking to protect your solar asset, a technician wanting to join our verified network, or an investor—we're ready to talk.
+            </p>
+
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-white font-medium text-sm mb-1">General Inquiries</h3>
+                <a href="mailto:hello@solvire.com" className="text-energy hover:underline text-lg">hello@solvire.com</a>
+              </div>
+              <div>
+                <h3 className="text-white font-medium text-sm mb-1">Support</h3>
+                <a href="mailto:support@solvire.com" className="text-energy hover:underline text-lg">support@solvire.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-surface/50 backdrop-blur-md border border-white/5 rounded-2xl p-8 shadow-2xl">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-2">
+                <label htmlFor="name" className="text-sm font-medium text-textSecondary">Name</label>
+                <input 
+                  id="name" 
+                  type="text" 
+                  required
+                  className="w-full bg-background/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-textSecondary/50 focus:outline-none focus:border-energy/50 transition-colors" 
+                  placeholder="John Doe"
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-sm font-medium text-textSecondary">Email</label>
+                <input 
+                  id="email" 
+                  type="email" 
+                  required
+                  className="w-full bg-background/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-textSecondary/50 focus:outline-none focus:border-energy/50 transition-colors" 
+                  placeholder="john@example.com"
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-sm font-medium text-textSecondary">Message</label>
+                <textarea 
+                  id="message" 
+                  required
+                  rows={4}
+                  className="w-full bg-background/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-textSecondary/50 focus:outline-none focus:border-energy/50 transition-colors resize-none" 
+                  placeholder="How can we help?"
+                />
+              </div>
+
+              <Button type="submit" className="w-full bg-energy text-white hover:bg-energy/90 h-12 rounded-lg font-medium group">
+                Send Message
+                <Send className="w-4 h-4 ml-2 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

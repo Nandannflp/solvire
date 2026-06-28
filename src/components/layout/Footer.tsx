@@ -44,7 +44,7 @@ export function Footer() {
                 <Link href="/terms" className="text-textSecondary text-sm hover:text-energy transition-colors">Terms of Service</Link>
               </li>
               <li>
-                <Link href="mailto:hello@solvire.com" className="text-textSecondary text-sm hover:text-energy transition-colors">Contact Us</Link>
+                <Link href="/contact" className="text-textSecondary text-sm hover:text-energy transition-colors">Contact Us</Link>
               </li>
             </ul>
           </div>
