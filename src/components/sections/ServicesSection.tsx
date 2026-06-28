@@ -1,46 +1,34 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Section } from "@/components/layout/Section";
-import { Droplets, Search, ShieldCheck, Wrench, Shield, FileText } from "lucide-react";
+import { Shield, Sparkles, Activity, Wrench, RefreshCw, Smartphone } from "lucide-react";
+import { useRef } from "react";
 
 export function ServicesSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const cardScale = useTransform(scrollYProgress, [0, 0.4, 0.7, 1], [0.8, 1, 1, 1.3]);
+  const cardY = useTransform(scrollYProgress, [0, 0.4, 0.7, 1], [100, 0, 0, -150]);
+  const cardOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+
   const services = [
-    {
-      title: "Solvire Cleaning & Maintenance",
-      description: "Restore peak efficiency with professional, scheduled solar panel cleaning and physical maintenance.",
-      icon: <Droplets className="size-6 text-solar" />,
-    },
-    {
-      title: "Solvire Inspection & Diagnostics",
-      description: "Deep technical audits to identify invisible inverter errors, wiring degradation, and safety risks.",
-      icon: <Search className="size-6 text-solar" />,
-    },
-    {
-      title: "Solvire AMC",
-      description: "Annual Maintenance Contracts that guarantee priority service, zero downtime, and absolute peace of mind.",
-      icon: <ShieldCheck className="size-6 text-solar" />,
-    },
-    {
-      title: "Solvire Fault Diagnosis & Repair",
-      description: "Rapid response repairs from verified technicians when your system unexpectedly stops performing.",
-      icon: <Wrench className="size-6 text-solar" />,
-    },
-    {
-      title: "Solvire Protection & Insurance",
-      description: "Comprehensive coverage for your solar assets against natural disasters, theft, and accidental damage.",
-      icon: <Shield className="size-6 text-solar" />,
-    },
-    {
-      title: "Solvire Care Records & History",
-      description: "A digital vault tracking every service, repair, and performance metric over your system's lifetime.",
-      icon: <FileText className="size-6 text-solar" />,
-    }
+    { title: "Verification & AMC", icon: <Shield className="text-solar size-6" />, description: "Annual maintenance contracts executed only by 5-point verified partners." },
+    { title: "Deep Diagnostics", icon: <Activity className="text-solar size-6" />, description: "Thermal imaging and IV-curve tracing to detect invisible panel degradation." },
+    { title: "Intelligent Cleaning", icon: <Sparkles className="text-solar size-6" />, description: "Robotic and manual precision cleaning to optimize yield up to 15%." },
+    { title: "OEM Warranty Management", icon: <Wrench className="text-solar size-6" />, description: "Automated tracking and claims processing for inverted and panel failures." },
+    { title: "Component Replacement", icon: <RefreshCw className="text-solar size-6" />, description: "Seamless sourcing of Tier-1 components at wholesale ecosystem pricing." },
+    { title: "Solar OS App", icon: <Smartphone className="text-solar size-6" />, description: "Monitor health, schedule services, and view your Protection Score instantly." },
   ];
 
   return (
-    <Section id="services" theme="navy" className="py-32 md:py-48 bg-transparent">
-      <div className="container max-w-6xl mx-auto z-10 relative">
+    <Section id="services" theme="navy" className="py-32 md:py-48 bg-transparent overflow-hidden">
+      <div className="container max-w-6xl mx-auto z-10 relative" ref={containerRef}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,17 +48,15 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
-              className="bg-white/5 p-8 rounded-2xl border border-white/10 card-hover flex flex-col items-start text-left"
+              style={{ scale: cardScale, y: cardY, opacity: cardOpacity }}
+              className="extreme-glass p-8 rounded-2xl card-hover flex flex-col items-start text-left relative overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-full bg-solar/10 flex items-center justify-center mb-6">
+              <div className="absolute bottom-0 right-0 w-40 h-40 bg-solar/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="w-14 h-14 rounded-full bg-solar/10 flex items-center justify-center mb-6 border border-solar/20 glow-solar">
                 {service.icon}
               </div>
               <h3 className="font-semibold text-xl text-white mb-3">{service.title}</h3>
-              <p className="body-clean text-white/60 text-sm leading-relaxed">
+              <p className="body-clean text-white/70 text-sm leading-relaxed">
                 {service.description}
               </p>
             </motion.div>

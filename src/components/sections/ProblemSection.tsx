@@ -1,15 +1,34 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Section } from "@/components/layout/Section";
+import { useRef } from "react";
 
 export function ProblemSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  // Extreme parallax values: items scale up and fly "towards" the screen/outside as you scroll down
+  const cardScale = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [0.8, 1, 1, 1.4]);
+  const cardY = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [100, 0, 0, -200]);
+  const cardOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+
+  const problems = [
+    { title: "No Standards", desc: "Finding an authorized, verified solar technician is a fragmented, manual process.", delay: 0.1 },
+    { title: "Hidden Costs", desc: "Maintenance visits often come with surprise fees and unverified part replacements.", delay: 0.2 },
+    { title: "Lost Warranties", desc: "Most owners lose track of OEM warranties, voiding them when amateur repairs happen.", delay: 0.3 }
+  ];
+
   return (
-    <Section id="problem" theme="navy" className="py-32 md:py-48 relative">
+    <Section id="problem" theme="navy" className="py-32 md:py-48 relative overflow-hidden">
       {/* Subtle Noise Texture */}
       <div className="noise-overlay" />
 
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+      <div className="container max-w-6xl mx-auto z-10 relative" ref={containerRef}>
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,23 +41,7 @@ export function ProblemSection() {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-24">
-          {[
-            {
-              title: "Dust accumulates.",
-              desc: "Panels lose up to 30% of their efficiency simply because they aren't cleaned properly or regularly.",
-              delay: 0.2
-            },
-            {
-              title: "Performance drops.",
-              desc: "Inverters flag invisible errors and wiring degrades while you assume everything is working perfectly.",
-              delay: 0.4
-            },
-            {
-              title: "You don't know who to call.",
-              desc: "When something finally breaks, finding a reliable, verified technician feels like a complete gamble.",
-              delay: 0.6
-            }
-          ].map((item, i) => (
+          {problems.map((item, i) => (
             <motion.div 
               key={i}
               initial={{ opacity: 0, y: 20 }}
