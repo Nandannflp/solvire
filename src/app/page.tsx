@@ -1,8 +1,14 @@
-import { Section } from "@/components/layout/Section";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { WhySolvireSection } from "@/components/sections/WhySolvireSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
+import { TrustLayerSection } from "@/components/sections/TrustLayerSection";
+import { ProtectionSection } from "@/components/sections/ProtectionSection";
+import { TechnologySection } from "@/components/sections/TechnologySection";
+import { RoadmapSection } from "@/components/sections/RoadmapSection";
+import { FounderStorySection } from "@/components/sections/FounderStorySection";
+import { FinalCTASection } from "@/components/sections/FinalCTASection";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -19,44 +25,26 @@ export default function Home() {
       {/* 04. SERVICE EXPERIENCE */}
       <ServicesSection />
       
-      {/* 05. HOW SOLVIRE WORKS (Skipped in User's prompt? Wait, User asked for: Hero, Problem Discovery, Brand Purpose, Trust Layer, Service Experience, Protection Experience, Technology Experience, Roadmap, Founder Story, Final CTA, Footer. I will follow that order) */}
+      {/* 05. TRUST LAYER */}
+      <TrustLayerSection />
 
-      {/* 06. TRUST LAYER */}
-      <Section id="trust-layer" theme="navy">
-        <h2 className="heading-editorial text-3xl md:text-5xl">Trust Layer</h2>
-      </Section>
+      {/* 06. PROTECTION EXPERIENCE */}
+      <ProtectionSection />
 
-      {/* 07. PROTECTION EXPERIENCE */}
-      <Section id="protection">
-        <h2 className="heading-editorial text-3xl md:text-5xl">Protection Experience</h2>
-      </Section>
+      {/* 07. TECHNOLOGY EXPERIENCE */}
+      <TechnologySection />
 
-      {/* 08. TECHNOLOGY EXPERIENCE */}
-      <Section id="technology" theme="navy">
-        <h2 className="heading-editorial text-3xl md:text-5xl">Technology Experience</h2>
-      </Section>
+      {/* 08. ROADMAP */}
+      <RoadmapSection />
 
-      {/* 09. ROADMAP */}
-      <Section id="roadmap">
-        <h2 className="heading-editorial text-3xl md:text-5xl">Roadmap</h2>
-      </Section>
+      {/* 09. FOUNDER STORY */}
+      <FounderStorySection />
 
-      {/* 10. FOUNDER STORY */}
-      <Section id="founder" theme="navy">
-        <h2 className="heading-editorial text-3xl md:text-5xl">Founder Story</h2>
-      </Section>
+      {/* 10. FINAL CTA */}
+      <FinalCTASection />
 
-      {/* 11. FINAL CTA */}
-      <Section id="cta">
-        <h2 className="heading-editorial text-3xl md:text-5xl">Final CTA</h2>
-      </Section>
-
-      {/* 12. FOOTER */}
-      <footer className="bg-foreground text-background py-12">
-        <div className="container mx-auto px-6 md:px-12 text-center">
-          Footer
-        </div>
-      </footer>
+      {/* 11. FOOTER */}
+      <Footer />
     </main>
   );
 }
