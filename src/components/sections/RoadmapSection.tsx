@@ -1,14 +1,15 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Section } from "@/components/layout/Section";
+import { SyncDot } from "@/components/layout/SyncDot";
 
 export function RoadmapSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start center", "end center"],
+    offset: ["start end", "center center"],
   });
   
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
@@ -23,7 +24,8 @@ export function RoadmapSection() {
   ];
 
   return (
-    <Section id="roadmap" theme="navy" className="py-32 md:py-48 bg-transparent">
+    <Section id="roadmap" theme="navy" className="py-32 md:py-48 bg-transparent md:pl-28 relative">
+      <SyncDot />
       <div className="container max-w-5xl mx-auto z-10 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

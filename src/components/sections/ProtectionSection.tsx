@@ -5,6 +5,7 @@ import { Section } from "@/components/layout/Section";
 import { ShieldCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
+import { SyncDot } from "@/components/layout/SyncDot";
 
 export function ProtectionSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -14,12 +15,13 @@ export function ProtectionSection() {
     offset: ["start end", "end start"]
   });
 
-  const widgetScale = useTransform(scrollYProgress, [0, 0.4, 0.7, 1], [0.8, 1, 1, 1.5]);
-  const widgetY = useTransform(scrollYProgress, [0, 0.4, 0.7, 1], [150, 0, 0, -300]);
-  const widgetOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  const rotateX = useTransform(scrollYProgress, [0, 0.5], [45, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
-    <Section id="protection" theme="navy" className="py-32 relative overflow-hidden">
+    <Section id="protection" theme="navy" className="py-32 md:py-48 overflow-hidden relative md:pl-28">
+      <SyncDot />
       <div className="container max-w-6xl mx-auto z-10 relative" ref={containerRef}>
         <div className="extreme-glass rounded-3xl p-8 md:p-16 relative overflow-hidden">
           {/* Abstract background shape */}

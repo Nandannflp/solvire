@@ -54,9 +54,9 @@
   --radius: 0.75rem;
   
   /* Solvire Dark Mode Default */
-  --background: #040D17; /* Very deep navy/black */
+  --background: #050505; /* True Sleek Dark */
   --foreground: #FFFFFF;
-  --card: rgba(11, 31, 51, 0.4);
+  --card: #0A0A0A;
   --card-foreground: #FFFFFF;
   --popover: #0B1F33;
   --popover-foreground: #FFFFFF;
@@ -80,9 +80,9 @@
 }
 
 .dark {
-  --background: #0B1F33;
+  --background: #050505;
   --foreground: #ffffff;
-  --card: rgba(255, 255, 255, 0.05);
+  --card: #0A0A0A;
   --card-foreground: #ffffff;
   --popover: #0B1F33;
   --popover-foreground: #ffffff;
@@ -159,15 +159,16 @@ html.lenis, html.lenis body {
   text-shadow: 0 0 20px rgba(245, 197, 66, 0.4), 0 0 40px rgba(245, 197, 66, 0.2);
 }
 
-.extreme-glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.7), inset 0 1px 1px 0 rgba(255, 255, 255, 0.1), inset 0 0 20px rgba(16, 185, 129, 0.03);
+.sleek-card {
+  background: #0A0A0A;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.sleek-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: #0C0C0C;
 }
 
 /* Solvire brand typography */
@@ -213,6 +214,16 @@ html.lenis, html.lenis body {
 
 .badge-pulse {
   animation: badge-pulse 2.5s ease-in-out infinite;
+}
+
+/* Futuristic precision grid */
+.futuristic-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 100%);
 }
 
 /* Solar grid background pattern */

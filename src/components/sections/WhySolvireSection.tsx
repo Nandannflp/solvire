@@ -3,9 +3,12 @@
 import { motion } from "framer-motion";
 import { Section } from "@/components/layout/Section";
 
+import { SyncDot } from "@/components/layout/SyncDot";
+
 export function WhySolvireSection() {
   return (
-    <Section id="purpose" theme="navy" className="py-32 md:py-48 relative">
+    <Section id="purpose" theme="navy" className="py-32 md:py-48 relative md:pl-28">
+      <SyncDot />
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-solar/5 rounded-full blur-[100px]" />
       </div>
@@ -18,7 +21,7 @@ export function WhySolvireSection() {
           transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="heading-editorial text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8"
         >
-          Solvire was created to simplify everything that happens after installation.
+          But they <span className="text-solar text-glow-solar">found</span> a better way.
         </motion.h2>
 
         <motion.p
@@ -28,8 +31,7 @@ export function WhySolvireSection() {
           transition={{ duration: 1, delay: 0.6 }}
           className="body-clean text-lg md:text-xl text-white/70 max-w-2xl mx-auto"
         >
-          We aren't just another service company. We are a unified, trusted ecosystem 
-          where customers discover, compare, and book solar care with complete confidence.
+          By connecting directly with Solvire's verified ecosystem, owners discovered a unified platform for maintenance, protection, and absolute peace of mind.
         </motion.p>
       </div>
     </Section>

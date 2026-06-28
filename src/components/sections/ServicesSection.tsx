@@ -5,6 +5,8 @@ import { Section } from "@/components/layout/Section";
 import { Shield, Sparkles, Activity, Wrench, RefreshCw, Smartphone } from "lucide-react";
 import { useRef } from "react";
 
+import { SyncDot } from "@/components/layout/SyncDot";
+
 export function ServicesSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   
@@ -38,7 +40,8 @@ export function ServicesSection() {
   };
 
   return (
-    <Section id="services" theme="navy" className="py-32 md:py-48 bg-transparent overflow-hidden">
+    <Section id="services" theme="navy" className="py-32 md:py-48 bg-transparent overflow-hidden md:pl-28">
+      <SyncDot />
       <div className="container max-w-6xl mx-auto z-10 relative" ref={containerRef}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -60,23 +63,25 @@ export function ServicesSection() {
             <motion.div
               key={index}
               style={{ scale: cardScale, y: cardY, opacity: cardOpacity }}
-              className={`extreme-glass p-8 rounded-2xl card-hover flex flex-col items-start text-left relative overflow-hidden group ${getBentoClass(index)}`}
+              className={`sleek-card p-8 rounded-xl card-hover flex flex-col items-start text-left relative overflow-hidden group ${getBentoClass(index)}`}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-solar/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-              <div className="absolute bottom-0 right-0 w-40 h-40 bg-solar/5 rounded-full blur-3xl pointer-events-none transition-all duration-500 group-hover:bg-solar/10 group-hover:scale-150" />
+              {/* Minimalist glow on hover, NO extreme background blur */}
+              <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-solar/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className={`w-14 h-14 rounded-full bg-solar/10 flex items-center justify-center mb-6 border border-solar/20 glow-solar transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] ${index === 0 || index === 4 ? 'lg:w-16 lg:h-16 lg:mb-8' : ''}`}>
-                {service.icon}
+              <div className={`w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mb-6 border border-white/10 transition-colors duration-500 group-hover:border-solar/30 group-hover:bg-solar/5 ${index === 0 || index === 4 ? 'lg:w-16 lg:h-16 lg:mb-8' : ''}`}>
+                <div className="text-white/60 group-hover:text-solar transition-colors duration-300">
+                  {service.icon}
+                </div>
               </div>
               
-              <h3 className={`font-semibold text-white mb-3 transition-colors duration-300 group-hover:text-solar ${index === 0 || index === 4 ? 'text-2xl' : 'text-xl'}`}>{service.title}</h3>
+              <h3 className={`font-medium text-white mb-3 transition-colors duration-300 group-hover:text-solar ${index === 0 || index === 4 ? 'text-2xl' : 'text-xl'}`}>{service.title}</h3>
               
-              <p className={`body-clean text-white/70 leading-relaxed ${index === 0 || index === 4 ? 'text-base lg:text-lg lg:max-w-md' : 'text-sm'}`}>
+              <p className={`body-clean text-white/50 leading-relaxed ${index === 0 || index === 4 ? 'text-base lg:text-lg lg:max-w-md' : 'text-sm'}`}>
                 {service.description}
               </p>
 
-              {/* Cyberpunk accent corner */}
-              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-white/0 group-hover:border-solar/40 transition-colors duration-300 rounded-tr-2xl m-4 pointer-events-none" />
+              {/* Minimal corner accent */}
+              <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-transparent group-hover:border-solar/30 transition-colors duration-300 rounded-tr-xl m-4 pointer-events-none" />
             </motion.div>
           ))}
         </div>

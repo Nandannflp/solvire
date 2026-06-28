@@ -4,9 +4,13 @@ import { motion } from "framer-motion";
 import { Section } from "@/components/layout/Section";
 import Image from "next/image";
 
+import { SyncDot } from "@/components/layout/SyncDot";
+
 export function FounderStorySection() {
   return (
-    <Section id="founder" theme="navy" className="py-32 md:py-48">
+    <Section id="story" theme="navy" className="py-32 md:py-48 relative overflow-hidden md:pl-28">
+      <SyncDot />
+      <div className="absolute inset-0 bg-solar/5" />
       <div className="container max-w-6xl mx-auto z-10 relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           

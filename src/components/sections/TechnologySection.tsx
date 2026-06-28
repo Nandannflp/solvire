@@ -1,19 +1,29 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Section } from "@/components/layout/Section";
 import { Activity, Bell, Calendar } from "lucide-react";
+import { SyncDot } from "@/components/layout/SyncDot";
 
 export function TechnologySection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "center center"]
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
+
   return (
-    <Section id="technology" theme="navy" className="py-32 md:py-48 relative overflow-hidden">
+    <Section id="technology" theme="navy" className="py-32 md:py-48 relative overflow-hidden md:pl-28">
+      <SyncDot />
       <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-solar/10 rounded-full blur-[120px] mix-blend-screen opacity-30 pointer-events-none" />
 
-      <div className="container max-w-6xl mx-auto z-10 relative">
+      <div className="container max-w-6xl mx-auto z-10 relative" ref={containerRef}>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-2xl mx-auto mb-20"
         >

@@ -6,18 +6,24 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
+import { SyncDot } from "@/components/layout/SyncDot";
+
 export function HeroSection() {
   return (
-    <Section id="hero" theme="navy" className="min-h-[100svh] relative justify-center flex items-center">
-      {/* Background Energy Glows */}
+    <Section id="hero" theme="navy" className="min-h-[100svh] relative justify-center flex items-center md:pl-28">
+      <SyncDot />
+      {/* Futuristic Precision Grid */}
+      <div className="absolute inset-0 futuristic-grid pointer-events-none opacity-50" />
+      
+      {/* Background Energy Glows (Minimalist for sleek dark) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-solar/10 rounded-full blur-[120px] mix-blend-screen opacity-50" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-soft-blue/10 rounded-full blur-[120px] mix-blend-screen opacity-30" />
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-solar/10 rounded-full blur-[150px] mix-blend-screen opacity-30" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-white/5 rounded-full blur-[150px] mix-blend-screen opacity-20" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Content Column */}
-        <div className="lg:col-span-8 flex flex-col items-start pt-20 lg:pt-0">
+        <div className="lg:col-span-10 flex flex-col items-start pt-20 lg:pt-0">
           <motion.div
             initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
             animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
@@ -39,20 +45,19 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="heading-display text-5xl md:text-7xl lg:text-8xl text-white tracking-tight mb-8 text-glow-white"
+            className="heading-display text-5xl md:text-7xl lg:text-8xl text-white tracking-tight mb-8"
           >
-            Reliable solar care. <br />
-            <span className="text-white/60">Zero guesswork.</span>
+            When solar breaks, <br />
+            <span className="text-white/40">the real problem begins.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="body-clean text-lg md:text-xl text-white/80 max-w-2xl mb-12"
+            className="body-clean text-lg md:text-xl text-white/70 max-w-2xl mb-12"
           >
-            Solvire is the trusted bridge between solar customers and verified service.
-            Maintenance, inspection, protection — everything that happens after installation.
+            We know exactly how you feel. You invested in solar for peace of mind, but finding a trusted technician when things go wrong feels like a fragmented, frustrating mess.
           </motion.p>
 
           <motion.div
