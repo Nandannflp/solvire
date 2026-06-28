@@ -15,9 +15,9 @@ export function ProtectionSection() {
     offset: ["start end", "end start"]
   });
 
-  const rotateX = useTransform(scrollYProgress, [0, 0.5], [45, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+  const widgetScale = useTransform(scrollYProgress, [0, 0.4, 0.7, 1], [0.8, 1, 1, 1.5]);
+  const widgetY = useTransform(scrollYProgress, [0, 0.4, 0.7, 1], [150, 0, 0, -300]);
+  const widgetOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   return (
     <Section id="protection" theme="navy" className="py-32 md:py-48 overflow-hidden relative md:pl-28">
