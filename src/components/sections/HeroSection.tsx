@@ -5,8 +5,8 @@ import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
-
 import { SyncDot } from "@/components/layout/SyncDot";
+import longLogo from "../../../public/solvire-long-logo.png";
 
 export function HeroSection() {
   return (
@@ -33,7 +33,7 @@ export function HeroSection() {
             {/* Logo Reveal in White Pill for Contrast */}
             <div className="bg-white/95 px-6 py-4 rounded-2xl inline-block shadow-[0_0_40px_rgba(255,255,255,0.1)] border border-white/20">
               <Image
-                src="/solvire-long-logo.png"
+                src={longLogo}
                 alt="Solvire Logo"
                 width={240}
                 height={60}

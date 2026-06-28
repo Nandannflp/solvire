@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import logoIcon from "../../public/logo.png";
 
 export function Navbar() {
   const { scrollY } = useScroll();
@@ -29,7 +30,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 md:pl-28 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Image
-            src="/logo.png"
+            src={logoIcon}
             alt="Solvire Icon"
             width={32}
             height={32}
