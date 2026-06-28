@@ -27,15 +27,16 @@ export function Navbar() {
       className="fixed top-0 left-0 right-0 z-[100] transition-colors duration-300 h-20 flex items-center"
     >
       <div className="container mx-auto px-6 md:pl-28 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <Image
-            src="/logo.svg"
-            alt="Solvire Logo"
-            width={140}
+            src="/logo.png"
+            alt="Solvire Icon"
+            width={32}
             height={32}
             priority
-            className="h-8 w-auto"
+            className="h-8 w-8 object-contain"
           />
+          <span className="font-bold text-xl tracking-[0.2em] text-white">SOLVIRE</span>
         </div>
         
         <nav className="hidden md:flex items-center gap-8">

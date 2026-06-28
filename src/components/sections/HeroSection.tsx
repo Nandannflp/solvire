@@ -28,17 +28,19 @@ export function HeroSection() {
             initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
             animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-8"
+            className="mb-10"
           >
-            {/* Logo Reveal */}
-            <Image
-              src="/logo.svg"
-              alt="Solvire Logo"
-              width={180}
-              height={40}
-              priority
-              className="mb-12 h-10 w-auto"
-            />
+            {/* Logo Reveal in White Pill for Contrast */}
+            <div className="bg-white/95 px-6 py-4 rounded-2xl inline-block shadow-[0_0_40px_rgba(255,255,255,0.1)] border border-white/20">
+              <Image
+                src="/solvire-long-logo.png"
+                alt="Solvire Logo"
+                width={240}
+                height={60}
+                priority
+                className="h-10 w-auto object-contain"
+              />
+            </div>
           </motion.div>
 
           <motion.h1
