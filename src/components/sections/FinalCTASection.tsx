@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export function FinalCTASection() {
   return (
-    <Section id="cta" theme="light" className="py-32 md:py-48 bg-white text-center">
+    <Section id="cta" theme="navy" className="py-32 md:py-48 bg-transparent text-center">
       <div className="container max-w-4xl mx-auto z-10 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -19,15 +19,15 @@ export function FinalCTASection() {
             <div className="size-8 rounded-full bg-solar" />
           </div>
           
-          <h2 className="heading-editorial text-5xl md:text-7xl text-foreground mb-8">
-            Start with Solvire.
+          <h2 className="heading-editorial text-5xl md:text-7xl text-white mb-8">
+            Start with <span className="text-solar text-glow-solar">Solvire.</span>
           </h2>
           
-          <p className="body-clean text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="body-clean text-lg md:text-xl text-white/60 mb-12 max-w-2xl mx-auto">
             Join the ecosystem of trusted solar care. Whether you need an inspection today or want to protect your system for tomorrow.
           </p>
           
-          <Button size="lg" className="h-16 px-10 text-lg bg-foreground text-background hover:bg-foreground/90 rounded-full shadow-xl hover:shadow-2xl transition-all">
+          <Button size="lg" className="h-16 px-10 text-lg bg-solar text-white hover:bg-solar/90 rounded-full shadow-xl hover:shadow-2xl transition-all btn-glow">
             Explore Solvire <ArrowRight className="ml-2 size-5" />
           </Button>
         </motion.div>

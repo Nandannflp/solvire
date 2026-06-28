@@ -52,23 +52,25 @@
 
 :root {
   --radius: 0.75rem;
-  --background: #ffffff;
-  --foreground: #0B1F33;
-  --card: #ffffff;
-  --card-foreground: #0B1F33;
-  --popover: #ffffff;
-  --popover-foreground: #0B1F33;
-  --primary: #0B1F33;
-  --primary-foreground: #ffffff;
-  --secondary: #EAF3FA;
-  --secondary-foreground: #0B1F33;
-  --muted: #E9EEF3;
-  --muted-foreground: #5A6B7F;
+  
+  /* Solvire Dark Mode Default */
+  --background: #040D17; /* Very deep navy/black */
+  --foreground: #FFFFFF;
+  --card: rgba(11, 31, 51, 0.4);
+  --card-foreground: #FFFFFF;
+  --popover: #0B1F33;
+  --popover-foreground: #FFFFFF;
+  --primary: #2DBE60;
+  --primary-foreground: #FFFFFF;
+  --secondary: #0B1F33;
+  --secondary-foreground: #EAF3FA;
+  --muted: rgba(234, 243, 250, 0.05);
+  --muted-foreground: rgba(255, 255, 255, 0.6);
   --accent: #F5C542;
-  --accent-foreground: #0B1F33;
+  --accent-foreground: #040D17;
   --destructive: #EF4444;
-  --border: #E2E8F0;
-  --input: #E2E8F0;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.1);
   --ring: #2DBE60;
   --chart-1: #2DBE60;
   --chart-2: #0B1F33;
@@ -143,6 +145,18 @@ html.lenis, html.lenis body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(45, 190, 96, 0.5);
+}
+
+.text-glow-solar {
+  text-shadow: 0 0 20px rgba(45, 190, 96, 0.5), 0 0 40px rgba(45, 190, 96, 0.2);
+}
+
+.text-glow-white {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+.text-glow-sun {
+  text-shadow: 0 0 20px rgba(245, 197, 66, 0.4), 0 0 40px rgba(245, 197, 66, 0.2);
 }
 
 /* Solvire brand typography */

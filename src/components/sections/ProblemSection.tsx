@@ -5,7 +5,7 @@ import { Section } from "@/components/layout/Section";
 
 export function ProblemSection() {
   return (
-    <Section id="problem" theme="light" className="py-32 md:py-48 bg-white relative">
+    <Section id="problem" theme="navy" className="py-32 md:py-48 relative">
       {/* Subtle Noise Texture */}
       <div className="noise-overlay" />
 
@@ -15,10 +15,10 @@ export function ProblemSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="heading-editorial text-4xl md:text-5xl lg:text-6xl text-foreground mb-16 leading-tight"
+          className="heading-editorial text-4xl md:text-5xl lg:text-6xl text-white mb-16 leading-tight"
         >
           Solar ownership doesn't end at installation. <br className="hidden md:block" />
-          <span className="text-muted-foreground">The real journey begins afterwards.</span>
+          <span className="text-solar text-glow-solar">The real journey begins afterwards.</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-24">
@@ -45,13 +45,13 @@ export function ProblemSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: item.delay, ease: "easeOut" }}
-              className="flex flex-col gap-4 p-8 rounded-2xl bg-muted/30 border border-border/40 card-hover"
+              className="flex flex-col gap-4 p-8 rounded-2xl bg-white/5 border border-white/10 card-hover"
             >
-              <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-sm font-bold text-foreground">
+              <div className="w-10 h-10 rounded-full bg-solar/20 flex items-center justify-center text-sm font-bold text-solar">
                 0{i + 1}
               </div>
-              <h3 className="font-semibold text-xl text-foreground mt-2">{item.title}</h3>
-              <p className="body-clean text-muted-foreground">{item.desc}</p>
+              <h3 className="font-semibold text-xl text-white mt-2">{item.title}</h3>
+              <p className="body-clean text-white/60">{item.desc}</p>
             </motion.div>
           ))}
         </div>

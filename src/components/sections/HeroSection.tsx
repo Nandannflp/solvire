@@ -39,7 +39,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="heading-display text-5xl md:text-7xl lg:text-8xl text-white tracking-tight mb-8"
+            className="heading-display text-5xl md:text-7xl lg:text-8xl text-white tracking-tight mb-8 text-glow-white"
           >
             Reliable solar care. <br />
             <span className="text-white/60">Zero guesswork.</span>

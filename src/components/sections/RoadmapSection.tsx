@@ -12,7 +12,7 @@ export function RoadmapSection() {
   ];
 
   return (
-    <Section id="roadmap" theme="light" className="py-32 md:py-48 bg-muted/30">
+    <Section id="roadmap" theme="navy" className="py-32 md:py-48 bg-transparent">
       <div className="container max-w-5xl mx-auto z-10 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -21,14 +21,14 @@ export function RoadmapSection() {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="mb-20 text-center md:text-left"
         >
-          <h2 className="heading-editorial text-4xl md:text-5xl text-foreground mb-6">
-            The road to a complete <br /> solar ecosystem.
+          <h2 className="heading-editorial text-4xl md:text-5xl text-white mb-6">
+            The road to a complete <br /> <span className="text-solar text-glow-solar">solar ecosystem.</span>
           </h2>
         </motion.div>
 
         <div className="relative">
           {/* Progress Line */}
-          <div className="absolute top-0 bottom-0 left-6 md:left-1/2 w-0.5 bg-border/50 -translate-x-1/2" />
+          <div className="absolute top-0 bottom-0 left-6 md:left-1/2 w-0.5 bg-white/10 -translate-x-1/2" />
           <motion.div 
             initial={{ height: 0 }}
             whileInView={{ height: "30%" }} // Indicating progress
@@ -52,16 +52,16 @@ export function RoadmapSection() {
                 <div className="hidden md:block w-5/12" />
                 
                 {/* Node */}
-                <div className={`absolute left-6 md:left-1/2 size-4 rounded-full -translate-x-1/2 flex items-center justify-center ${step.active ? 'bg-solar' : 'bg-background border-2 border-border'}`}>
+                <div className={`absolute left-6 md:left-1/2 size-4 rounded-full -translate-x-1/2 flex items-center justify-center ${step.active ? 'bg-solar' : 'bg-transparent border-2 border-white/20'}`}>
                   {step.active && <div className="size-8 rounded-full bg-solar/20 badge-pulse absolute" />}
                 </div>
 
                 <div className="w-full md:w-5/12 pl-16 md:pl-0">
-                  <div className={`p-6 rounded-2xl border ${step.active ? 'bg-card border-solar/30 shadow-md' : 'bg-transparent border-transparent'}`}>
-                    <span className={`text-sm font-bold tracking-widest uppercase mb-2 block ${step.active ? 'text-solar' : 'text-muted-foreground'}`}>
+                  <div className={`p-6 rounded-2xl border ${step.active ? 'bg-white/10 border-solar/30 shadow-md backdrop-blur-sm' : 'bg-transparent border-transparent'}`}>
+                    <span className={`text-sm font-bold tracking-widest uppercase mb-2 block ${step.active ? 'text-solar' : 'text-white/40'}`}>
                       {step.year}
                     </span>
-                    <h3 className={`text-xl font-semibold ${step.active ? 'text-foreground' : 'text-muted-foreground'}`}>
+                    <h3 className={`text-xl font-semibold ${step.active ? 'text-white' : 'text-white/40'}`}>
                       {step.title}
                     </h3>
                   </div>

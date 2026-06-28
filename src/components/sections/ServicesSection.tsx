@@ -39,7 +39,7 @@ export function ServicesSection() {
   ];
 
   return (
-    <Section id="services" theme="light" className="py-32 md:py-48 bg-muted/30">
+    <Section id="services" theme="navy" className="py-32 md:py-48 bg-transparent">
       <div className="container max-w-6xl mx-auto z-10 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -48,10 +48,10 @@ export function ServicesSection() {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-2xl mx-auto mb-20"
         >
-          <h2 className="heading-editorial text-4xl md:text-5xl text-foreground mb-6">
-            Everything you need. <br /> Under one trusted brand.
+          <h2 className="heading-editorial text-4xl md:text-5xl text-white mb-6">
+            Everything you need. <br /> <span className="text-solar text-glow-solar">Under one trusted brand.</span>
           </h2>
-          <p className="body-clean text-lg text-muted-foreground">
+          <p className="body-clean text-lg text-white/60">
             No fragmented marketplaces. No third-party confusion. Experience complete solar care orchestrated by Solvire.
           </p>
         </motion.div>
@@ -64,13 +64,13 @@ export function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
-              className="bg-card p-8 rounded-2xl border border-border/50 card-hover flex flex-col items-start text-left"
+              className="bg-white/5 p-8 rounded-2xl border border-white/10 card-hover flex flex-col items-start text-left"
             >
               <div className="w-12 h-12 rounded-full bg-solar/10 flex items-center justify-center mb-6">
                 {service.icon}
               </div>
-              <h3 className="font-semibold text-xl text-card-foreground mb-3">{service.title}</h3>
-              <p className="body-clean text-muted-foreground text-sm leading-relaxed">
+              <h3 className="font-semibold text-xl text-white mb-3">{service.title}</h3>
+              <p className="body-clean text-white/60 text-sm leading-relaxed">
                 {service.description}
               </p>
             </motion.div>

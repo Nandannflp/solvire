@@ -17,9 +17,9 @@ export function Section({
   ...props
 }: SectionProps) {
   const themeClasses = {
-    light: "bg-background text-foreground",
-    dark: "dark bg-background text-foreground",
-    navy: "bg-primary text-primary-foreground", // primary is Navy #0B1F33
+    light: "bg-background text-foreground", // now dark by default
+    dark: "bg-[#040D17] text-white", // deep space navy
+    navy: "bg-[#0B1F33] text-white", // slightly lighter navy
   };
 
   return (
