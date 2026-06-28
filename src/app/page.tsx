@@ -1,5 +1,6 @@
 import { Section } from "@/components/layout/Section";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { ProblemSection } from "@/components/sections/ProblemSection";
 
 export default function Home() {
   return (
@@ -8,9 +9,7 @@ export default function Home() {
       <HeroSection />
 
       {/* 02. PROBLEM DISCOVERY */}
-      <Section id="problem">
-        <h2 className="heading-editorial text-3xl md:text-5xl">Problem Discovery</h2>
-      </Section>
+      <ProblemSection />
 
       {/* 03. BRAND PURPOSE (WHY SOLVIRE EXISTS) */}
       <Section id="purpose" theme="navy">
