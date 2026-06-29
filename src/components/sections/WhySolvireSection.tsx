@@ -49,6 +49,13 @@ const cardVariants: Variants = {
 export function WhySolvireSection() {
   return (
     <section className="relative py-24 md:py-32 bg-background overflow-hidden border-t border-white/5">
+      {/* Giant Background Title */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
+        <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">
+          WHY CHOOSE US
+        </h2>
+      </div>
+
       {/* Logo Watermark Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] pointer-events-none mix-blend-overlay">
         <Image 

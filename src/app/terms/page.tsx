@@ -1,14 +1,25 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import Image from "next/image";
 
 export default function TermsOfServicePage() {
   return (
     <div className="relative min-h-screen bg-background py-32 px-6 md:px-12 overflow-hidden">
-      {/* Editorial Background Title */}
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
-        <h2 className="font-display font-bold text-[18vw] leading-[0.8] tracking-tight text-editorial/5 whitespace-nowrap text-center">
+      {/* Giant Background Title */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
+        <h2 className="font-sans font-black text-[15vw] leading-[0.8] tracking-tighter text-editorial/5 whitespace-nowrap text-center select-none">
           TERMS
         </h2>
+      </div>
+
+      {/* Background Watermark */}
+      <div className="absolute top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] pointer-events-none mix-blend-overlay">
+        <Image 
+          src="/logo.png" 
+          alt="Solvire"
+          fill
+          className="object-contain"
+        />
       </div>
 
       <div className="container max-w-3xl mx-auto relative z-10">
@@ -35,16 +46,16 @@ export default function TermsOfServicePage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-medium text-white mb-4">3. Network Verification</h2>
+            <h2 className="text-xl font-medium text-white mb-4">3. Service Provision</h2>
             <p>
-              While Solvire vets and verifies technicians within our network, we act as a bridge and intelligence layer. Any contracts for physical repair or maintenance are ultimately executed between the system owner and the chosen service provider.
+              Solvire provides solar installation, maintenance, and consulting services. All physical repair, installation, and maintenance are executed by our certified professional team or authorized partners in accordance with local regulations.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-medium text-white mb-4">4. System Limitations</h2>
+            <h2 className="text-xl font-medium text-white mb-4">4. System Performance</h2>
             <p>
-              Our diagnostic algorithms are designed to predict and alert users of potential hardware failures. However, solar infrastructure is complex, and Solvire cannot guarantee that 100% of physical or electrical faults will be detected before they occur.
+              While our maintenance and monitoring services are designed to optimize your solar infrastructure, energy production depends on various environmental factors. Solvire cannot guarantee specific financial returns or energy yields beyond standard equipment warranties.
             </p>
           </section>
 

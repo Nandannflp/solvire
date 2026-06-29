@@ -1,14 +1,25 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import Image from "next/image";
 
 export default function PrivacyPolicyPage() {
   return (
     <div className="relative min-h-screen bg-background py-32 px-6 md:px-12 overflow-hidden">
-      {/* Editorial Background Title */}
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
-        <h2 className="font-display font-bold text-[18vw] leading-[0.8] tracking-tight text-editorial/5 whitespace-nowrap text-center">
+      {/* Giant Background Title */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
+        <h2 className="font-sans font-black text-[15vw] leading-[0.8] tracking-tighter text-editorial/5 whitespace-nowrap text-center select-none">
           PRIVACY
         </h2>
+      </div>
+
+      {/* Background Watermark */}
+      <div className="absolute top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] pointer-events-none mix-blend-overlay">
+        <Image 
+          src="/logo.png" 
+          alt="Solvire"
+          fill
+          className="object-contain"
+        />
       </div>
 
       <div className="container max-w-3xl mx-auto relative z-10">
@@ -41,7 +52,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-xl font-medium text-white mb-4">3. Data Usage</h2>
             <p>
-              Your data is primarily used to provide, maintain, and improve our services. System telemetry and diagnostic data are used strictly to predict hardware failures and ensure your solar infrastructure operates at peak efficiency. We do not sell your personal energy data to third-party data brokers.
+              Your data is primarily used to provide, maintain, and improve our services. Information collected during site visits, installations, and monitoring is used strictly to ensure your solar infrastructure operates at peak efficiency. We do not sell your personal energy data to third-party data brokers.
             </p>
           </section>
 

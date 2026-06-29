@@ -11,11 +11,16 @@ export function Footer() {
           
           {/* Brand Column */}
           <div className="md:col-span-2">
-            <Link href="/" className="inline-block mb-6">
-              <span className="font-display font-bold text-2xl text-white tracking-widest">SOLVIRE</span>
+            <Link href="/" className="inline-block mb-6 relative w-48 h-12">
+              <Image 
+                src="/solvire-long-logo.png"
+                alt="Solvire Logo"
+                fill
+                className="object-contain object-left"
+              />
             </Link>
             <p className="text-textSecondary text-sm max-w-sm leading-relaxed">
-              The intelligence layer for solar systems. Connecting homeowners, technicians, and insurers into one unified ecosystem.
+              Your trusted partner for complete solar solutions, from professional installation to lifetime maintenance.
             </p>
           </div>
 
@@ -23,13 +28,18 @@ export function Footer() {
           <div>
             <h4 className="text-white font-medium mb-6 text-sm">Quick Links</h4>
             <ul className="space-y-4">
-              {['Problem', 'Solution', 'Platform', 'Founder', 'Join'].map((item) => (
-                <li key={item}>
-                  <Link href={`#${item.toLowerCase()}`} className="text-textSecondary text-sm hover:text-energy transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/#services" className="text-textSecondary text-sm hover:text-energy transition-colors">Services</Link>
+              </li>
+              <li>
+                <Link href="/#how-it-works" className="text-textSecondary text-sm hover:text-energy transition-colors">How It Works</Link>
+              </li>
+              <li>
+                <Link href="/#industries" className="text-textSecondary text-sm hover:text-energy transition-colors">Industries</Link>
+              </li>
+              <li>
+                <Link href="/#trust" className="text-textSecondary text-sm hover:text-energy transition-colors">Why Us</Link>
+              </li>
             </ul>
           </div>
 

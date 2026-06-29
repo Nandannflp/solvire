@@ -16,7 +16,13 @@ const trustPoints = [
 export function TrustSection() {
   return (
     <section className="relative py-24 md:py-32 bg-surface/30 overflow-hidden border-t border-white/5">
-      
+      {/* Giant Background Title */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
+        <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">
+          TRUST
+        </h2>
+      </div>
+
       {/* Background Watermark */}
       <div className="absolute top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] pointer-events-none mix-blend-overlay">
         <Image 

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
@@ -13,11 +14,21 @@ export default function ContactPage() {
 
   return (
     <div className="relative min-h-screen bg-background py-32 px-6 md:px-12 overflow-hidden">
-      {/* Editorial Background Title */}
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
-        <h2 className="font-display font-bold text-[16vw] leading-[0.8] tracking-tight text-editorial/5 whitespace-nowrap text-center">
+      {/* Giant Background Title */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
+        <h2 className="font-sans font-black text-[15vw] leading-[0.8] tracking-tighter text-editorial/5 whitespace-nowrap text-center select-none">
           CONTACT
         </h2>
+      </div>
+
+      {/* Background Watermark */}
+      <div className="absolute top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] pointer-events-none mix-blend-overlay">
+        <Image 
+          src="/logo.png" 
+          alt="Solvire"
+          fill
+          className="object-contain"
+        />
       </div>
 
       <div className="container max-w-4xl mx-auto relative z-10">
@@ -30,7 +41,7 @@ export default function ContactPage() {
           <div>
             <h1 className="text-4xl md:text-5xl font-semibold text-white mb-6">Get in touch</h1>
             <p className="text-textSecondary leading-relaxed mb-12">
-              Whether you're a homeowner looking to protect your solar asset, a technician wanting to join our verified network, or an investor—we're ready to talk.
+              Whether you need a new solar installation, ongoing maintenance, or a comprehensive energy audit, our team is ready to help.
             </p>
 
             <div className="space-y-6">
