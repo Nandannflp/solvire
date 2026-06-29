@@ -1,22 +1,22 @@
 import { HeroSection } from "@/components/sections/HeroSection";
-import { ProblemSection } from "@/components/sections/ProblemSection";
-import { SolutionSection } from "@/components/sections/SolutionSection";
-import { ServicesSection } from "@/components/sections/ServicesSection";
-import { PlatformSection } from "@/components/sections/PlatformSection";
+import { WhySolvireSection } from "@/components/sections/WhySolvireSection";
 import { SolarServicesSection } from "@/components/sections/SolarServicesSection";
-import { JoinFutureSection } from "@/components/sections/JoinFutureSection";
+import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
+import { IndustriesSection } from "@/components/sections/IndustriesSection";
+import { TrustSection } from "@/components/sections/TrustSection";
+import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen relative w-full overflow-hidden">
+    <main className="flex flex-col min-h-screen relative w-full overflow-hidden bg-background">
       <HeroSection />
-      <ProblemSection />
-      <SolutionSection />
-      <ServicesSection />
-      <PlatformSection />
+      <WhySolvireSection />
       <SolarServicesSection />
-      <JoinFutureSection />
+      <HowItWorksSection />
+      <IndustriesSection />
+      <TrustSection />
+      <FinalCtaSection />
       <Footer />
     </main>
   );
