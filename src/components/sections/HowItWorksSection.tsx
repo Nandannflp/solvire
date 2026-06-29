@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import longLogo from "../../../public/solvire-long-logo.png";
 import { MapPin, Search, PenTool, Wrench, Activity, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
@@ -26,7 +27,7 @@ export function HowItWorksSection() {
       {/* Background logo anchor */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.02] pointer-events-none mix-blend-overlay">
         <Image 
-          src="/solvire-long-logo.png" 
+          src={longLogo} 
           alt="Solvire"
           fill
           className="object-contain"

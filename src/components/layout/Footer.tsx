@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Github, Twitter, Linkedin, ArrowUpRight } from "lucide-react";
+import longLogo from "../../../public/solvire-long-logo.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,7 +15,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-6 relative w-48 h-12">
               <Image 
-                src="/solvire-long-logo.png"
+                src={longLogo}
                 alt="Solvire Logo"
                 fill
                 className="object-contain object-left"

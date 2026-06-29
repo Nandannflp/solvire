@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import logo from "../../../public/logo.png";
 import Image from "next/image";
 
 export default function PrivacyPolicyPage() {
@@ -15,7 +16,7 @@ export default function PrivacyPolicyPage() {
       {/* Background Watermark */}
       <div className="absolute top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] pointer-events-none mix-blend-overlay">
         <Image 
-          src="/logo.png" 
+          src={logo} 
           alt="Solvire"
           fill
           className="object-contain"

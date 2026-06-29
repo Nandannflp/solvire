@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
+import logo from "../../../public/logo.png";
 import Image from "next/image";
 
 export function FinalCtaSection() {
@@ -24,7 +25,7 @@ export function FinalCtaSection() {
         >
           <div className="relative w-16 h-16 mb-8 opacity-90">
             <Image 
-              src="/logo.png" 
+              src={logo} 
               alt="Solvire Logo" 
               fill 
               className="object-contain"

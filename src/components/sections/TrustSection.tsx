@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ShieldCheck, Award, Zap } from "lucide-react";
+import logo from "../../../public/logo.png";
 import Image from "next/image";
 
 const trustPoints = [
@@ -26,7 +27,7 @@ export function TrustSection() {
       {/* Background Watermark */}
       <div className="absolute top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] pointer-events-none mix-blend-overlay">
         <Image 
-          src="/logo.png" 
+          src={logo} 
           alt="Solvire Trust"
           fill
           className="object-contain"
