@@ -3,7 +3,7 @@ import { ProblemSection } from "@/components/sections/ProblemSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { PlatformSection } from "@/components/sections/PlatformSection";
-import { FounderStorySection } from "@/components/sections/FounderStorySection";
+import { SolarServicesSection } from "@/components/sections/SolarServicesSection";
 import { JoinFutureSection } from "@/components/sections/JoinFutureSection";
 import { Footer } from "@/components/layout/Footer";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <SolutionSection />
       <ServicesSection />
       <PlatformSection />
-      <FounderStorySection />
+      <SolarServicesSection />
       <JoinFutureSection />
       <Footer />
     </main>
