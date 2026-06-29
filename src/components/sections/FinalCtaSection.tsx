@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export function FinalCtaSection() {
   return (
@@ -22,8 +23,13 @@ export function FinalCtaSection() {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center"
         >
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-energy/10 border border-energy/20 text-energy mb-8">
-            <Sparkles className="w-8 h-8 text-solar" />
+          <div className="relative w-16 h-16 mb-8 opacity-90">
+            <Image 
+              src="/logo.png" 
+              alt="Solvire Logo" 
+              fill 
+              className="object-contain"
+            />
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight">
