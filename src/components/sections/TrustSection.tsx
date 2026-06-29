@@ -45,10 +45,6 @@ export function TrustSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-energy/10 border border-energy/20 text-energy text-sm font-medium mb-6">
-              Why Choose Solvire
-            </div>
-            
             <h2 className="text-3xl md:text-5xl font-semibold text-foreground mb-6 leading-tight">
               A Trusted Partner for Your Solar Journey
             </h2>

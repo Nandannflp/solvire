@@ -128,14 +128,6 @@ export function SolarServicesSection() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-energy/10 border border-energy/20 text-energy text-sm font-medium mb-6">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-energy opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-energy"></span>
-                </span>
-                End-to-End Solutions
-              </div>
-
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6 leading-[1.1] tracking-tight">
                 Complete <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy to-solar">Solar Solutions</span>

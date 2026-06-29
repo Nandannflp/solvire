@@ -36,16 +36,7 @@ export function HowItWorksSection() {
       <div className="container max-w-6xl mx-auto px-6 md:px-12 relative z-10">
         
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-solar/10 border border-solar/20 text-solar text-sm font-medium mb-6"
-          >
-            How It Works
-          </motion.div>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
