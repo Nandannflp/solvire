@@ -19,9 +19,7 @@ export const metadata: Metadata = {
     "verified solar vendors",
   ],
   authors: [{ name: "Solvire" }],
-  icons: {
-    icon: "/logo.png",
-  },
+
   openGraph: {
     title: "Solvire — Reliable Solar Care. Zero Guesswork.",
     description:
