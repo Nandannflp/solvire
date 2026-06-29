@@ -94,7 +94,7 @@ export function SolarServicesSection() {
   const dataParticlesY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section 
+    <section id="services"
       ref={containerRef}
       className="relative min-h-screen py-24 md:py-32 flex flex-col items-center justify-center overflow-hidden bg-background"
     >

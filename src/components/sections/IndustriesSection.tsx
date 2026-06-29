@@ -71,7 +71,7 @@ export function IndustriesSection() {
   };
 
   return (
-    <section className="relative py-24 md:py-32 bg-transparent border-t border-white/5 overflow-hidden">
+    <section id="industries" className="relative py-24 md:py-32 bg-transparent border-t border-white/5 overflow-hidden">
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">

@@ -16,7 +16,7 @@ const trustPoints = [
 
 export function TrustSection() {
   return (
-    <section className="relative py-24 md:py-32 bg-transparent overflow-hidden border-t border-white/5">
+    <section id="trust" className="relative py-24 md:py-32 bg-transparent overflow-hidden border-t border-white/5">
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">
