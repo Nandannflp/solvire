@@ -15,51 +15,51 @@ const config: Config = {
   			display: ['var(--font-clash)', 'sans-serif'],
   		},
   		colors: {
-  			background: '#071625',
-  			foreground: '#FFFFFF',
-  			surface: '#10263B',
+  			background: '#F4F1EA',
+  			foreground: '#1A1A1A',
+  			surface: '#FFFFFF',
   			editorial: '#E7DFC8',
-  			textPrimary: '#FFFFFF',
-  			textSecondary: '#A6B1BE',
-  			solar: '#F5C542',
-  			energy: '#2DBE60',
+  			textPrimary: '#1A1A1A',
+  			textSecondary: '#4A5568',
+  			solar: '#F58220', // Orange
+  			energy: '#2DBE60', // Green
   			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
+  				DEFAULT: '#FFFFFF',
+  				foreground: '#1A1A1A'
   			},
   			popover: {
-  				DEFAULT: 'hsl(var(--popover))',
-  				foreground: 'hsl(var(--popover-foreground))'
+  				DEFAULT: '#FFFFFF',
+  				foreground: '#1A1A1A'
   			},
   			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
+  				DEFAULT: '#2DBE60',
+  				foreground: '#FFFFFF'
   			},
   			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
+  				DEFAULT: '#EAE6DF',
+  				foreground: '#1A1A1A'
   			},
   			muted: {
-  				DEFAULT: 'hsl(var(--muted))',
-  				foreground: 'hsl(var(--muted-foreground))'
+  				DEFAULT: 'rgba(0,0,0,0.05)',
+  				foreground: 'rgba(0,0,0,0.6)'
   			},
   			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
+  				DEFAULT: '#F58220',
+  				foreground: '#FFFFFF'
   			},
   			destructive: {
-  				DEFAULT: 'hsl(var(--destructive))',
-  				foreground: 'hsl(var(--destructive-foreground))'
+  				DEFAULT: '#EF4444',
+  				foreground: '#FFFFFF'
   			},
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
+  			border: 'rgba(0,0,0,0.1)',
+  			input: 'rgba(0,0,0,0.1)',
+  			ring: '#2DBE60',
   			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
+  				'1': '#2DBE60',
+  				'2': '#F58220',
+  				'3': '#1A1A1A',
+  				'4': '#EAE6DF',
+  				'5': '#E9EEF3'
   			}
   		},
   		borderRadius: {

@@ -24,16 +24,14 @@ export function HeroSection() {
       {/* Foreground Content */}
       <div className="container max-w-5xl mx-auto z-10 relative px-6 md:px-12 flex flex-col items-center text-center">
         
-        {/* Supporting Eyebrow */}
+        {/* Logo at the start */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-6 flex items-center gap-3"
+          className="mb-8 flex items-center justify-center"
         >
-          <div className="w-8 h-[1px] bg-solar/50" />
-          <span className="text-solar uppercase tracking-widest text-sm font-medium">Solvire</span>
-          <div className="w-8 h-[1px] bg-solar/50" />
+          <img src="/solvire-long-logo.png" alt="Solvire" className="h-12 md:h-16 object-contain" />
         </motion.div>
 
         {/* Hero Headline */}

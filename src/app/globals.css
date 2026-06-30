@@ -46,64 +46,64 @@
 
   /* Solvire Brand Colors */
   --color-navy: #0B1F33;
-  --color-solar: #F5C542;
-  --color-energy: #2DBE60;
-  --color-background: #071625;
-  --color-foreground: #FFFFFF;
-  --color-surface: #10263B;
+  --color-solar: #F58220; /* Orange */
+  --color-energy: #2DBE60; /* Green */
+  --color-background: #F4F1EA;
+  --color-foreground: #1A1A1A;
+  --color-surface: #FFFFFF;
   --color-editorial: #E7DFC8;
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #A6B1BE;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #4A5568;
 }
 
 :root {
   --radius: 0.75rem;
   
-  /* Solvire Dark Mode Default */
-  --background: #071625; /* Deep Navy */
-  --foreground: #FFFFFF;
-  --card: #10263B;
-  --card-foreground: #FFFFFF;
-  --popover: #0B1F33;
-  --popover-foreground: #FFFFFF;
-  --primary: #10B981;
+  /* Solvire Beige Theme */
+  --background: #F4F1EA; 
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --primary: #2DBE60;
   --primary-foreground: #FFFFFF;
-  --secondary: #0B1F33;
-  --secondary-foreground: #EAF3FA;
-  --muted: rgba(234, 243, 250, 0.05);
-  --muted-foreground: rgba(255, 255, 255, 0.6);
-  --accent: #FBBF24;
-  --accent-foreground: #040D17;
+  --secondary: #EAE6DF;
+  --secondary-foreground: #1A1A1A;
+  --muted: rgba(0, 0, 0, 0.05);
+  --muted-foreground: rgba(0, 0, 0, 0.6);
+  --accent: #F58220;
+  --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.1);
-  --ring: #10B981;
-  --chart-1: #10B981;
-  --chart-2: #0B1F33;
-  --chart-3: #FBBF24;
-  --chart-4: #EAF3FA;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: rgba(0, 0, 0, 0.1);
+  --ring: #2DBE60;
+  --chart-1: #2DBE60;
+  --chart-2: #F58220;
+  --chart-3: #1A1A1A;
+  --chart-4: #EAE6DF;
   --chart-5: #E9EEF3;
 }
 
 .dark {
-  --background: #050505;
-  --foreground: #ffffff;
-  --card: #0A0A0A;
-  --card-foreground: #ffffff;
-  --popover: #0B1F33;
-  --popover-foreground: #ffffff;
-  --primary: #10B981;
-  --primary-foreground: #ffffff;
-  --secondary: #1C334D;
-  --secondary-foreground: #ffffff;
-  --muted: rgba(255, 255, 255, 0.1);
-  --muted-foreground: #EAF3FA;
-  --accent: #FBBF24;
-  --accent-foreground: #0B1F33;
+  --background: #F4F1EA;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --primary: #2DBE60;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EAE6DF;
+  --secondary-foreground: #1A1A1A;
+  --muted: rgba(0, 0, 0, 0.05);
+  --muted-foreground: rgba(0, 0, 0, 0.6);
+  --accent: #F58220;
+  --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.1);
-  --ring: #10B981;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: rgba(0, 0, 0, 0.1);
+  --ring: #2DBE60;
 }
 
 @layer base {
@@ -141,7 +141,7 @@ html.lenis, html.lenis body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B1F33;
+  background: #EAE6DF;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -166,15 +166,15 @@ html.lenis, html.lenis body {
 }
 
 .sleek-card {
-  background: #0A0A0A;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: border-color 0.3s ease, background 0.3s ease;
 }
 
 .sleek-card:hover {
-  border-color: rgba(255, 255, 255, 0.15);
-  background: #0C0C0C;
+  border-color: rgba(0, 0, 0, 0.15);
+  background: #FAFAFA;
 }
 
 /* Solvire brand typography */
@@ -226,8 +226,8 @@ html.lenis, html.lenis body {
 .futuristic-grid {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 100%);
 }
@@ -251,14 +251,14 @@ html.lenis, html.lenis body {
 
 /* Gradient text */
 .text-gradient-solar {
-  background: linear-gradient(135deg, #10B981, #3DD471);
+  background: linear-gradient(135deg, #F58220, #2DBE60);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-hero {
-  background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.6) 100%);
+  background: linear-gradient(180deg, #1A1A1A 0%, rgba(26,26,26,0.6) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
