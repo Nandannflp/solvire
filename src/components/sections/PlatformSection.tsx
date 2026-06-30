@@ -58,12 +58,12 @@ export function PlatformSection() {
           className="relative w-full max-w-4xl mx-auto"
         >
           {/* Main Dashboard Window */}
-          <div className="bg-white  border border-border rounded-2xl shadow-2xl overflow-hidden">
+          <div className="bg-white/60 backdrop-blur-sm  border border-border rounded-2xl shadow-2xl overflow-hidden">
             {/* Window Header */}
             <div className="h-12 border-b border-border flex items-center px-4 gap-2 bg-background/50">
-              <div className="w-3 h-3 rounded-full bg-white/10" />
-              <div className="w-3 h-3 rounded-full bg-white/10" />
-              <div className="w-3 h-3 rounded-full bg-white/10" />
+              <div className="w-3 h-3 rounded-full bg-white/60 backdrop-blur-sm/10" />
+              <div className="w-3 h-3 rounded-full bg-white/60 backdrop-blur-sm/10" />
+              <div className="w-3 h-3 rounded-full bg-white/60 backdrop-blur-sm/10" />
             </div>
             
             {/* Dashboard Content */}
@@ -87,12 +87,12 @@ export function PlatformSection() {
                 {/* Abstract Bar Chart */}
                 <div className="h-40 flex items-end justify-between gap-2">
                   {[40, 60, 45, 80, 55, 90, 70].map((h, i) => (
-                    <div key={i} className="w-full bg-white/5 rounded-t-sm relative group cursor-pointer transition-all hover:bg-white/10" style={{ height: '100%' }}>
+                    <div key={i} className="w-full bg-white/60 backdrop-blur-sm/5 rounded-t-sm relative group cursor-pointer transition-all hover:bg-white/60 backdrop-blur-sm/10" style={{ height: '100%' }}>
                       <motion.div 
                         initial={{ height: 0 }}
                         whileInView={{ height: `${h}%` }}
                         transition={{ duration: 1, delay: i * 0.1, ease: "easeOut" }}
-                        className="absolute bottom-0 w-full bg-white/20 rounded-t-sm group-hover:bg-energy transition-colors" 
+                        className="absolute bottom-0 w-full bg-white/60 backdrop-blur-sm/20 rounded-t-sm group-hover:bg-energy transition-colors" 
                       />
                     </div>
                   ))}
@@ -128,7 +128,7 @@ export function PlatformSection() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 1 }}
-            className="absolute -right-8 -top-8 bg-white border border-border rounded-xl p-4 shadow-2xl flex items-center gap-3"
+            className="absolute -right-8 -top-8 bg-white/60 backdrop-blur-sm border border-border rounded-xl p-4 shadow-2xl flex items-center gap-3"
           >
             <div className="w-2 h-2 rounded-full bg-solar" />
             <span className="text-foreground text-sm font-medium">Routine Checkup Scheduled</span>

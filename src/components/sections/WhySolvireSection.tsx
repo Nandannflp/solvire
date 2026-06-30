@@ -109,7 +109,7 @@ export function WhySolvireSection() {
                 key={idx}
                 variants={cardVariants}
                 whileHover={{ y: -5 }}
-                className="group relative p-8 rounded-2xl bg-white  border border-border hover:border-energy/40 transition-all duration-500 overflow-hidden"
+                className="group relative p-8 rounded-2xl bg-white/60 backdrop-blur-sm  border border-border hover:border-energy/40 transition-all duration-500 overflow-hidden"
               >
                 {/* Subtle corner glow */}
                 <div className="absolute -top-10 -right-10 w-24 h-24 bg-energy/10 rounded-full blur-2xl group-hover:bg-energy/20 transition-colors duration-500" />

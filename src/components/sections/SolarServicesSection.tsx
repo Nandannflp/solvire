@@ -144,7 +144,7 @@ export function SolarServicesSection() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 
-                <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-white border border-border hover:border-border text-foreground rounded-xl font-medium transition-all duration-300 group">
+                <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/60 backdrop-blur-sm hover:bg-white/60 backdrop-blur-sm border border-border hover:border-border text-foreground rounded-xl font-medium transition-all duration-300 group">
                   Talk to an Expert
                   <PhoneCall className="w-5 h-5 text-solar group-hover:scale-110 transition-transform" />
                 </button>
@@ -152,11 +152,11 @@ export function SolarServicesSection() {
 
               {/* Complimentary Services Badges */}
               <div className="flex flex-wrap gap-4">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-primary/20 shadow-sm ">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/60 backdrop-blur-sm border border-primary/20 shadow-sm ">
                   <CheckCircle2 className="w-5 h-5 text-solar" />
                   <span className="text-sm font-medium text-foreground">Free Site Visit*</span>
                 </div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-primary/20 shadow-sm ">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/60 backdrop-blur-sm border border-primary/20 shadow-sm ">
                   <CheckCircle2 className="w-5 h-5 text-solar" />
                   <span className="text-sm font-medium text-foreground">Free Consultation*</span>
                 </div>
@@ -180,7 +180,7 @@ export function SolarServicesSection() {
                     key={idx}
                     variants={cardVariants}
                     whileHover={{ y: -5 }}
-                    className={`group relative p-8 rounded-2xl bg-white  border border-border hover:border-energy/40 transition-all duration-500 overflow-hidden ${
+                    className={`group relative p-8 rounded-2xl bg-white/60 backdrop-blur-sm  border border-border hover:border-energy/40 transition-all duration-500 overflow-hidden ${
                       idx === serviceCategories.length - 1 ? 'md:col-span-2' : ''
                     }`}
                   >

@@ -68,7 +68,7 @@ export function TrustSection() {
               <motion.li 
                 key={idx}
                 whileHover={{ x: 5 }}
-                className="flex items-center gap-4 p-4 rounded-xl bg-white border border-border hover:border-primary/20 transition-all duration-300"
+                className="flex items-center gap-4 p-4 rounded-xl bg-white/60 backdrop-blur-sm border border-border hover:border-primary/20 transition-all duration-300"
               >
                 <div className="w-10 h-10 rounded-lg bg-energy/10 flex items-center justify-center flex-shrink-0">
                   <CheckCircle2 className="w-5 h-5 text-energy" />

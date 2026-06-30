@@ -104,7 +104,7 @@ export function SolutionSection() {
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative z-30 w-40 h-40 md:w-48 md:h-48 rounded-full bg-white  border border-border flex flex-col items-center justify-center shadow-sm"
+            className="relative z-30 w-40 h-40 md:w-48 md:h-48 rounded-full bg-white/60 backdrop-blur-sm  border border-border flex flex-col items-center justify-center shadow-sm"
           >
             <div className="absolute inset-0 rounded-full border border-energy/40 animate-[ping_2s_ease-out_infinite]" />
             <div className="absolute inset-0 rounded-full border border-energy/20 animate-[ping_3s_ease-out_infinite_1s]" />
@@ -153,7 +153,7 @@ export function SolutionSection() {
                 <div className="absolute inset-0 bg-energy/20 rounded-full blur-2xl group-hover:bg-energy/40 transition-colors duration-500" />
                 
                 {/* Glass Object */}
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/5  border border-border flex items-center justify-center shadow-sm relative z-10 group-hover:scale-110 group-hover:border-border transition-all duration-500 overflow-hidden">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/60 backdrop-blur-sm/5  border border-border flex items-center justify-center shadow-sm relative z-10 group-hover:scale-110 group-hover:border-border transition-all duration-500 overflow-hidden">
                   
                   {/* Specular Top Highlight */}
                   <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent pointer-events-none" />

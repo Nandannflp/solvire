@@ -88,7 +88,7 @@ export function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`group relative bg-white p-8 rounded-2xl flex flex-col items-start hover:shadow-sm transition-all overflow-hidden ${i === 3 || i === 4 ? 'lg:col-span-1.5' : ''}`}
+              className={`group relative bg-white/60 backdrop-blur-sm p-8 rounded-2xl flex flex-col items-start hover:shadow-sm transition-all overflow-hidden ${i === 3 || i === 4 ? 'lg:col-span-1.5' : ''}`}
             >
               {/* Subtle hover glow inside card */}
               <div className="absolute inset-0 bg-energy/0 group-hover:bg-energy/5 transition-colors pointer-events-none" />

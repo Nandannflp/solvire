@@ -42,7 +42,7 @@ export function FounderStorySection() {
           >
             <div className="aspect-[3/4] w-full rounded-2xl overflow-hidden relative">
               {/* Fallback dark bg in case image is missing */}
-              <div className="absolute inset-0 bg-white" />
+              <div className="absolute inset-0 bg-white/60 backdrop-blur-sm" />
               {/* Replace with actual founder portrait later */}
               <Image 
                 src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=800" 
@@ -53,7 +53,7 @@ export function FounderStorySection() {
               <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
             </div>
             {/* Small Snapshot Tag */}
-            <div className="absolute -bottom-6 -right-6 md:-right-12 bg-white  border border-border p-6 rounded-xl shadow-2xl max-w-xs">
+            <div className="absolute -bottom-6 -right-6 md:-right-12 bg-white/60 backdrop-blur-sm  border border-border p-6 rounded-xl shadow-2xl max-w-xs">
               <ul className="space-y-3">
                 <li className="flex items-center gap-3 text-sm text-textSecondary">
                   <div className="w-1.5 h-1.5 rounded-full bg-energy" />

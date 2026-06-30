@@ -77,7 +77,7 @@ export function HowItWorksSection() {
                   className="flex flex-col items-center text-center group"
                 >
                   <div className="relative mb-6">
-                    <div className="w-24 h-24 rounded-full bg-white  border border-border flex items-center justify-center group-hover:border-energy/50 group-hover:shadow-sm transition-all duration-300">
+                    <div className="w-24 h-24 rounded-full bg-white/60 backdrop-blur-sm  border border-border flex items-center justify-center group-hover:border-energy/50 group-hover:shadow-sm transition-all duration-300">
                       <Icon className="w-8 h-8 text-energy group-hover:text-solar transition-colors duration-300" />
                     </div>
                     {/* Step Number Badge */}

@@ -79,9 +79,9 @@ export function ProblemSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: 0.2 + (i * 0.1) }}
-              className="bg-white border border-border p-8 rounded-2xl flex flex-col items-start  hover:bg-white transition-colors"
+              className="bg-white/60 backdrop-blur-sm border border-border p-8 rounded-2xl flex flex-col items-start  hover:bg-white/60 backdrop-blur-sm transition-colors"
             >
-              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm/5 flex items-center justify-center mb-6">
                 {card.icon}
               </div>
               <h4 className="text-xl font-semibold text-foreground mb-3">{card.title}</h4>

@@ -122,7 +122,7 @@ export function IndustriesSection() {
               <motion.div
                 key={industry.id}
                 variants={cardVariants}
-                className="group relative rounded-2xl bg-white  border border-border overflow-hidden flex flex-col"
+                className="group relative rounded-2xl bg-white/60 backdrop-blur-sm  border border-border overflow-hidden flex flex-col"
               >
                 {/* Header Section (Always Visible) */}
                 <button 
@@ -156,7 +156,7 @@ export function IndustriesSection() {
                       className="overflow-hidden"
                     >
                       <div className="px-8 pb-8 pt-2">
-                        <div className="h-[1px] w-full bg-white/10 mb-6" />
+                        <div className="h-[1px] w-full bg-white/60 backdrop-blur-sm/10 mb-6" />
                         <h4 className="text-sm font-medium text-foreground mb-4 uppercase tracking-wider">
                           Key Services
                         </h4>

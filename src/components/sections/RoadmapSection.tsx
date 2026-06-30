@@ -43,7 +43,7 @@ export function RoadmapSection() {
           {/* Track Wrapper perfectly aligned to the centers of the first and last cards (approx 52px from top/bottom) */}
           <div className="absolute top-[52px] bottom-[52px] left-6 md:left-1/2 w-0.5 -translate-x-1/2 z-10">
             {/* Background Track */}
-            <div className="absolute inset-0 w-full bg-white/10" />
+            <div className="absolute inset-0 w-full bg-white/60 backdrop-blur-sm/10" />
             
             {/* Scroll-driven Progress Line */}
             <motion.div 
@@ -79,7 +79,7 @@ export function RoadmapSection() {
                 <div className="absolute left-6 md:left-1/2 size-4 rounded-full -translate-x-1/2 flex items-center justify-center bg-transparent border-2 border-border z-0" />
 
                 <div className="w-full md:w-5/12 pl-16 md:pl-0">
-                  <div className={`p-6 rounded-2xl border ${step.active ? 'bg-white/10 border-border shadow-md ' : 'bg-transparent border-transparent'}`}>
+                  <div className={`p-6 rounded-2xl border ${step.active ? 'bg-white/60 backdrop-blur-sm/10 border-border shadow-md ' : 'bg-transparent border-transparent'}`}>
                     <span className={`text-sm font-bold tracking-widest uppercase mb-2 block ${step.active ? 'text-solar' : 'text-foreground/40'}`}>
                       {step.year}
                     </span>

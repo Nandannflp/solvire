@@ -18,8 +18,8 @@ export function Section({
 }: SectionProps) {
   const themeClasses = {
     light: "bg-transparent text-foreground",
-    dark: "bg-muted/30 text-foreground border-y border-border",
-    navy: "bg-secondary/30 text-foreground border-y border-border",
+    dark: "bg-transparent text-foreground",
+    navy: "bg-transparent text-foreground",
   };
 
   return (

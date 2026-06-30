@@ -77,7 +77,7 @@ export function HeroSection() {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           
-          <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-white border border-border hover:border-border text-foreground rounded-xl font-medium transition-all duration-300 group">
+          <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/60 backdrop-blur-sm hover:bg-white/60 backdrop-blur-sm border border-border hover:border-border text-foreground rounded-xl font-medium transition-all duration-300 group">
             Talk to an Expert
             <PhoneCall className="w-5 h-5 text-solar group-hover:scale-110 transition-transform" />
           </button>
