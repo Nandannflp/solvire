@@ -31,7 +31,9 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-8 flex items-center justify-center"
         >
-          <img src="/solvire-long-logo.png" alt="Solvire" className="h-12 md:h-16 object-contain" />
+          <div className="bg-[#0B1F33] px-6 py-3 rounded-2xl shadow-lg border border-foreground/10">
+            <img src="/solvire-long-logo.png" alt="Solvire" className="h-10 md:h-12 object-contain" />
+          </div>
         </motion.div>
 
         {/* Hero Headline */}
@@ -77,7 +79,7 @@ export function HeroSection() {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           
-          <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-surface hover:bg-surface/80 border border-white/10 hover:border-solar/30 text-white rounded-xl font-medium transition-all duration-300 group">
+          <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-surface hover:bg-surface/80 border border-foreground/10 hover:border-solar/30 text-foreground rounded-xl font-medium transition-all duration-300 group">
             Talk to an Expert
             <PhoneCall className="w-5 h-5 text-solar group-hover:scale-110 transition-transform" />
           </button>

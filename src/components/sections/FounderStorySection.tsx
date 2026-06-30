@@ -53,7 +53,7 @@ export function FounderStorySection() {
               <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
             </div>
             {/* Small Snapshot Tag */}
-            <div className="absolute -bottom-6 -right-6 md:-right-12 bg-surface/90 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-2xl max-w-xs">
+            <div className="absolute -bottom-6 -right-6 md:-right-12 bg-surface/90 backdrop-blur-md border border-foreground/10 p-6 rounded-xl shadow-2xl max-w-xs">
               <ul className="space-y-3">
                 <li className="flex items-center gap-3 text-sm text-textSecondary">
                   <div className="w-1.5 h-1.5 rounded-full bg-energy" />
@@ -97,7 +97,7 @@ export function FounderStorySection() {
               </p>
             </div>
 
-            <blockquote className="border-l-2 border-energy pl-6 text-xl md:text-2xl text-white font-medium italic">
+            <blockquote className="border-l-2 border-energy pl-6 text-xl md:text-2xl text-foreground font-medium italic">
               "Solar adoption isn't the finish line. Reliable ownership is."
             </blockquote>
           </motion.div>

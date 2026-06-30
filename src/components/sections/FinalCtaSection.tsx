@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function FinalCtaSection() {
   return (
-    <section className="relative py-24 md:py-32 bg-transparent overflow-hidden border-t border-white/5">
+    <section className="relative py-24 md:py-32 bg-transparent overflow-hidden border-t border-foreground/5">
       
       {/* Background Solar Flare Effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[600px] bg-gradient-to-r from-energy/10 via-solar/10 to-energy/10 blur-[100px] opacity-60 pointer-events-none" />

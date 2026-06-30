@@ -34,7 +34,7 @@ export function RoadmapSection() {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="mb-20 text-center md:text-left"
         >
-          <h2 className="heading-editorial text-4xl md:text-5xl text-white mb-6">
+          <h2 className="heading-editorial text-4xl md:text-5xl text-foreground mb-6">
             The road to a complete <br /> <span className="text-solar text-glow-solar">solar ecosystem.</span>
           </h2>
         </motion.div>
@@ -76,14 +76,14 @@ export function RoadmapSection() {
                 <div className="hidden md:block w-5/12" />
                 
                 {/* Node Waypoint */}
-                <div className="absolute left-6 md:left-1/2 size-4 rounded-full -translate-x-1/2 flex items-center justify-center bg-transparent border-2 border-white/20 z-0" />
+                <div className="absolute left-6 md:left-1/2 size-4 rounded-full -translate-x-1/2 flex items-center justify-center bg-transparent border-2 border-foreground/20 z-0" />
 
                 <div className="w-full md:w-5/12 pl-16 md:pl-0">
                   <div className={`p-6 rounded-2xl border ${step.active ? 'bg-white/10 border-solar/30 shadow-md backdrop-blur-sm' : 'bg-transparent border-transparent'}`}>
-                    <span className={`text-sm font-bold tracking-widest uppercase mb-2 block ${step.active ? 'text-solar' : 'text-white/40'}`}>
+                    <span className={`text-sm font-bold tracking-widest uppercase mb-2 block ${step.active ? 'text-solar' : 'text-foreground/40'}`}>
                       {step.year}
                     </span>
-                    <h3 className={`text-xl font-semibold ${step.active ? 'text-white' : 'text-white/40'}`}>
+                    <h3 className={`text-xl font-semibold ${step.active ? 'text-foreground' : 'text-foreground/40'}`}>
                       {step.title}
                     </h3>
                   </div>

@@ -33,31 +33,31 @@ export default function ContactPage() {
       </div>
 
       <div className="container max-w-4xl mx-auto relative z-10">
-        <Link href="/" className="inline-flex items-center text-textSecondary hover:text-white transition-colors mb-16 text-sm font-medium group">
+        <Link href="/" className="inline-flex items-center text-textSecondary hover:text-foreground transition-colors mb-16 text-sm font-medium group">
           <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
           Back to Home
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
-            <h1 className="text-4xl md:text-5xl font-semibold text-white mb-6">Get in touch</h1>
+            <h1 className="text-4xl md:text-5xl font-semibold text-foreground mb-6">Get in touch</h1>
             <p className="text-textSecondary leading-relaxed mb-12">
               Whether you need a new solar installation, ongoing maintenance, or a comprehensive energy audit, our team is ready to help.
             </p>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-white font-medium text-sm mb-1">General Inquiries</h3>
+                <h3 className="text-foreground font-medium text-sm mb-1">General Inquiries</h3>
                 <a href="mailto:hello@solvire.com" className="text-energy hover:underline text-lg">hello@solvire.com</a>
               </div>
               <div>
-                <h3 className="text-white font-medium text-sm mb-1">Support</h3>
+                <h3 className="text-foreground font-medium text-sm mb-1">Support</h3>
                 <a href="mailto:support@solvire.com" className="text-energy hover:underline text-lg">support@solvire.com</a>
               </div>
             </div>
           </div>
 
-          <div className="bg-surface/50 backdrop-blur-md border border-white/5 rounded-2xl p-8 shadow-2xl">
+          <div className="bg-surface/50 backdrop-blur-md border border-foreground/5 rounded-2xl p-8 shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium text-textSecondary">Name</label>
@@ -65,7 +65,7 @@ export default function ContactPage() {
                   id="name" 
                   type="text" 
                   required
-                  className="w-full bg-background/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-textSecondary/50 focus:outline-none focus:border-energy/50 transition-colors" 
+                  className="w-full bg-background/50 border border-foreground/10 rounded-lg px-4 py-3 text-foreground placeholder-textSecondary/50 focus:outline-none focus:border-energy/50 transition-colors" 
                   placeholder="John Doe"
                 />
               </div>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                   id="email" 
                   type="email" 
                   required
-                  className="w-full bg-background/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-textSecondary/50 focus:outline-none focus:border-energy/50 transition-colors" 
+                  className="w-full bg-background/50 border border-foreground/10 rounded-lg px-4 py-3 text-foreground placeholder-textSecondary/50 focus:outline-none focus:border-energy/50 transition-colors" 
                   placeholder="john@example.com"
                 />
               </div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                   id="message" 
                   required
                   rows={4}
-                  className="w-full bg-background/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-textSecondary/50 focus:outline-none focus:border-energy/50 transition-colors resize-none" 
+                  className="w-full bg-background/50 border border-foreground/10 rounded-lg px-4 py-3 text-foreground placeholder-textSecondary/50 focus:outline-none focus:border-energy/50 transition-colors resize-none" 
                   placeholder="How can we help?"
                 />
               </div>

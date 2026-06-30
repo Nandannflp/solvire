@@ -37,22 +37,22 @@ export function TrustLayerSection() {
           className="text-center flex flex-col items-center"
         >
           <TrustBadge text="Solvire Trust Layer" pulse={false} className="mb-6" />
-          <h2 className="heading-editorial text-4xl md:text-5xl text-white mb-6 leading-tight">
+          <h2 className="heading-editorial text-4xl md:text-5xl text-foreground mb-6 leading-tight">
             Trust isn't promised.<br /> It's engineered.
           </h2>
-          <p className="body-clean text-lg text-white/70 mb-16 max-w-2xl text-center">
+          <p className="body-clean text-lg text-foreground/70 mb-16 max-w-2xl text-center">
             We remove the guesswork from solar ownership. By surfacing verified profiles, transparent pricing, and comprehensive service histories, we ensure your investment is always in safe hands.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left w-full">
             {trustSignals.map((signal, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center gap-4 p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm card-hover">
+              <div key={idx} className="flex flex-col items-center text-center gap-4 p-6 bg-white/5 rounded-2xl border border-foreground/10 backdrop-blur-sm card-hover">
                 <div className="bg-solar/20 p-3 rounded-full flex items-center justify-center border border-solar/30 glow-solar">
                   {signal.icon}
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold mb-2">{signal.title}</h4>
-                  <p className="text-white/60 text-sm leading-relaxed">{signal.desc}</p>
+                  <h4 className="text-foreground font-semibold mb-2">{signal.title}</h4>
+                  <p className="text-foreground/60 text-sm leading-relaxed">{signal.desc}</p>
                 </div>
               </div>
             ))}

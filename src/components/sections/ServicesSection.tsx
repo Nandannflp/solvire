@@ -96,7 +96,7 @@ export function ServicesSection() {
               {/* Orange decorative line */}
               <div className="absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-solar/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
-              <div className="w-12 h-12 rounded-full bg-background border border-white/10 flex items-center justify-center mb-6 z-10">
+              <div className="w-12 h-12 rounded-full bg-background border border-foreground/10 flex items-center justify-center mb-6 z-10">
                 {service.icon}
               </div>
               <h4 className="text-xl font-semibold text-foreground mb-3 z-10">{service.title}</h4>

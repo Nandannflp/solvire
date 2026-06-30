@@ -71,7 +71,7 @@ export function IndustriesSection() {
   };
 
   return (
-    <section id="industries" className="relative py-24 md:py-32 bg-transparent border-t border-white/5 overflow-hidden">
+    <section id="industries" className="relative py-24 md:py-32 bg-transparent border-t border-foreground/5 overflow-hidden">
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">
@@ -122,19 +122,19 @@ export function IndustriesSection() {
               <motion.div
                 key={industry.id}
                 variants={cardVariants}
-                className="group relative rounded-2xl bg-surface/40 backdrop-blur-md border border-white/5 overflow-hidden flex flex-col"
+                className="group relative rounded-2xl bg-surface/40 backdrop-blur-md border border-foreground/5 overflow-hidden flex flex-col"
               >
                 {/* Header Section (Always Visible) */}
                 <button 
                   onClick={() => toggleCard(industry.id)}
                   className="w-full p-8 text-left focus:outline-none"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-background border border-white/10 flex items-center justify-center mb-6 group-hover:border-energy/30 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-xl bg-background border border-foreground/10 flex items-center justify-center mb-6 group-hover:border-energy/30 transition-all duration-300">
                     <Icon className="w-7 h-7 text-energy group-hover:text-solar transition-colors duration-300" />
                   </div>
                   
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-2xl font-semibold text-white">
+                    <h3 className="text-2xl font-semibold text-foreground">
                       {industry.title}
                     </h3>
                     <ChevronDown className={`w-5 h-5 text-textSecondary transition-transform duration-300 ${isOpen ? "rotate-180 text-solar" : ""}`} />
@@ -157,7 +157,7 @@ export function IndustriesSection() {
                     >
                       <div className="px-8 pb-8 pt-2">
                         <div className="h-[1px] w-full bg-white/10 mb-6" />
-                        <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wider">
+                        <h4 className="text-sm font-medium text-foreground mb-4 uppercase tracking-wider">
                           Key Services
                         </h4>
                         <ul className="space-y-3">

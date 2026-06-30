@@ -58,9 +58,9 @@ export function PlatformSection() {
           className="relative w-full max-w-4xl mx-auto"
         >
           {/* Main Dashboard Window */}
-          <div className="bg-surface/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
+          <div className="bg-surface/80 backdrop-blur-xl border border-foreground/10 rounded-2xl shadow-2xl overflow-hidden">
             {/* Window Header */}
-            <div className="h-12 border-b border-white/5 flex items-center px-4 gap-2 bg-background/50">
+            <div className="h-12 border-b border-foreground/5 flex items-center px-4 gap-2 bg-background/50">
               <div className="w-3 h-3 rounded-full bg-white/10" />
               <div className="w-3 h-3 rounded-full bg-white/10" />
               <div className="w-3 h-3 rounded-full bg-white/10" />
@@ -70,10 +70,10 @@ export function PlatformSection() {
             <div className="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
               
               {/* Main Chart Area */}
-              <div className="md:col-span-2 bg-background/50 rounded-xl p-6 border border-white/5">
+              <div className="md:col-span-2 bg-background/50 rounded-xl p-6 border border-foreground/5">
                 <div className="flex items-center justify-between mb-8">
                   <div>
-                    <h5 className="text-white font-medium">System Performance</h5>
+                    <h5 className="text-foreground font-medium">System Performance</h5>
                     <p className="text-textSecondary text-sm">Live Energy Output</p>
                   </div>
                   <div className="flex items-center gap-2">
@@ -101,20 +101,20 @@ export function PlatformSection() {
 
               {/* Side Panels */}
               <div className="flex flex-col gap-6">
-                <div className="bg-background/50 rounded-xl p-6 border border-white/5 flex items-start gap-4">
-                  <Activity className="w-6 h-6 text-white" />
+                <div className="bg-background/50 rounded-xl p-6 border border-foreground/5 flex items-start gap-4">
+                  <Activity className="w-6 h-6 text-foreground" />
                   <div>
-                    <h5 className="text-white font-medium mb-1">Diagnostics</h5>
+                    <h5 className="text-foreground font-medium mb-1">Diagnostics</h5>
                     <p className="text-textSecondary text-sm mb-3">All systems optimal. No errors detected.</p>
                     <div className="flex items-center gap-1 text-energy text-sm cursor-pointer hover:text-energy/80">
                       View log <ChevronRight className="w-4 h-4" />
                     </div>
                   </div>
                 </div>
-                <div className="bg-background/50 rounded-xl p-6 border border-white/5 flex items-start gap-4">
-                  <BatteryCharging className="w-6 h-6 text-white" />
+                <div className="bg-background/50 rounded-xl p-6 border border-foreground/5 flex items-start gap-4">
+                  <BatteryCharging className="w-6 h-6 text-foreground" />
                   <div>
-                    <h5 className="text-white font-medium mb-1">Battery Health</h5>
+                    <h5 className="text-foreground font-medium mb-1">Battery Health</h5>
                     <p className="text-textSecondary text-sm">98% efficiency remaining.</p>
                   </div>
                 </div>
@@ -128,10 +128,10 @@ export function PlatformSection() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 1 }}
-            className="absolute -right-8 -top-8 bg-surface border border-white/10 rounded-xl p-4 shadow-2xl flex items-center gap-3"
+            className="absolute -right-8 -top-8 bg-surface border border-foreground/10 rounded-xl p-4 shadow-2xl flex items-center gap-3"
           >
             <div className="w-2 h-2 rounded-full bg-solar" />
-            <span className="text-white text-sm font-medium">Routine Checkup Scheduled</span>
+            <span className="text-foreground text-sm font-medium">Routine Checkup Scheduled</span>
           </motion.div>
         </motion.div>
       </div>

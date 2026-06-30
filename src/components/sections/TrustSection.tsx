@@ -16,7 +16,7 @@ const trustPoints = [
 
 export function TrustSection() {
   return (
-    <section id="trust" className="relative py-24 md:py-32 bg-transparent overflow-hidden border-t border-white/5">
+    <section id="trust" className="relative py-24 md:py-32 bg-transparent overflow-hidden border-t border-foreground/5">
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">
@@ -68,12 +68,12 @@ export function TrustSection() {
               <motion.li 
                 key={idx}
                 whileHover={{ x: 5 }}
-                className="flex items-center gap-4 p-4 rounded-xl bg-surface/50 border border-white/5 hover:border-energy/30 transition-all duration-300"
+                className="flex items-center gap-4 p-4 rounded-xl bg-surface/50 border border-foreground/5 hover:border-energy/30 transition-all duration-300"
               >
                 <div className="w-10 h-10 rounded-lg bg-energy/10 flex items-center justify-center flex-shrink-0">
                   <CheckCircle2 className="w-5 h-5 text-energy" />
                 </div>
-                <span className="text-white font-medium">{point}</span>
+                <span className="text-foreground font-medium">{point}</span>
               </motion.li>
             ))}
           </motion.ul>

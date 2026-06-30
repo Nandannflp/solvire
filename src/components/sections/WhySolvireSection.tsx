@@ -49,7 +49,7 @@ const cardVariants: Variants = {
 
 export function WhySolvireSection() {
   return (
-    <section className="relative py-24 md:py-32 bg-transparent overflow-hidden border-t border-white/5">
+    <section className="relative py-24 md:py-32 bg-transparent overflow-hidden border-t border-foreground/5">
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">
@@ -109,16 +109,16 @@ export function WhySolvireSection() {
                 key={idx}
                 variants={cardVariants}
                 whileHover={{ y: -5 }}
-                className="group relative p-8 rounded-2xl bg-surface/40 backdrop-blur-md border border-white/5 hover:border-energy/40 transition-all duration-500 overflow-hidden"
+                className="group relative p-8 rounded-2xl bg-surface/40 backdrop-blur-md border border-foreground/5 hover:border-energy/40 transition-all duration-500 overflow-hidden"
               >
                 {/* Subtle corner glow */}
                 <div className="absolute -top-10 -right-10 w-24 h-24 bg-energy/10 rounded-full blur-2xl group-hover:bg-energy/20 transition-colors duration-500" />
                 
-                <div className="w-12 h-12 rounded-xl bg-background border border-white/10 flex items-center justify-center mb-6 group-hover:border-energy/30 group-hover:shadow-[0_0_15px_rgba(45,190,96,0.2)] transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-background border border-foreground/10 flex items-center justify-center mb-6 group-hover:border-energy/30 group-hover:shadow-[0_0_15px_rgba(45,190,96,0.2)] transition-all duration-300">
                   <Icon className="w-6 h-6 text-energy group-hover:text-solar transition-colors duration-300" />
                 </div>
                 
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-energy transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-energy transition-colors duration-300">
                   {feature.title}
                 </h3>
                 
