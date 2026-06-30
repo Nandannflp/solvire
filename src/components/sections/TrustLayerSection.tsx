@@ -46,8 +46,8 @@ export function TrustLayerSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left w-full">
             {trustSignals.map((signal, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center gap-4 p-6 bg-white/5 rounded-2xl border border-foreground/10 backdrop-blur-sm card-hover">
-                <div className="bg-solar/20 p-3 rounded-full flex items-center justify-center border border-solar/30 glow-solar">
+              <div key={idx} className="flex flex-col items-center text-center gap-4 p-6 bg-white/5 rounded-2xl border border-border  card-hover">
+                <div className="bg-solar/20 p-3 rounded-full flex items-center justify-center border border-border glow-solar">
                   {signal.icon}
                 </div>
                 <div>

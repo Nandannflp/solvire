@@ -42,7 +42,7 @@ export function HeroSection() {
           className="font-display font-bold text-5xl md:text-[80px] lg:text-[100px] leading-[1.0] tracking-tight text-foreground mb-8"
         >
           Complete Solar Solutions.<br/>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy to-solar">One Trusted Partner.</span>
+          <span className="text-primary">One Trusted Partner.</span>
         </motion.h1>
 
         {/* Supporting Copy */}
@@ -71,13 +71,13 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
         >
-          <button className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-energy to-[#24994d] hover:from-[#24994d] hover:to-energy text-white rounded-xl font-medium overflow-hidden transition-all duration-300 shadow-[0_0_20px_rgba(45,190,96,0.3)] hover:shadow-[0_0_30px_rgba(45,190,96,0.5)]">
+          <button className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium overflow-hidden transition-all duration-300 shadow-sm hover:shadow-sm">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.2),transparent)] -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
             Book Free Site Visit
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           
-          <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-surface hover:bg-surface/80 border border-foreground/10 hover:border-solar/30 text-foreground rounded-xl font-medium transition-all duration-300 group">
+          <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-white border border-border hover:border-border text-foreground rounded-xl font-medium transition-all duration-300 group">
             Talk to an Expert
             <PhoneCall className="w-5 h-5 text-solar group-hover:scale-110 transition-transform" />
           </button>

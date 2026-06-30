@@ -54,7 +54,7 @@ export function ProtectionSection() {
                   "Policy vault for all your warranty documents."
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-foreground/90 font-medium">
-                    <div className="size-1.5 rounded-full bg-solar shadow-[0_0_10px_rgba(45,190,96,0.8)]" />
+                    <div className="size-1.5 rounded-full bg-solar shadow-sm" />
                     {item}
                   </li>
                 ))}
@@ -70,12 +70,12 @@ export function ProtectionSection() {
               className="flex justify-center lg:justify-end"
             >
               <div className="w-full max-w-sm aspect-[4/5] extreme-glass rounded-2xl shadow-2xl p-6 flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-2 bg-solar shadow-[0_0_15px_rgba(45,190,96,0.8)]" />
+                <div className="absolute top-0 left-0 w-full h-2 bg-solar shadow-sm" />
                 <h4 className="font-semibold text-lg mt-4 mb-1 text-foreground">Solar Protection Score</h4>
                 <p className="text-xs text-foreground/50 mb-8">System health and coverage status</p>
                 
                 <div className="flex-1 flex flex-col items-center justify-center">
-                  <div className="size-40 rounded-full border-[8px] border-foreground/5 border-t-solar flex items-center justify-center mb-4 relative glow-solar">
+                  <div className="size-40 rounded-full border-[8px] border-border border-t-solar flex items-center justify-center mb-4 relative glow-solar">
                     <div className="text-4xl font-bold text-foreground text-glow-white">98<span className="text-lg text-foreground/50">%</span></div>
                   </div>
                   <div className="text-center font-medium text-solar flex items-center gap-2 text-glow-solar">

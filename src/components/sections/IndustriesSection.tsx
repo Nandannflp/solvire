@@ -71,7 +71,7 @@ export function IndustriesSection() {
   };
 
   return (
-    <section id="industries" className="relative py-24 md:py-32 bg-transparent border-t border-foreground/5 overflow-hidden">
+    <section id="industries" className="relative py-24 md:py-32 bg-transparent border-t border-border overflow-hidden">
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">
@@ -122,14 +122,14 @@ export function IndustriesSection() {
               <motion.div
                 key={industry.id}
                 variants={cardVariants}
-                className="group relative rounded-2xl bg-surface/40 backdrop-blur-md border border-foreground/5 overflow-hidden flex flex-col"
+                className="group relative rounded-2xl bg-white  border border-border overflow-hidden flex flex-col"
               >
                 {/* Header Section (Always Visible) */}
                 <button 
                   onClick={() => toggleCard(industry.id)}
                   className="w-full p-8 text-left focus:outline-none"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-background border border-foreground/10 flex items-center justify-center mb-6 group-hover:border-energy/30 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-xl bg-background border border-border flex items-center justify-center mb-6 group-hover:border-primary/20 transition-all duration-300">
                     <Icon className="w-7 h-7 text-energy group-hover:text-solar transition-colors duration-300" />
                   </div>
                   

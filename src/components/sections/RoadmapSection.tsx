@@ -76,10 +76,10 @@ export function RoadmapSection() {
                 <div className="hidden md:block w-5/12" />
                 
                 {/* Node Waypoint */}
-                <div className="absolute left-6 md:left-1/2 size-4 rounded-full -translate-x-1/2 flex items-center justify-center bg-transparent border-2 border-foreground/20 z-0" />
+                <div className="absolute left-6 md:left-1/2 size-4 rounded-full -translate-x-1/2 flex items-center justify-center bg-transparent border-2 border-border z-0" />
 
                 <div className="w-full md:w-5/12 pl-16 md:pl-0">
-                  <div className={`p-6 rounded-2xl border ${step.active ? 'bg-white/10 border-solar/30 shadow-md backdrop-blur-sm' : 'bg-transparent border-transparent'}`}>
+                  <div className={`p-6 rounded-2xl border ${step.active ? 'bg-white/10 border-border shadow-md ' : 'bg-transparent border-transparent'}`}>
                     <span className={`text-sm font-bold tracking-widest uppercase mb-2 block ${step.active ? 'text-solar' : 'text-foreground/40'}`}>
                       {step.year}
                     </span>

@@ -130,7 +130,7 @@ export function SolarServicesSection() {
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6 leading-[1.1] tracking-tight">
                 Complete <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy to-solar">Solar Solutions</span>
+                <span className="text-primary">Solar Solutions</span>
               </h2>
               
               <p className="text-textSecondary text-lg md:text-xl leading-relaxed mb-10 max-w-md">
@@ -138,13 +138,13 @@ export function SolarServicesSection() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <button className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-energy to-[#24994d] hover:from-[#24994d] hover:to-energy text-white rounded-xl font-medium overflow-hidden transition-all duration-300 shadow-[0_0_20px_rgba(45,190,96,0.3)] hover:shadow-[0_0_30px_rgba(45,190,96,0.5)]">
+                <button className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium overflow-hidden transition-all duration-300 shadow-sm hover:shadow-sm">
                   <div className="absolute inset-0 bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.2),transparent)] -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                   Book Free Site Visit
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 
-                <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-surface hover:bg-surface/80 border border-foreground/10 hover:border-solar/30 text-foreground rounded-xl font-medium transition-all duration-300 group">
+                <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-white border border-border hover:border-border text-foreground rounded-xl font-medium transition-all duration-300 group">
                   Talk to an Expert
                   <PhoneCall className="w-5 h-5 text-solar group-hover:scale-110 transition-transform" />
                 </button>
@@ -152,11 +152,11 @@ export function SolarServicesSection() {
 
               {/* Complimentary Services Badges */}
               <div className="flex flex-wrap gap-4">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface/50 border border-energy/30 shadow-[0_0_15px_rgba(245,197,66,0.1)] backdrop-blur-sm">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-primary/20 shadow-sm ">
                   <CheckCircle2 className="w-5 h-5 text-solar" />
                   <span className="text-sm font-medium text-foreground">Free Site Visit*</span>
                 </div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface/50 border border-energy/30 shadow-[0_0_15px_rgba(245,197,66,0.1)] backdrop-blur-sm">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-primary/20 shadow-sm ">
                   <CheckCircle2 className="w-5 h-5 text-solar" />
                   <span className="text-sm font-medium text-foreground">Free Consultation*</span>
                 </div>
@@ -180,7 +180,7 @@ export function SolarServicesSection() {
                     key={idx}
                     variants={cardVariants}
                     whileHover={{ y: -5 }}
-                    className={`group relative p-8 rounded-2xl bg-surface/40 backdrop-blur-xl border border-foreground/5 hover:border-energy/40 transition-all duration-500 overflow-hidden ${
+                    className={`group relative p-8 rounded-2xl bg-white  border border-border hover:border-energy/40 transition-all duration-500 overflow-hidden ${
                       idx === serviceCategories.length - 1 ? 'md:col-span-2' : ''
                     }`}
                   >
@@ -191,7 +191,7 @@ export function SolarServicesSection() {
                     <div className="absolute inset-0 bg-gradient-to-br from-energy/0 to-energy/0 group-hover:from-energy/5 group-hover:to-transparent transition-colors duration-500" />
                     
                     <div className="relative z-10">
-                      <div className="w-12 h-12 rounded-xl bg-background border border-foreground/10 flex items-center justify-center mb-6 group-hover:border-energy/30 group-hover:shadow-[0_0_15px_rgba(45,190,96,0.2)] transition-all duration-300">
+                      <div className="w-12 h-12 rounded-xl bg-background border border-border flex items-center justify-center mb-6 group-hover:border-primary/20 group-hover:shadow-sm transition-all duration-300">
                         <Icon className="w-6 h-6 text-energy group-hover:text-solar transition-colors duration-300" />
                       </div>
                       

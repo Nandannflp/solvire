@@ -16,7 +16,7 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="relative py-24 md:py-32 bg-transparent border-t border-foreground/5 overflow-hidden">
+    <section id="how-it-works" className="relative py-24 md:py-32 bg-transparent border-t border-border overflow-hidden">
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">
@@ -77,7 +77,7 @@ export function HowItWorksSection() {
                   className="flex flex-col items-center text-center group"
                 >
                   <div className="relative mb-6">
-                    <div className="w-24 h-24 rounded-full bg-surface/80 backdrop-blur-sm border border-foreground/10 flex items-center justify-center group-hover:border-energy/50 group-hover:shadow-[0_0_20px_rgba(45,190,96,0.2)] transition-all duration-300">
+                    <div className="w-24 h-24 rounded-full bg-white  border border-border flex items-center justify-center group-hover:border-energy/50 group-hover:shadow-sm transition-all duration-300">
                       <Icon className="w-8 h-8 text-energy group-hover:text-solar transition-colors duration-300" />
                     </div>
                     {/* Step Number Badge */}

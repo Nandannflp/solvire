@@ -88,7 +88,7 @@ export function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`group relative bg-surface p-8 rounded-2xl flex flex-col items-start hover:shadow-[0_0_30px_rgba(45,190,96,0.1)] transition-all overflow-hidden ${i === 3 || i === 4 ? 'lg:col-span-1.5' : ''}`}
+              className={`group relative bg-white p-8 rounded-2xl flex flex-col items-start hover:shadow-sm transition-all overflow-hidden ${i === 3 || i === 4 ? 'lg:col-span-1.5' : ''}`}
             >
               {/* Subtle hover glow inside card */}
               <div className="absolute inset-0 bg-energy/0 group-hover:bg-energy/5 transition-colors pointer-events-none" />
@@ -96,7 +96,7 @@ export function ServicesSection() {
               {/* Orange decorative line */}
               <div className="absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-solar/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
-              <div className="w-12 h-12 rounded-full bg-background border border-foreground/10 flex items-center justify-center mb-6 z-10">
+              <div className="w-12 h-12 rounded-full bg-background border border-border flex items-center justify-center mb-6 z-10">
                 {service.icon}
               </div>
               <h4 className="text-xl font-semibold text-foreground mb-3 z-10">{service.title}</h4>

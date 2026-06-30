@@ -48,61 +48,62 @@
   --color-navy: #0B1F33;
   --color-solar: #F58220; /* Orange */
   --color-energy: #2DBE60; /* Green */
-  --color-background: #F4F1EA;
-  --color-foreground: #1A1A1A;
+  --color-background: #FFFFFF;
+  --color-foreground: #111827;
   --color-surface: #FFFFFF;
-  --color-editorial: #E7DFC8;
-  --color-text-primary: #1A1A1A;
-  --color-text-secondary: #4A5568;
+  --color-editorial: #F9FAFB;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4B5563;
 }
 
 :root {
   --radius: 0.75rem;
   
-  /* Solvire Beige Theme */
-  --background: #F4F1EA; 
-  --foreground: #1A1A1A;
+  /* Solvire White Theme */
+  --background: #FFFFFF; 
+  --foreground: #111827;
   --card: #FFFFFF;
-  --card-foreground: #1A1A1A;
+  --card-foreground: #111827;
   --popover: #FFFFFF;
-  --popover-foreground: #1A1A1A;
+  --popover-foreground: #111827;
   --primary: #2DBE60;
   --primary-foreground: #FFFFFF;
-  --secondary: #EAE6DF;
-  --secondary-foreground: #1A1A1A;
-  --muted: rgba(0, 0, 0, 0.05);
-  --muted-foreground: rgba(0, 0, 0, 0.6);
+  --secondary: #F9FAFB;
+  --secondary-foreground: #111827;
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
   --accent: #F58220;
   --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
-  --border: rgba(0, 0, 0, 0.1);
-  --input: rgba(0, 0, 0, 0.1);
+  --border: #E5E7EB;
+  --input: #E5E7EB;
   --ring: #2DBE60;
   --chart-1: #2DBE60;
   --chart-2: #F58220;
-  --chart-3: #1A1A1A;
-  --chart-4: #EAE6DF;
-  --chart-5: #E9EEF3;
+  --chart-3: #111827;
+  --chart-4: #F9FAFB;
+  --chart-5: #E5E7EB;
 }
 
 .dark {
-  --background: #F4F1EA;
-  --foreground: #1A1A1A;
+  /* We enforce light mode for this redesign */
+  --background: #FFFFFF;
+  --foreground: #111827;
   --card: #FFFFFF;
-  --card-foreground: #1A1A1A;
+  --card-foreground: #111827;
   --popover: #FFFFFF;
-  --popover-foreground: #1A1A1A;
+  --popover-foreground: #111827;
   --primary: #2DBE60;
   --primary-foreground: #FFFFFF;
-  --secondary: #EAE6DF;
-  --secondary-foreground: #1A1A1A;
-  --muted: rgba(0, 0, 0, 0.05);
-  --muted-foreground: rgba(0, 0, 0, 0.6);
+  --secondary: #F9FAFB;
+  --secondary-foreground: #111827;
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
   --accent: #F58220;
   --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
-  --border: rgba(0, 0, 0, 0.1);
-  --input: rgba(0, 0, 0, 0.1);
+  --border: #E5E7EB;
+  --input: #E5E7EB;
   --ring: #2DBE60;
 }
 
@@ -141,7 +142,7 @@ html.lenis, html.lenis body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #EAE6DF;
+  background: #F3F4F6;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -167,14 +168,14 @@ html.lenis, html.lenis body {
 
 .sleek-card {
   background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: border-color 0.3s ease, background 0.3s ease;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sleek-card:hover {
-  border-color: rgba(0, 0, 0, 0.15);
-  background: #FAFAFA;
+  border-color: #D1D5DB;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 /* Solvire brand typography */
@@ -222,31 +223,12 @@ html.lenis, html.lenis body {
   animation: badge-pulse 2.5s ease-in-out infinite;
 }
 
-/* Futuristic precision grid */
-.futuristic-grid {
-  background-size: 40px 40px;
+/* Subtle Grid background pattern */
+.bg-grid-pattern {
   background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 100%);
-}
-
-/* Solar grid background pattern */
-.solar-grid {
-  background-image:
-    linear-gradient(rgba(45, 190, 96, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(45, 190, 96, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
-/* Glow effects */
-.glow-solar {
-  box-shadow: 0 0 40px rgba(45, 190, 96, 0.15), 0 0 80px rgba(45, 190, 96, 0.05);
-}
-
-.glow-sun {
-  box-shadow: 0 0 40px rgba(245, 197, 66, 0.15), 0 0 80px rgba(245, 197, 66, 0.05);
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 /* Gradient text */

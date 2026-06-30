@@ -86,12 +86,12 @@ export function SolutionSection() {
           <motion.div 
             animate={{ rotate: 360 }} 
             transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-            className="absolute w-[120%] aspect-square md:w-[80%] rounded-full border border-dashed border-foreground/5 z-0"
+            className="absolute w-[120%] aspect-square md:w-[80%] rounded-full border border-dashed border-border z-0"
           />
           <motion.div 
             animate={{ rotate: -360 }} 
             transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-            className="absolute w-[90%] aspect-square md:w-[60%] rounded-full border border-foreground/5 z-0 flex items-center justify-center"
+            className="absolute w-[90%] aspect-square md:w-[60%] rounded-full border border-border z-0 flex items-center justify-center"
           >
             {/* Orbital Particles */}
             <div className="absolute top-0 w-2 h-2 rounded-full bg-energy shadow-[0_0_10px_#2DBE60]" />
@@ -104,7 +104,7 @@ export function SolutionSection() {
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative z-30 w-40 h-40 md:w-48 md:h-48 rounded-full bg-surface/80 backdrop-blur-xl border border-foreground/20 flex flex-col items-center justify-center shadow-[0_0_80px_rgba(45,190,96,0.2)]"
+            className="relative z-30 w-40 h-40 md:w-48 md:h-48 rounded-full bg-white  border border-border flex flex-col items-center justify-center shadow-sm"
           >
             <div className="absolute inset-0 rounded-full border border-energy/40 animate-[ping_2s_ease-out_infinite]" />
             <div className="absolute inset-0 rounded-full border border-energy/20 animate-[ping_3s_ease-out_infinite_1s]" />
@@ -153,7 +153,7 @@ export function SolutionSection() {
                 <div className="absolute inset-0 bg-energy/20 rounded-full blur-2xl group-hover:bg-energy/40 transition-colors duration-500" />
                 
                 {/* Glass Object */}
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/5 backdrop-blur-2xl border border-foreground/20 flex items-center justify-center shadow-[inset_0_0_20px_rgba(255,255,255,0.1),0_8px_32px_rgba(45,190,96,0.2)] relative z-10 group-hover:scale-110 group-hover:border-foreground/40 transition-all duration-500 overflow-hidden">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/5  border border-border flex items-center justify-center shadow-sm relative z-10 group-hover:scale-110 group-hover:border-border transition-all duration-500 overflow-hidden">
                   
                   {/* Specular Top Highlight */}
                   <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/20 to-transparent pointer-events-none" />
@@ -166,7 +166,7 @@ export function SolutionSection() {
                   </div>
                 </div>
               </div>
-              <span className="text-foreground text-sm md:text-base font-medium tracking-wide bg-background/50 px-3 py-1 rounded-full backdrop-blur-sm border border-foreground/5">
+              <span className="text-foreground text-sm md:text-base font-medium tracking-wide bg-background/50 px-3 py-1 rounded-full  border border-border">
                 {node.label}
               </span>
             </motion.div>

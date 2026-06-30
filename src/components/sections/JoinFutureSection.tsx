@@ -65,7 +65,7 @@ export function JoinFutureSection() {
           className="mb-8"
         >
           {/* Pulsing Logo Indicator */}
-          <div className="w-16 h-16 mx-auto bg-surface rounded-2xl flex items-center justify-center border border-foreground/10 shadow-[0_0_50px_rgba(45,190,96,0.15)] relative mb-8">
+          <div className="w-16 h-16 mx-auto bg-white rounded-2xl flex items-center justify-center border border-border shadow-sm relative mb-8">
             <Image src={logoIcon} alt="Solvire Logo" className="w-8 h-8 object-contain" />
             <div className="absolute inset-0 rounded-2xl border border-energy/40 animate-[ping_2.5s_ease-in-out_infinite]" />
           </div>
