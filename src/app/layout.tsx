@@ -3,7 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import SmoothScroll from "@/components/layout/SmoothScroll";
-import { GlobalBackground } from "@/components/layout/GlobalBackground";
+import { GridBackground } from "@/components/ui/grid-background";
 
 export const metadata: Metadata = {
   title: "Solvire | Comprehensive Solar Maintenance Ecosystem",
@@ -45,11 +45,12 @@ export default function RootLayout({
       <body
         className={`${GeistSans.variable} ${GeistSans.className} antialiased bg-background text-foreground selection:bg-energy/30 font-sans`}
       >
-        <GlobalBackground />
-        <SmoothScroll>
-          {children}
-        </SmoothScroll>
-        <Toaster />
+        <GridBackground>
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+          <Toaster />
+        </GridBackground>
       </body>
     </html>
   );
