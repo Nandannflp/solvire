@@ -32,7 +32,7 @@ export function HeroSection() {
           className="mb-8 flex items-center justify-center"
         >
           <div className="bg-[#0B1F33] px-6 py-3 rounded-2xl shadow-lg border border-foreground/10">
-            <img src="/solvire-long-logo.png" alt="Solvire" className="h-10 md:h-12 object-contain" />
+            <img src="/solvire/solvire-long-logo.png" alt="Solvire" className="h-10 md:h-12 object-contain" />
           </div>
         </motion.div>
 
