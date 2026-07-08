@@ -31,7 +31,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-8 flex items-center justify-center"
         >
-          <img src="/solvire/solvire-long-logo.png" alt="Solvire" className="h-10 md:h-12 object-contain" />
+          <img src="/solvire-long-logo.png" alt="Solvire" className="h-10 md:h-12 object-contain" />
         </motion.div>
 
         {/* Hero Headline */}
