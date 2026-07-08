@@ -26,12 +26,21 @@ export const metadata: Metadata = {
       "The trusted bridge between solar customers and verified service. Maintenance, inspection, protection — everything after installation.",
     siteName: "Solvire",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Solvire - Complete Solar Solutions",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Solvire — Reliable Solar Care. Zero Guesswork.",
     description:
       "The trusted bridge between solar customers and verified service.",
+    images: ["/og-image.png"],
   },
 };
 
