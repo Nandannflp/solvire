@@ -13,52 +13,49 @@ import {
   PhoneCall
 } from "lucide-react";
 
-const serviceCategories = [
+const tiers = [
   {
-    title: "Installation",
+    title: "Residential Jumpstart Bundle",
+    subtitle: "Entry-Level On-Grid",
     icon: Sun,
-    items: [
-      "Residential Solar Installation",
-      "Commercial Solar Installation",
-      "Industrial Solar Solutions",
+    features: [
+      "3kW - 5kW System Size",
+      "Net Metering Integration",
+      "Tier-1 Mono PERC Panels",
+      "Standard String Inverter"
     ]
   },
   {
-    title: "Solar Systems",
-    icon: Zap,
-    items: [
-      "On-Grid Solar System",
-      "Off-Grid Solar System",
-      "Hybrid Solar System",
-    ]
-  },
-  {
-    title: "Energy Solutions",
+    title: "Advanced Home Hybrid",
+    subtitle: "With Battery Storage",
     icon: BatteryCharging,
-    items: [
-      "Solar Water Pump Installation",
-      "Solar Street Light Installation",
-      "Solar Battery & Inverter Solutions",
+    features: [
+      "5kW - 10kW System Size",
+      "Lithium-ion Backup Storage",
+      "Smart Hybrid Inverter",
+      "Zero Blackout Guarantee"
     ]
   },
   {
-    title: "Maintenance & Support",
-    icon: Wrench,
-    items: [
-      "Solar Panel Cleaning & Maintenance",
-      "Annual Maintenance Contract (AMC)",
-      "System Repair & Upgradation",
+    title: "Commercial Optimization",
+    subtitle: "Mid-Scale Deployment",
+    icon: Zap,
+    features: [
+      "20kW - 100kW System Size",
+      "High-Yield TOPCon Modules",
+      "Advanced Load Management",
+      "Priority Maintenance SLA"
     ]
   },
   {
-    title: "Consultancy & Compliance",
+    title: "Enterprise Infrastructure",
+    subtitle: "Large-Scale Industrial",
     icon: FileCheck2,
-    items: [
-      "Site Survey & Energy Audit",
-      "Customized Solar Design",
-      "Net Metering Assistance",
-      "Subsidy & Documentation Support",
-      "Financing / EMI Assistance",
+    features: [
+      "100kW+ Megawatt Scale",
+      "Custom Substation Design",
+      "AI Predictive Maintenance",
+      "Dedicated Technical Team"
     ]
   }
 ];
@@ -178,37 +175,33 @@ export function SolarServicesSection() {
               viewport={{ once: true, margin: "-100px" }}
               className="grid grid-cols-1 md:grid-cols-2 gap-6"
             >
-              {serviceCategories.map((category, idx) => {
-                const Icon = category.icon;
+              {tiers.map((tier, idx) => {
+                const Icon = tier.icon;
                 return (
                   <motion.div
                     key={idx}
                     variants={cardVariants}
                     whileHover={{ y: -5 }}
-                    className={`group relative p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg hover:border-white/40 transition-all duration-500 overflow-hidden ${
-                      idx === serviceCategories.length - 1 ? 'md:col-span-2' : ''
-                    }`}
+                    className="group relative p-8 rounded-2xl bg-white/60 backdrop-blur-md border border-border shadow-lg hover:border-primary/20 transition-all duration-500 overflow-hidden flex flex-col h-full"
                   >
-                    {/* Orange ambient corner lighting */}
-                    <div className="absolute -top-10 -right-10 w-32 h-32 bg-solar/10 rounded-full blur-2xl group-hover:bg-solar/20 transition-colors duration-500" />
-                    
                     {/* Subtle green glow on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-energy/0 to-energy/0 group-hover:from-energy/5 group-hover:to-transparent transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-energy/0 to-energy/0 group-hover:from-energy/5 group-hover:to-transparent transition-colors duration-500 pointer-events-none" />
                     
-                    <div className="relative z-10">
+                    <div className="relative z-10 flex-grow">
                       <div className="w-12 h-12 rounded-xl bg-background border border-border flex items-center justify-center mb-6 group-hover:border-primary/20 group-hover:shadow-sm transition-all duration-300">
                         <Icon className="w-6 h-6 text-energy group-hover:text-solar transition-colors duration-300" />
                       </div>
                       
-                      <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-energy transition-colors duration-300">
-                        {category.title}
+                      <p className="text-xs font-bold text-energy uppercase tracking-wider mb-2">{tier.subtitle}</p>
+                      <h3 className="text-2xl font-semibold text-foreground mb-6 group-hover:text-primary transition-colors duration-300 leading-tight">
+                        {tier.title}
                       </h3>
                       
-                      <ul className="space-y-3">
-                        {category.items.map((item, itemIdx) => (
-                          <li key={itemIdx} className="flex items-start gap-3 text-textSecondary group/item">
-                            <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-energy/50 group-hover/item:bg-solar transition-colors duration-300" />
-                            <span className="text-sm group-hover/item:text-foreground transition-colors duration-300">{item}</span>
+                      <ul className="space-y-4 mb-8">
+                        {tier.features.map((feature, featureIdx) => (
+                          <li key={featureIdx} className="flex items-start gap-3 text-textSecondary group/item">
+                            <CheckCircle2 className="w-5 h-5 text-energy/50 group-hover/item:text-energy shrink-0 transition-colors duration-300" />
+                            <span className="text-sm font-medium group-hover/item:text-foreground transition-colors duration-300">{feature}</span>
                           </li>
                         ))}
                       </ul>
