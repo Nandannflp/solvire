@@ -49,7 +49,7 @@ const cardVariants: Variants = {
 
 export function WhySolvireSection() {
   return (
-    <section className="relative py-24 md:py-32 bg-transparent overflow-hidden border-t border-border">
+    <section className="relative py-32 md:py-48 bg-transparent overflow-hidden border-t border-border">
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">
@@ -128,6 +128,30 @@ export function WhySolvireSection() {
               </motion.div>
             );
           })}
+        </motion.div>
+
+        {/* Social Proof Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-20 py-8 px-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-border flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center"
+        >
+          <div>
+            <p className="text-3xl font-bold text-foreground mb-1">500+</p>
+            <p className="text-sm text-textSecondary font-medium">Verified Installations</p>
+          </div>
+          <div className="hidden md:block w-px h-12 bg-border" />
+          <div>
+            <p className="text-3xl font-bold text-foreground mb-1">10MW+</p>
+            <p className="text-sm text-textSecondary font-medium">Energy Optimized</p>
+          </div>
+          <div className="hidden md:block w-px h-12 bg-border" />
+          <div>
+            <p className="text-3xl font-bold text-foreground mb-1">99.9%</p>
+            <p className="text-sm text-textSecondary font-medium">System Uptime</p>
+          </div>
         </motion.div>
       </div>
     </section>

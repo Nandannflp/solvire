@@ -96,7 +96,7 @@ export function SolarServicesSection() {
   return (
     <section id="services"
       ref={containerRef}
-      className="relative min-h-screen py-24 md:py-32 flex flex-col items-center justify-center overflow-hidden bg-background"
+      className="relative min-h-screen py-32 md:py-48 flex flex-col items-center justify-center overflow-hidden bg-background"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -161,6 +161,11 @@ export function SolarServicesSection() {
                   <span className="text-sm font-medium text-foreground">Free Consultation*</span>
                 </div>
               </div>
+              
+              {/* Legal Disclaimer */}
+              <p className="mt-8 text-xs text-textSecondary/60 leading-relaxed max-w-sm">
+                * Free Site Visit and Free Consultation are subject to location feasibility and standard terms of service. Limited to standard residential and commercial zones.
+              </p>
             </motion.div>
           </div>
 
@@ -180,7 +185,7 @@ export function SolarServicesSection() {
                     key={idx}
                     variants={cardVariants}
                     whileHover={{ y: -5 }}
-                    className={`group relative p-8 rounded-2xl bg-white/60 backdrop-blur-sm  border border-border hover:border-energy/40 transition-all duration-500 overflow-hidden ${
+                    className={`group relative p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg hover:border-white/40 transition-all duration-500 overflow-hidden ${
                       idx === serviceCategories.length - 1 ? 'md:col-span-2' : ''
                     }`}
                   >

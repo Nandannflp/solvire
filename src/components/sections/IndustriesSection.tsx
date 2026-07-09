@@ -71,7 +71,7 @@ export function IndustriesSection() {
   };
 
   return (
-    <section id="industries" className="relative py-24 md:py-32 bg-transparent border-t border-border overflow-hidden">
+    <section id="industries" className="relative py-32 md:py-48 bg-transparent border-t border-border overflow-hidden">
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">
@@ -124,6 +124,11 @@ export function IndustriesSection() {
                 variants={cardVariants}
                 className="group relative rounded-2xl bg-white/60 backdrop-blur-sm  border border-border overflow-hidden flex flex-col"
               >
+                {/* [REPLACE_ME: Authentic High-Res Installation Photography] */}
+                <div className="w-full h-48 bg-black/5 relative overflow-hidden flex items-center justify-center border-b border-border placeholder-image">
+                  <span className="text-textSecondary/50 text-sm font-medium">Image Placeholder</span>
+                </div>
+
                 {/* Header Section (Always Visible) */}
                 <button 
                   onClick={() => toggleCard(industry.id)}

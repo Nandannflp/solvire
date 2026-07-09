@@ -39,10 +39,10 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display font-bold text-5xl md:text-[80px] lg:text-[100px] leading-[1.0] tracking-tight text-foreground mb-8"
+          className="font-display font-bold text-5xl md:text-[70px] lg:text-[90px] leading-[1.0] tracking-tight text-foreground mb-8"
         >
-          Complete Solar Solutions.<br/>
-          <span className="text-primary">One Trusted Partner.</span>
+          <em className="not-italic text-transparent bg-clip-text bg-gradient-to-r from-energy to-solar">India's First Verified</em><br/>
+          Solar Network.
         </motion.h1>
 
         {/* Supporting Copy */}

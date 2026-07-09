@@ -16,7 +16,7 @@ const trustPoints = [
 
 export function TrustSection() {
   return (
-    <section id="trust" className="relative py-24 md:py-32 bg-transparent overflow-hidden border-t border-border">
+    <section id="trust" className="relative py-32 md:py-48 bg-transparent overflow-hidden border-t border-border">
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">
@@ -53,6 +53,11 @@ export function TrustSection() {
             <p className="text-textSecondary text-lg mb-8 leading-relaxed">
               We go beyond standard installation. Solvire is committed to ensuring your solar infrastructure remains robust, efficient, and profitable for decades.
             </p>
+            
+            {/* [REPLACE_ME: Authentic High-Res Installation Photography] */}
+            <div className="w-full h-64 md:h-80 bg-black/5 rounded-2xl relative overflow-hidden flex items-center justify-center border border-border placeholder-image mt-8">
+              <span className="text-textSecondary/50 text-sm font-medium">Image Placeholder</span>
+            </div>
           </motion.div>
         </div>
 
@@ -79,6 +84,25 @@ export function TrustSection() {
           </motion.ul>
         </div>
 
+      </div>
+
+      {/* Trusted By Logos (Mimetic Social Proof) */}
+      <div className="container max-w-5xl mx-auto px-6 md:px-12 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-24 pt-12 border-t border-border w-full flex flex-col items-center"
+        >
+          <p className="text-sm font-medium text-textSecondary mb-8 uppercase tracking-widest text-center">Trusted by industry leaders</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale select-none">
+            <span className="text-xl font-bold font-display">SUNPHARMA</span>
+            <span className="text-xl font-bold font-display">ECOCORP</span>
+            <span className="text-xl font-bold font-display">TATA STEEL</span>
+            <span className="text-xl font-bold font-display">RELIANCE</span>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
