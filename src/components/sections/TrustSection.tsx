@@ -17,9 +17,19 @@ const trustPoints = [
 export function TrustSection() {
   return (
     <section id="trust" className="relative py-32 md:py-48 bg-transparent overflow-hidden border-t border-border">
+      {/* Dark Solar Background with Frosted Glass Overlay */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-black/85 backdrop-blur-md z-10" />
+        <img 
+          src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1920&fit=crop"
+          alt="Dark Solar Panels"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
-        <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-editorial/5 text-center whitespace-nowrap select-none">
+        <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-white/5 text-center whitespace-nowrap select-none">
           TRUST
         </h2>
       </div>
@@ -46,11 +56,11 @@ export function TrustSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-semibold text-foreground mb-6 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-semibold text-white mb-6 leading-tight">
               A Trusted Partner for Your Solar Journey
             </h2>
             
-            <p className="text-textSecondary text-lg mb-8 leading-relaxed">
+            <p className="text-white/80 text-lg mb-8 leading-relaxed">
               We go beyond standard installation. Solvire is committed to ensuring your solar infrastructure remains robust, efficient, and profitable for decades.
             </p>
             
@@ -77,12 +87,12 @@ export function TrustSection() {
               <motion.li 
                 key={idx}
                 whileHover={{ x: 5 }}
-                className="flex items-center gap-4 p-4 rounded-xl bg-white/60 backdrop-blur-sm border border-border hover:border-primary/20 transition-all duration-300"
+                className="flex items-center gap-4 p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 hover:border-primary/40 transition-all duration-300 shadow-lg"
               >
-                <div className="w-10 h-10 rounded-lg bg-energy/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-energy/20 flex items-center justify-center flex-shrink-0">
                   <CheckCircle2 className="w-5 h-5 text-energy" />
                 </div>
-                <span className="text-foreground font-medium">{point}</span>
+                <span className="text-white font-medium">{point}</span>
               </motion.li>
             ))}
           </motion.ul>
@@ -97,9 +107,9 @@ export function TrustSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-24 pt-12 border-t border-border w-full flex flex-col items-center"
+          className="mt-24 pt-12 border-t border-white/20 w-full flex flex-col items-center"
         >
-          <p className="text-sm font-medium text-textSecondary mb-8 uppercase tracking-widest text-center">Trusted by industry leaders</p>
+          <p className="text-sm font-medium text-white/60 mb-8 uppercase tracking-widest text-center">Trusted by industry leaders</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale select-none">
             <span className="text-xl font-bold font-display">SUNPHARMA</span>
             <span className="text-xl font-bold font-display">ECOCORP</span>

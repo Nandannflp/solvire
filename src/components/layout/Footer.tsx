@@ -31,21 +31,15 @@ export function Footer() {
             <h4 className="text-foreground font-medium mb-6 text-sm">Contact Us</h4>
             <ul className="space-y-4">
               <li>
-                <a href="mailto:hello@solvire.com" className="flex items-start gap-3 text-textSecondary text-sm hover:text-energy transition-colors">
+                <a href="mailto:Solvire.in@gmail.com" className="flex items-start gap-3 text-textSecondary text-sm hover:text-energy transition-colors">
                   <Mail className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span>hello@solvire.com</span>
-                </a>
-              </li>
-              <li>
-                <a href="tel:+919876543210" className="flex items-start gap-3 text-textSecondary text-sm hover:text-energy transition-colors">
-                  <PhoneCall className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span>+91 98765 43210</span>
+                  <span>Solvire.in@gmail.com</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-textSecondary text-sm">
                   <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span>123 Solar Park Avenue<br />Tech Hub, City 400001</span>
+                  <span>Patna, Bihar 800020</span>
                 </div>
               </li>
             </ul>

@@ -17,11 +17,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/80 backdrop-blur-md border-b border-border shadow-sm py-4"
-          : "bg-transparent py-6"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-border shadow-sm py-4"
     >
       <div className="container max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
@@ -54,13 +50,9 @@ export function Navbar() {
 
         {/* Contact Info (Desktop) */}
         <div className="hidden lg:flex items-center gap-6">
-          <a href="mailto:hello@solvire.com" className="flex items-center gap-2 text-sm text-textSecondary hover:text-foreground transition-colors">
+          <a href="mailto:Solvire.in@gmail.com" className="flex items-center gap-2 text-sm text-textSecondary hover:text-foreground transition-colors">
             <Mail className="w-4 h-4" />
-            <span>hello@solvire.com</span>
-          </a>
-          <a href="tel:+919876543210" className="flex items-center gap-2 text-sm text-textSecondary hover:text-foreground transition-colors">
-            <PhoneCall className="w-4 h-4" />
-            <span>+91 98765 43210</span>
+            <span>Solvire.in@gmail.com</span>
           </a>
         </div>
       </div>
