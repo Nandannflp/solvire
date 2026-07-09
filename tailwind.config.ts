@@ -22,7 +22,7 @@ const config: Config = {
   			textPrimary: '#1F2937',
   			textSecondary: '#4B5563',
   			solar: '#F58220', // Orange
-  			energy: '#079E46', // Dark Green (Logo)
+  			energy: '#009743', // Dark Green (Logo)
   			card: {
   				DEFAULT: '#FFFFFF',
   				foreground: '#1F2937'
