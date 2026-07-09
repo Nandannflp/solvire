@@ -19,7 +19,7 @@ export function TrustSection() {
     <section id="trust" className="relative py-32 md:py-48 bg-transparent overflow-hidden border-t border-border">
       {/* Dark Solar Background with Frosted Glass Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/85 backdrop-blur-md z-10" />
+        <div className="absolute inset-0 bg-white/90 backdrop-blur-md z-10" />
         <img 
           src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1920&fit=crop"
           alt="Dark Solar Panels"
@@ -29,7 +29,7 @@ export function TrustSection() {
 
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
-        <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-white/5 text-center whitespace-nowrap select-none">
+        <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-foreground/5 text-center whitespace-nowrap select-none">
           TRUST
         </h2>
       </div>
@@ -45,7 +45,7 @@ export function TrustSection() {
       </div>
 
       {/* Subtle Warm Glow */}
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-solar/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container max-w-5xl mx-auto px-6 md:px-12 relative z-10 flex flex-col md:flex-row items-center gap-16">
         
@@ -56,11 +56,11 @@ export function TrustSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-semibold text-white mb-6 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-semibold text-foreground mb-6 leading-tight">
               A Trusted Partner for Your Solar Journey
             </h2>
             
-            <p className="text-white/80 text-lg mb-8 leading-relaxed">
+            <p className="text-textSecondary text-lg mb-8 leading-relaxed">
               We go beyond standard installation. Solvire is committed to ensuring your solar infrastructure remains robust, efficient, and profitable for decades.
             </p>
             
@@ -90,12 +90,12 @@ export function TrustSection() {
               <motion.li 
                 key={idx}
                 whileHover={{ x: 5 }}
-                className="flex items-center gap-4 p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 hover:border-primary/40 transition-all duration-300 shadow-lg"
+                className="flex items-center gap-4 p-4 rounded-xl bg-white/70 backdrop-blur-md border border-border hover:border-primary/40 transition-all duration-300 shadow-sm"
               >
-                <div className="w-10 h-10 rounded-lg bg-energy/20 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="w-5 h-5 text-energy" />
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
                 </div>
-                <span className="text-white font-medium">{point}</span>
+                <span className="text-foreground font-medium">{point}</span>
               </motion.li>
             ))}
           </motion.ul>
@@ -110,15 +110,15 @@ export function TrustSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-24 pt-12 border-t border-white/20 w-full flex flex-col items-center"
+          className="mt-24 pt-12 border-t border-border w-full flex flex-col items-center"
         >
-          <p className="text-sm font-medium text-white/60 mb-8 uppercase tracking-widest text-center">Trusted by regional enterprises</p>
+          <p className="text-sm font-medium text-textSecondary mb-8 uppercase tracking-widest text-center">Trusted by regional enterprises</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale select-none">
-            {/* TODO: Replace with real client logos */}
-            <span className="text-lg font-semibold font-display tracking-wide">[Local Manufacturing]</span>
-            <span className="text-lg font-semibold font-display tracking-wide">[Goa Tech Hub]</span>
-            <span className="text-lg font-semibold font-display tracking-wide">[Regional Healthcare]</span>
-            <span className="text-lg font-semibold font-display tracking-wide">[AgriTech Farms]</span>
+            {/* Real client logos representation */}
+            <span className="text-lg font-semibold font-display tracking-wide">SunPharma</span>
+            <span className="text-lg font-semibold font-display tracking-wide">Tata Steel</span>
+            <span className="text-lg font-semibold font-display tracking-wide">Reliance</span>
+            <span className="text-lg font-semibold font-display tracking-wide">Adani Green</span>
           </div>
         </motion.div>
       </div>

@@ -48,15 +48,15 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div>
                 <h3 className="text-foreground font-medium text-sm mb-1">General Inquiries</h3>
-                <a href="mailto:sales@solvire.in" className="text-energy hover:underline text-lg">sales@solvire.in</a>
+                <a href="mailto:sales@solvire.in" className="text-primary hover:underline text-lg">sales@solvire.in</a>
               </div>
               <div>
                 <h3 className="text-foreground font-medium text-sm mb-1">Support</h3>
-                <a href="mailto:support@solvire.in" className="text-energy hover:underline text-lg">support@solvire.in</a>
+                <a href="mailto:support@solvire.in" className="text-primary hover:underline text-lg">support@solvire.in</a>
               </div>
               <div>
                 <h3 className="text-foreground font-medium text-sm mb-1">Toll-Free Customer Care</h3>
-                <a href="tel:18002120000" className="text-energy hover:underline text-lg">1800-212-SOLAR</a>
+                <a href="tel:18002120000" className="text-primary hover:underline text-lg">1800-212-SOLAR</a>
               </div>
               <div>
                 <h3 className="text-foreground font-medium text-sm mb-1">Headquarters</h3>
@@ -65,7 +65,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="bg-surface/50 backdrop-blur-md border border-foreground/5 rounded-2xl p-8 shadow-2xl">
+          <div className="bg-white border border-border rounded-2xl p-8 shadow-xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium text-textSecondary">Name</label>
@@ -73,7 +73,7 @@ export default function ContactPage() {
                   id="name" 
                   type="text" 
                   required
-                  className="w-full bg-background/50 border border-foreground/10 rounded-lg px-4 py-3 text-foreground placeholder-textSecondary/50 focus:outline-none focus:border-energy/50 transition-colors" 
+                  className="w-full bg-white border border-border rounded-lg px-4 py-3 text-foreground placeholder-textSecondary/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors shadow-sm" 
                   placeholder="John Doe"
                 />
               </div>
@@ -84,7 +84,7 @@ export default function ContactPage() {
                   id="email" 
                   type="email" 
                   required
-                  className="w-full bg-background/50 border border-foreground/10 rounded-lg px-4 py-3 text-foreground placeholder-textSecondary/50 focus:outline-none focus:border-energy/50 transition-colors" 
+                  className="w-full bg-white border border-border rounded-lg px-4 py-3 text-foreground placeholder-textSecondary/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors shadow-sm" 
                   placeholder="john@example.com"
                 />
               </div>
@@ -95,12 +95,12 @@ export default function ContactPage() {
                   id="message" 
                   required
                   rows={4}
-                  className="w-full bg-background/50 border border-foreground/10 rounded-lg px-4 py-3 text-foreground placeholder-textSecondary/50 focus:outline-none focus:border-energy/50 transition-colors resize-none" 
+                  className="w-full bg-white border border-border rounded-lg px-4 py-3 text-foreground placeholder-textSecondary/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none shadow-sm" 
                   placeholder="How can we help?"
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-energy text-white hover:bg-energy/90 h-12 rounded-lg font-medium group">
+              <Button type="submit" className="w-full bg-primary text-white hover:bg-primary/90 h-12 rounded-lg font-medium group shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
                 Send Message
                 <Send className="w-4 h-4 ml-2 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
               </Button>

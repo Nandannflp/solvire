@@ -31,33 +31,33 @@ export function Navbar() {
 
         {/* Navigation Links (Desktop) */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="/" className="text-sm font-medium text-foreground hover:text-energy transition-colors">
+          <Link href="/" className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 hover:-translate-y-0.5">
             Home
           </Link>
-          <Link href="/#services" className="text-sm font-medium text-foreground hover:text-energy transition-colors">
+          <Link href="/#services" className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 hover:-translate-y-0.5">
             Services
           </Link>
-          <Link href="/#how-it-works" className="text-sm font-medium text-foreground hover:text-energy transition-colors">
+          <Link href="/#how-it-works" className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 hover:-translate-y-0.5">
             Process
           </Link>
-          <Link href="/#industries" className="text-sm font-medium text-foreground hover:text-energy transition-colors">
+          <Link href="/#industries" className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 hover:-translate-y-0.5">
             Industries
           </Link>
-          <Link href="/resources" className="text-sm font-medium text-foreground hover:text-energy transition-colors">
+          <Link href="/resources" className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 hover:-translate-y-0.5">
             Resources
           </Link>
-          <Link href="/support" className="text-sm font-medium text-foreground hover:text-energy transition-colors">
+          <Link href="/support" className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 hover:-translate-y-0.5">
             Support
           </Link>
         </nav>
 
         {/* Contact Info (Desktop) */}
         <div className="hidden lg:flex items-center gap-6">
-          <a href="tel:18002120000" className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-energy transition-colors">
-            <PhoneCall className="w-4 h-4 text-energy" />
+          <a href="tel:18002120000" className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-all duration-300 hover:-translate-y-0.5">
+            <PhoneCall className="w-4 h-4 text-primary" />
             <span>1800-212-SOLAR</span>
           </a>
-          <a href="mailto:sales@solvire.in" className="flex items-center gap-2 text-sm text-textSecondary hover:text-foreground transition-colors">
+          <a href="mailto:sales@solvire.in" className="flex items-center gap-2 text-sm text-textSecondary hover:text-foreground transition-all duration-300 hover:-translate-y-0.5">
             <Mail className="w-4 h-4" />
             <span>sales@solvire.in</span>
           </a>

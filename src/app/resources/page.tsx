@@ -58,16 +58,16 @@ export default function ResourcesPage() {
             const Icon = article.icon;
             return (
               <Link key={idx} href={article.link} className="group block h-full">
-                <div className="bg-surface/50 backdrop-blur-md border border-foreground/5 hover:border-energy/50 rounded-2xl p-8 h-full flex flex-col transition-all hover:shadow-xl hover:-translate-y-1 duration-300">
+                <div className="bg-white border border-border hover:border-primary/50 rounded-2xl p-8 h-full flex flex-col transition-all hover:shadow-xl hover:-translate-y-1 duration-300 shadow-sm">
                   <div className="flex justify-between items-start mb-6">
-                    <div className="w-12 h-12 bg-energy/10 rounded-xl flex items-center justify-center group-hover:bg-energy transition-colors">
-                      <Icon className="w-6 h-6 text-energy group-hover:text-white transition-colors" />
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                      <Icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                     </div>
                     <span className="text-xs font-medium text-textSecondary px-3 py-1 rounded-full border border-border">
                       {article.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-energy transition-colors">{article.title}</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">{article.title}</h3>
                   <p className="text-textSecondary leading-relaxed text-sm mb-6 flex-grow">{article.description}</p>
                   <div className="text-xs text-textSecondary/50 font-medium tracking-wider uppercase">
                     {article.date}

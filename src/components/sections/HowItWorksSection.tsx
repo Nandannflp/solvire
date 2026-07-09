@@ -62,7 +62,7 @@ export function HowItWorksSection() {
         {/* Timeline Grid */}
         <div className="relative">
           {/* Connecting Line (Desktop) */}
-          <div className="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-energy/30 to-transparent" />
+          <div className="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
           
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-4 relative z-10">
             {steps.map((step, idx) => {
@@ -77,16 +77,16 @@ export function HowItWorksSection() {
                   className="flex flex-col items-center text-center group"
                 >
                   <div className="relative mb-6">
-                    <div className="w-24 h-24 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:border-white/40 group-hover:shadow-lg transition-all duration-300 shadow-md">
-                      <Icon className="w-8 h-8 text-energy group-hover:text-solar transition-colors duration-300" />
+                    <div className="w-24 h-24 rounded-full bg-white border border-border flex items-center justify-center group-hover:border-primary/40 group-hover:shadow-xl transition-all duration-300 shadow-md group-hover:-translate-y-1">
+                      <Icon className="w-8 h-8 text-primary group-hover:text-primary transition-colors duration-300" />
                     </div>
                     {/* Step Number Badge */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-energy text-background text-sm font-bold flex items-center justify-center border-2 border-background">
+                    <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center border-2 border-background shadow-sm">
                       {step.id}
                     </div>
                   </div>
                   
-                  <h3 className="text-lg font-medium text-foreground mb-2 group-hover:text-energy transition-colors duration-300">
+                  <h3 className="text-lg font-medium text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
                     {step.title}
                   </h3>
                   <p className="text-sm text-textSecondary px-2">

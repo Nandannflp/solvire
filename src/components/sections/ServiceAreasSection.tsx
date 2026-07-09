@@ -12,13 +12,13 @@ export function ServiceAreasSection() {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto"
         >
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-energy/10 mb-6">
-            <MapPin className="w-6 h-6 text-energy" />
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-6">
+            <MapPin className="w-6 h-6 text-primary" />
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">
+          <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
             Proudly Powering Our Region
           </h2>
-          <p className="text-slate-600 leading-relaxed mb-8">
+          <p className="text-textSecondary leading-relaxed mb-8">
             As the premier verified solar network, Solvire is committed to accelerating the transition to clean, reliable energy across our core operational zones. We deliver end-to-end solar infrastructure and uncompromising maintenance to homes, businesses, and industrial facilities in <strong>Goa</strong>, <strong>Panaji</strong>, <strong>Madgaon</strong>, and <strong>Marcel</strong>.
           </p>
         </motion.div>

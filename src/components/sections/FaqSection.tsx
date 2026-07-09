@@ -60,7 +60,7 @@ export function FaqSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="text-3xl md:text-5xl font-semibold text-slate-900 mb-4"
+                className="text-3xl md:text-5xl font-semibold text-foreground mb-4"
               >
                 Frequently Asked Questions
               </motion.h2>
@@ -69,7 +69,7 @@ export function FaqSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-slate-600 text-lg"
+                className="text-textSecondary text-lg"
               >
                 Everything you need to know about our solar solutions.
               </motion.p>
@@ -83,14 +83,14 @@ export function FaqSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="border border-border rounded-2xl bg-white/60 backdrop-blur-sm overflow-hidden"
+                  className="border border-border rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden group"
                 >
                   <button
                     onClick={() => toggleFaq(index)}
                     className="w-full px-6 py-6 flex items-center justify-between text-left focus:outline-none"
                   >
-                    <span className="text-lg font-medium text-slate-900">{faq.question}</span>
-                    <ChevronDown className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${openIndex === index ? "rotate-180 text-solar" : ""}`} />
+                    <span className="text-lg font-medium text-foreground group-hover:text-primary transition-colors">{faq.question}</span>
+                    <ChevronDown className={`w-5 h-5 text-textSecondary transition-transform duration-300 ${openIndex === index ? "rotate-180 text-primary" : ""}`} />
                   </button>
                   
                   <AnimatePresence>
@@ -102,7 +102,7 @@ export function FaqSection() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-6 pt-0 text-slate-600 leading-relaxed">
+                        <div className="px-6 pb-6 pt-0 text-textSecondary leading-relaxed">
                           {faq.answer}
                         </div>
                       </motion.div>

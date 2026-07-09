@@ -52,7 +52,7 @@ export function WhySolvireSection() {
     <section className="relative py-32 md:py-48 bg-transparent overflow-hidden border-t border-border">
       {/* Dark Solar Background with Frosted Glass Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/80 backdrop-blur-md z-10" />
+        <div className="absolute inset-0 bg-white/90 backdrop-blur-md z-10" />
         <img 
           src="https://images.unsplash.com/photo-1620616954203-0d5885284eb3?q=80&w=1920&fit=crop"
           alt="Solar Panels Macro"
@@ -62,7 +62,7 @@ export function WhySolvireSection() {
 
       {/* Giant Background Title */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
-        <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-white/5 text-center whitespace-nowrap select-none">
+        <h2 className="font-sans font-black text-[12vw] md:text-[14vw] leading-[0.8] tracking-tighter text-foreground/5 text-center whitespace-nowrap select-none">
           WHY CHOOSE US
         </h2>
       </div>
@@ -78,7 +78,7 @@ export function WhySolvireSection() {
       </div>
       
       {/* Soft Glow */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-energy/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
@@ -89,7 +89,7 @@ export function WhySolvireSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl md:text-5xl font-semibold text-white mb-6"
+            className="text-3xl md:text-5xl font-semibold text-foreground mb-6"
           >
             The Solvire Advantage
           </motion.h2>
@@ -99,7 +99,7 @@ export function WhySolvireSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-white/80 text-lg"
+            className="text-textSecondary text-lg"
           >
             We don't just install solar panels; we ensure they deliver maximum value for their entire lifespan.
           </motion.p>
@@ -118,21 +118,20 @@ export function WhySolvireSection() {
               <motion.div
                 key={idx}
                 variants={cardVariants}
-                whileHover={{ y: -5 }}
-                className="group relative p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:border-energy/40 transition-all duration-500 overflow-hidden"
+                className="group relative p-8 rounded-2xl bg-white/70 backdrop-blur-md border border-border hover:border-primary/40 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
               >
                 {/* Subtle corner glow */}
-                <div className="absolute -top-10 -right-10 w-24 h-24 bg-energy/10 rounded-full blur-2xl group-hover:bg-energy/30 transition-colors duration-500" />
+                <div className="absolute -top-10 -right-10 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors duration-500" />
                 
-                <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center mb-6 group-hover:border-primary/40 group-hover:shadow-sm transition-all duration-300">
-                  <Icon className="w-6 h-6 text-energy group-hover:text-solar transition-colors duration-300" />
+                <div className="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center mb-6 group-hover:border-primary/40 group-hover:shadow-sm transition-all duration-300">
+                  <Icon className="w-6 h-6 text-primary group-hover:text-primary transition-colors duration-300" />
                 </div>
                 
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-energy transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-foreground mb-3 transition-colors duration-300">
                   {feature.title}
                 </h3>
                 
-                <p className="text-sm text-white/80 leading-relaxed">
+                <p className="text-sm text-textSecondary leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -146,21 +145,21 @@ export function WhySolvireSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20 py-8 px-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center"
+          className="mt-20 py-8 px-6 rounded-2xl bg-white/70 backdrop-blur-md border border-primary/20 shadow-lg flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center"
         >
           <div>
-            <p className="text-3xl font-bold text-white mb-1">500+</p>
-            <p className="text-sm text-white/80 font-medium">Verified Installations</p>
+            <p className="text-3xl font-bold text-foreground mb-1">500+</p>
+            <p className="text-sm text-textSecondary font-medium">Verified Installations</p>
           </div>
-          <div className="hidden md:block w-px h-12 bg-white/20" />
+          <div className="hidden md:block w-px h-12 bg-border" />
           <div>
-            <p className="text-3xl font-bold text-white mb-1">10MW+</p>
-            <p className="text-sm text-white/80 font-medium">Energy Optimized</p>
+            <p className="text-3xl font-bold text-foreground mb-1">10MW+</p>
+            <p className="text-sm text-textSecondary font-medium">Energy Optimized</p>
           </div>
-          <div className="hidden md:block w-px h-12 bg-white/20" />
+          <div className="hidden md:block w-px h-12 bg-border" />
           <div>
-            <p className="text-3xl font-bold text-white mb-1">99.9%</p>
-            <p className="text-sm text-white/80 font-medium">System Uptime</p>
+            <p className="text-3xl font-bold text-foreground mb-1">99.9%</p>
+            <p className="text-sm text-textSecondary font-medium">System Uptime</p>
           </div>
         </motion.div>
       </div>

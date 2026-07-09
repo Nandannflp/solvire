@@ -98,19 +98,19 @@ export function SolarServicesSection() {
       {/* Background Effects */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         {/* Soft radial orange glow behind the service grid */}
-        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[800px] h-[800px] bg-solar/10 rounded-full blur-[120px] opacity-60" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] opacity-60" />
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)]" />
         
         {/* Animated Data Particles */}
         <motion.div 
           style={{ y: dataParticlesY }}
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-40"
         >
-          <div className="absolute top-[20%] left-[30%] w-2 h-2 bg-energy rounded-full shadow-[0_0_10px_#2DBE60] animate-pulse" />
-          <div className="absolute top-[60%] left-[10%] w-1 h-1 bg-energy rounded-full shadow-[0_0_10px_#2DBE60] animate-ping" />
-          <div className="absolute top-[40%] right-[20%] w-3 h-3 bg-solar rounded-full shadow-[0_0_15px_#F5C542] animate-pulse delay-75" />
-          <div className="absolute bottom-[30%] right-[40%] w-2 h-2 bg-energy rounded-full shadow-[0_0_10px_#2DBE60] animate-pulse delay-150" />
+          <div className="absolute top-[20%] left-[30%] w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_#FE9B02] animate-pulse" />
+          <div className="absolute top-[60%] left-[10%] w-1 h-1 bg-primary rounded-full shadow-[0_0_10px_#FE9B02] animate-ping" />
+          <div className="absolute top-[40%] right-[20%] w-3 h-3 bg-primary rounded-full shadow-[0_0_15px_#FE9B02] animate-pulse delay-75" />
+          <div className="absolute bottom-[30%] right-[40%] w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_#FE9B02] animate-pulse delay-150" />
         </motion.div>
       </div>
 
@@ -135,26 +135,26 @@ export function SolarServicesSection() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <button className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium overflow-hidden transition-all duration-300 shadow-sm hover:shadow-sm">
+                <button className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium overflow-hidden transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
                   <div className="absolute inset-0 bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.2),transparent)] -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                   Book Free Site Visit
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
                 
-                <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/60 backdrop-blur-sm hover:bg-white/60 backdrop-blur-sm border border-border hover:border-border text-foreground rounded-xl font-medium transition-all duration-300 group">
+                <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/60 backdrop-blur-sm hover:bg-white/80 border border-border hover:border-primary/20 text-foreground rounded-xl font-medium transition-all duration-300 group hover:-translate-y-0.5 shadow-sm hover:shadow-md">
                   Talk to an Expert
-                  <PhoneCall className="w-5 h-5 text-solar group-hover:scale-110 transition-transform" />
+                  <PhoneCall className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
                 </button>
               </div>
 
               {/* Complimentary Services Badges */}
               <div className="flex flex-wrap gap-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/60 backdrop-blur-sm border border-primary/20 shadow-sm ">
-                  <CheckCircle2 className="w-5 h-5 text-solar" />
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
                   <span className="text-sm font-medium text-foreground">Free Site Visit*</span>
                 </div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/60 backdrop-blur-sm border border-primary/20 shadow-sm ">
-                  <CheckCircle2 className="w-5 h-5 text-solar" />
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
                   <span className="text-sm font-medium text-foreground">Free Consultation*</span>
                 </div>
               </div>
@@ -181,18 +181,17 @@ export function SolarServicesSection() {
                   <motion.div
                     key={idx}
                     variants={cardVariants}
-                    whileHover={{ y: -5 }}
-                    className="group relative p-8 rounded-2xl bg-white/60 backdrop-blur-md border border-border shadow-lg hover:border-primary/20 transition-all duration-500 overflow-hidden flex flex-col h-full"
+                    className="group relative p-8 rounded-2xl bg-white/70 backdrop-blur-md border border-border shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-500 hover:-translate-y-1 overflow-hidden flex flex-col h-full"
                   >
                     {/* Subtle green glow on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-energy/0 to-energy/0 group-hover:from-energy/5 group-hover:to-transparent transition-colors duration-500 pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:to-transparent transition-colors duration-500 pointer-events-none" />
                     
                     <div className="relative z-10 flex-grow">
-                      <div className="w-12 h-12 rounded-xl bg-background border border-border flex items-center justify-center mb-6 group-hover:border-primary/20 group-hover:shadow-sm transition-all duration-300">
-                        <Icon className="w-6 h-6 text-energy group-hover:text-solar transition-colors duration-300" />
+                      <div className="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center mb-6 group-hover:border-primary/20 group-hover:shadow-sm transition-all duration-300">
+                        <Icon className="w-6 h-6 text-primary group-hover:text-primary transition-colors duration-300" />
                       </div>
                       
-                      <p className="text-xs font-bold text-energy uppercase tracking-wider mb-2">{tier.subtitle}</p>
+                      <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">{tier.subtitle}</p>
                       <h3 className="text-2xl font-semibold text-foreground mb-6 group-hover:text-primary transition-colors duration-300 leading-tight">
                         {tier.title}
                       </h3>
@@ -200,7 +199,7 @@ export function SolarServicesSection() {
                       <ul className="space-y-4 mb-8">
                         {tier.features.map((feature, featureIdx) => (
                           <li key={featureIdx} className="flex items-start gap-3 text-textSecondary group/item">
-                            <CheckCircle2 className="w-5 h-5 text-energy/50 group-hover/item:text-energy shrink-0 transition-colors duration-300" />
+                            <CheckCircle2 className="w-5 h-5 text-primary/50 group-hover/item:text-primary shrink-0 transition-colors duration-300" />
                             <span className="text-sm font-medium group-hover/item:text-foreground transition-colors duration-300">{feature}</span>
                           </li>
                         ))}

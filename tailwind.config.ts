@@ -15,36 +15,36 @@ const config: Config = {
   			display: ['var(--font-clash)', 'sans-serif'],
   		},
   		colors: {
-  			background: '#FFFFFF',
-  			foreground: '#111827',
+  			background: '#FAFAFA',
+  			foreground: '#1F2937',
   			surface: '#FFFFFF',
   			editorial: '#F9FAFB',
-  			textPrimary: '#111827',
+  			textPrimary: '#1F2937',
   			textSecondary: '#4B5563',
   			solar: '#F58220', // Orange
   			energy: '#2DBE60', // Green
   			card: {
   				DEFAULT: '#FFFFFF',
-  				foreground: '#111827'
+  				foreground: '#1F2937'
   			},
   			popover: {
   				DEFAULT: '#FFFFFF',
-  				foreground: '#111827'
+  				foreground: '#1F2937'
   			},
   			primary: {
-  				DEFAULT: '#2DBE60',
+  				DEFAULT: '#FE9B02',
   				foreground: '#FFFFFF'
   			},
   			secondary: {
   				DEFAULT: '#F9FAFB',
-  				foreground: '#111827'
+  				foreground: '#1F2937'
   			},
   			muted: {
   				DEFAULT: '#F3F4F6',
   				foreground: '#6B7280'
   			},
   			accent: {
-  				DEFAULT: '#F58220',
+  				DEFAULT: '#FE9B02',
   				foreground: '#FFFFFF'
   			},
   			destructive: {

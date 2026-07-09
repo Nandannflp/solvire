@@ -52,7 +52,7 @@ export function FinalCtaSection() {
     <section className="relative py-32 md:py-48 bg-transparent overflow-hidden border-t border-border">
       
       {/* Background Solar Flare Effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[600px] bg-gradient-to-r from-energy/10 via-solar/10 to-energy/10 blur-[100px] opacity-60 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[600px] bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 blur-[100px] opacity-60 pointer-events-none" />
       
 
 
@@ -99,7 +99,7 @@ export function FinalCtaSection() {
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                   placeholder="Jane Doe" 
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-energy focus:ring-1 focus:ring-energy outline-none transition-colors" 
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" 
                   required 
                 />
               </div>
@@ -109,7 +109,7 @@ export function FinalCtaSection() {
                   id="property" 
                   value={formData.property}
                   onChange={(e) => setFormData({...formData, property: e.target.value})}
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-energy focus:ring-1 focus:ring-energy outline-none transition-colors" 
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" 
                   required
                 >
                   <option value="" disabled>Select Property Type</option>
@@ -126,7 +126,7 @@ export function FinalCtaSection() {
                   value={formData.bill}
                   onChange={(e) => setFormData({...formData, bill: e.target.value})}
                   placeholder="e.g. 5000" 
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-energy focus:ring-1 focus:ring-energy outline-none transition-colors" 
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" 
                   required 
                 />
               </div>
@@ -138,12 +138,12 @@ export function FinalCtaSection() {
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   placeholder="+91 00000 00000" 
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-energy focus:ring-1 focus:ring-energy outline-none transition-colors" 
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" 
                   required 
                 />
               </div>
               
-              <button disabled={isSubmitting} type="submit" className="mt-2 w-full group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium overflow-hidden transition-all duration-300 shadow-md disabled:opacity-70 disabled:cursor-not-allowed">
+              <button disabled={isSubmitting} type="submit" className="mt-2 w-full group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium overflow-hidden transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.2),transparent)] -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                 {isSubmitting ? "Submitting..." : "Submit Application"}
                 {!isSubmitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}

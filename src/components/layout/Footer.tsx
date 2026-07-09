@@ -31,13 +31,13 @@ export function Footer() {
             <h4 className="text-foreground font-medium mb-6 text-sm">Contact Us</h4>
             <ul className="space-y-4">
               <li>
-                <a href="tel:18002120000" className="flex items-start gap-3 text-textSecondary text-sm hover:text-energy transition-colors">
-                  <PhoneCall className="w-4 h-4 mt-0.5 shrink-0 text-energy" />
+                <a href="tel:18002120000" className="flex items-start gap-3 text-textSecondary text-sm hover:text-primary transition-colors">
+                  <PhoneCall className="w-4 h-4 mt-0.5 shrink-0 text-primary" />
                   <span>1800-212-SOLAR</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:sales@solvire.in" className="flex items-start gap-3 text-textSecondary text-sm hover:text-energy transition-colors">
+                <a href="mailto:sales@solvire.in" className="flex items-start gap-3 text-textSecondary text-sm hover:text-primary transition-colors">
                   <Mail className="w-4 h-4 mt-0.5 shrink-0" />
                   <span>sales@solvire.in</span>
                 </a>
@@ -56,19 +56,19 @@ export function Footer() {
             <h4 className="text-foreground font-medium mb-6 text-sm">Quick Links</h4>
             <ul className="space-y-4">
               <li>
-                <Link href="/#services" className="text-textSecondary text-sm hover:text-energy transition-colors">Services</Link>
+                <Link href="/#services" className="text-textSecondary text-sm hover:text-primary transition-colors">Services</Link>
               </li>
               <li>
-                <Link href="/#how-it-works" className="text-textSecondary text-sm hover:text-energy transition-colors">How It Works</Link>
+                <Link href="/#how-it-works" className="text-textSecondary text-sm hover:text-primary transition-colors">How It Works</Link>
               </li>
               <li>
-                <Link href="/#industries" className="text-textSecondary text-sm hover:text-energy transition-colors">Industries</Link>
+                <Link href="/#industries" className="text-textSecondary text-sm hover:text-primary transition-colors">Industries</Link>
               </li>
               <li>
-                <Link href="/#trust" className="text-textSecondary text-sm hover:text-energy transition-colors">Why Us</Link>
+                <Link href="/#trust" className="text-textSecondary text-sm hover:text-primary transition-colors">Why Us</Link>
               </li>
               <li>
-                <Link href="/resources" className="text-textSecondary text-sm hover:text-energy transition-colors">Knowledge Center</Link>
+                <Link href="/resources" className="text-textSecondary text-sm hover:text-primary transition-colors">Knowledge Center</Link>
               </li>
             </ul>
           </div>
@@ -78,16 +78,16 @@ export function Footer() {
             <h4 className="text-foreground font-medium mb-6 text-sm">Legal & Connect</h4>
             <ul className="space-y-4">
               <li>
-                <Link href="/privacy" className="text-textSecondary text-sm hover:text-energy transition-colors">Privacy Policy</Link>
+                <Link href="/privacy" className="text-textSecondary text-sm hover:text-primary transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="/terms" className="text-textSecondary text-sm hover:text-energy transition-colors">Terms of Service</Link>
+                <Link href="/terms" className="text-textSecondary text-sm hover:text-primary transition-colors">Terms of Service</Link>
               </li>
               <li>
-                <Link href="/contact" className="text-textSecondary text-sm hover:text-energy transition-colors">Contact Us</Link>
+                <Link href="/contact" className="text-textSecondary text-sm hover:text-primary transition-colors">Contact Us</Link>
               </li>
               <li>
-                <Link href="/support" className="text-textSecondary text-sm hover:text-energy transition-colors">Support & Warranty</Link>
+                <Link href="/support" className="text-textSecondary text-sm hover:text-primary transition-colors">Support & Warranty</Link>
               </li>
             </ul>
           </div>

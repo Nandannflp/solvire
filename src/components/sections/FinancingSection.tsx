@@ -51,10 +51,10 @@ export function FinancingSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-2xl bg-surface/50 border border-border hover:border-energy/50 transition-all group shadow-sm hover:shadow-md"
+                className="p-8 rounded-2xl bg-surface/50 border border-border hover:border-primary/50 transition-all group shadow-sm hover:shadow-md hover:-translate-y-1"
               >
-                <div className="w-12 h-12 bg-energy/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-energy transition-colors">
-                  <Icon className="w-6 h-6 text-energy group-hover:text-white transition-colors" />
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                  <Icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">{option.title}</h3>
                 <p className="text-textSecondary leading-relaxed">{option.description}</p>

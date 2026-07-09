@@ -80,7 +80,7 @@ export function IndustriesSection() {
       </div>
 
       {/* Background accents */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-solar/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container max-w-6xl mx-auto px-6 md:px-12 relative z-10">
         
@@ -122,7 +122,7 @@ export function IndustriesSection() {
               <motion.div
                 key={industry.id}
                 variants={cardVariants}
-                className="group relative rounded-2xl bg-white/60 backdrop-blur-sm  border border-border overflow-hidden flex flex-col"
+                className="group relative rounded-2xl bg-white border border-border overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300 shadow-sm"
               >
                 {/* Authentic High-Res Installation Photography */}
                 <div className="w-full h-48 relative overflow-hidden flex items-center justify-center border-b border-border aspect-[3/4]">
@@ -144,15 +144,15 @@ export function IndustriesSection() {
                   onClick={() => toggleCard(industry.id)}
                   className="w-full p-8 text-left focus:outline-none"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-background border border-border flex items-center justify-center mb-6 group-hover:border-primary/20 transition-all duration-300">
-                    <Icon className="w-7 h-7 text-energy group-hover:text-solar transition-colors duration-300" />
+                  <div className="w-14 h-14 rounded-xl bg-white border border-border flex items-center justify-center mb-6 group-hover:border-primary/40 transition-all duration-300 shadow-sm group-hover:shadow-md">
+                    <Icon className="w-7 h-7 text-primary group-hover:text-primary transition-colors duration-300" />
                   </div>
                   
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-2xl font-semibold text-foreground">
                       {industry.title}
                     </h3>
-                    <ChevronDown className={`w-5 h-5 text-textSecondary transition-transform duration-300 ${isOpen ? "rotate-180 text-solar" : ""}`} />
+                    <ChevronDown className={`w-5 h-5 text-textSecondary transition-transform duration-300 ${isOpen ? "rotate-180 text-primary" : ""}`} />
                   </div>
                   
                   <p className="text-sm text-textSecondary leading-relaxed">
@@ -171,14 +171,14 @@ export function IndustriesSection() {
                       className="overflow-hidden"
                     >
                       <div className="px-8 pb-8 pt-2">
-                        <div className="h-[1px] w-full bg-white/60 backdrop-blur-sm/10 mb-6" />
+                        <div className="h-[1px] w-full bg-border mb-6" />
                         <h4 className="text-sm font-medium text-foreground mb-4 uppercase tracking-wider">
                           Key Services
                         </h4>
                         <ul className="space-y-3">
                           {industry.services.map((service, idx) => (
                             <li key={idx} className="flex items-start gap-3 text-textSecondary">
-                              <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-energy/50 flex-shrink-0" />
+                              <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
                               <span className="text-sm">{service}</span>
                             </li>
                           ))}

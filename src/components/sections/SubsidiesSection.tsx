@@ -5,7 +5,7 @@ import { CheckCircle2, FileText, BadgeIndianRupee } from "lucide-react";
 
 export function SubsidiesSection() {
   return (
-    <section className="relative py-24 md:py-32 bg-energy/5 border-t border-border">
+    <section className="relative py-24 md:py-32 bg-primary/5 border-t border-border">
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -13,7 +13,7 @@ export function SubsidiesSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-energy/10 text-energy text-sm font-medium mb-6 border border-energy/20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 border border-primary/20">
               <BadgeIndianRupee className="w-4 h-4" />
               <span>Government Subsidies</span>
             </div>
@@ -30,7 +30,7 @@ export function SubsidiesSection() {
                 "Guaranteed compliance with state DISCOM regulations"
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3 text-foreground">
-                  <CheckCircle2 className="w-6 h-6 text-energy shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -49,9 +49,9 @@ export function SubsidiesSection() {
                 alt="Solar installation documentation" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale opacity-80 mix-blend-luminosity"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8 bg-surface/90 backdrop-blur-md p-6 rounded-2xl border border-border flex items-center gap-4">
-                <FileText className="w-10 h-10 text-energy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8 bg-surface/90 backdrop-blur-md p-6 rounded-2xl border border-border flex items-center gap-4 shadow-lg">
+                <FileText className="w-10 h-10 text-primary" />
                 <div>
                   <h4 className="font-semibold text-foreground">Seamless Approvals</h4>
                   <p className="text-sm text-textSecondary">We manage 100% of the subsidy application process.</p>

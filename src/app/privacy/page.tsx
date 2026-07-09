@@ -28,7 +28,7 @@ export default function PrivacyPage() {
             </section>
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">5. Your Rights</h2>
-              <p>Depending on your jurisdiction, you may have the right to access, correct, or delete your personal data held by us. To exercise these rights, please contact us at Solvire.in@gmail.com.</p>
+              <p>Depending on your jurisdiction, you may have the right to access, correct, or delete your personal data held by us. To exercise these rights, please contact us at sales@solvire.in.</p>
             </section>
           </div>
         </div>

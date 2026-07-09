@@ -62,9 +62,9 @@ export function TeamSection() {
                 <h3 className="text-xl font-semibold text-foreground">{member.name}</h3>
                 <a href={member.linkedin} className="text-[#0A66C2] hover:text-[#084e96] transition-colors"><Linkedin className="w-5 h-5 fill-current" /></a>
               </div>
-              <p className="text-energy font-medium text-sm uppercase tracking-wider mb-2">{member.role}</p>
+              <p className="text-primary font-medium text-sm uppercase tracking-wider mb-2">{member.role}</p>
               <div className="flex items-center justify-center gap-1 text-textSecondary text-xs">
-                <Award className="w-4 h-4 text-solar" />
+                <Award className="w-4 h-4 text-primary" />
                 <span>{member.certification}</span>
               </div>
             </motion.div>
