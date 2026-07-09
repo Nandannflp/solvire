@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
 import logo from "../../../public/logo.png";
@@ -11,6 +11,22 @@ export function FinalCtaSection() {
   const [formData, setFormData] = useState({ name: "", property: "", bill: "", phone: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+
+  useEffect(() => {
+    const handleCalculatorData = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      if (customEvent.detail) {
+        setFormData(prev => ({
+          ...prev,
+          bill: customEvent.detail.bill || prev.bill,
+          property: customEvent.detail.systemSize > 10 ? "commercial" : "residential"
+        }));
+      }
+    };
+    
+    window.addEventListener("solar-calculator-data", handleCalculatorData);
+    return () => window.removeEventListener("solar-calculator-data", handleCalculatorData);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
