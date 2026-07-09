@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/sections/HeroSection";
 import { WhySolvireSection } from "@/components/sections/WhySolvireSection";
+import { CalculatorSection } from "@/components/sections/CalculatorSection";
 import { SolarServicesSection } from "@/components/sections/SolarServicesSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { TechnicalSpecsSection } from "@/components/sections/TechnicalSpecsSection";
@@ -16,6 +17,7 @@ export default function Home() {
     <main className="flex flex-col min-h-screen relative w-full overflow-hidden bg-background">
       <HeroSection />
       <WhySolvireSection />
+      <CalculatorSection />
       <SolarServicesSection />
       <HowItWorksSection />
       <TechnicalSpecsSection />

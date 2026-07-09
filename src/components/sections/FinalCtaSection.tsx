@@ -152,6 +152,7 @@ export function FinalCtaSection() {
             </div>
           </motion.div>
         </div>
+      </div>
     </section>
   );
 }
