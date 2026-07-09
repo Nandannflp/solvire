@@ -7,6 +7,7 @@ import { GridBackground } from "@/components/ui/grid-background";
 import { Navbar } from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://solvire.in"), // Replace with actual domain
   title: "Solvire | Comprehensive Solar Maintenance Ecosystem",
   description:
     "Protect and optimize your solar asset with our 5-point verified network, deep diagnostics, and end-to-end management.",
