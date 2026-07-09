@@ -53,7 +53,7 @@ export function TechnicalSpecsSection() {
             transition={{ delay: 0.1 }}
             className="text-white/60 text-lg max-w-2xl"
           >
-            Engineered for maximum yield. Our infrastructure relies on Tier-1 components designed to withstand harsh environments while delivering consistent, high-density power generation.
+            Engineered for maximum yield. Our infrastructure relies on Tier-1 components from globally trusted partners like <strong>Vikram Solar</strong>, <strong>Growatt</strong>, and <strong>Enphase</strong>. Designed to withstand harsh environments while delivering consistent, high-density power generation.
           </motion.p>
         </div>
 

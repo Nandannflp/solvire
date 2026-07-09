@@ -48,11 +48,19 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div>
                 <h3 className="text-foreground font-medium text-sm mb-1">General Inquiries</h3>
-                <a href="mailto:hello@solvire.com" className="text-energy hover:underline text-lg">hello@solvire.com</a>
+                <a href="mailto:sales@solvire.in" className="text-energy hover:underline text-lg">sales@solvire.in</a>
               </div>
               <div>
                 <h3 className="text-foreground font-medium text-sm mb-1">Support</h3>
-                <a href="mailto:support@solvire.com" className="text-energy hover:underline text-lg">support@solvire.com</a>
+                <a href="mailto:support@solvire.in" className="text-energy hover:underline text-lg">support@solvire.in</a>
+              </div>
+              <div>
+                <h3 className="text-foreground font-medium text-sm mb-1">Toll-Free Customer Care</h3>
+                <a href="tel:18002120000" className="text-energy hover:underline text-lg">1800-212-SOLAR</a>
+              </div>
+              <div>
+                <h3 className="text-foreground font-medium text-sm mb-1">Headquarters</h3>
+                <p className="text-textSecondary text-lg">Panaji, Goa 403001</p>
               </div>
             </div>
           </div>

@@ -1,9 +1,12 @@
 import { HeroSection } from "@/components/sections/HeroSection";
 import { WhySolvireSection } from "@/components/sections/WhySolvireSection";
 import { CalculatorSection } from "@/components/sections/CalculatorSection";
+import { SubsidiesSection } from "@/components/sections/SubsidiesSection";
+import { FinancingSection } from "@/components/sections/FinancingSection";
 import { SolarServicesSection } from "@/components/sections/SolarServicesSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { TechnicalSpecsSection } from "@/components/sections/TechnicalSpecsSection";
+import { MonitoringSection } from "@/components/sections/MonitoringSection";
 import { IndustriesSection } from "@/components/sections/IndustriesSection";
 import { TrustSection } from "@/components/sections/TrustSection";
 import { TeamSection } from "@/components/sections/TeamSection";
@@ -18,9 +21,12 @@ export default function Home() {
       <HeroSection />
       <WhySolvireSection />
       <CalculatorSection />
+      <SubsidiesSection />
+      <FinancingSection />
       <SolarServicesSection />
       <HowItWorksSection />
       <TechnicalSpecsSection />
+      <MonitoringSection />
       <IndustriesSection />
       <TrustSection />
       <TeamSection />

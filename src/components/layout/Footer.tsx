@@ -31,15 +31,21 @@ export function Footer() {
             <h4 className="text-foreground font-medium mb-6 text-sm">Contact Us</h4>
             <ul className="space-y-4">
               <li>
-                <a href="mailto:Solvire.in@gmail.com" className="flex items-start gap-3 text-textSecondary text-sm hover:text-energy transition-colors">
+                <a href="tel:18002120000" className="flex items-start gap-3 text-textSecondary text-sm hover:text-energy transition-colors">
+                  <PhoneCall className="w-4 h-4 mt-0.5 shrink-0 text-energy" />
+                  <span>1800-212-SOLAR</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:sales@solvire.in" className="flex items-start gap-3 text-textSecondary text-sm hover:text-energy transition-colors">
                   <Mail className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span>Solvire.in@gmail.com</span>
+                  <span>sales@solvire.in</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-textSecondary text-sm">
                   <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span>Patna, Bihar 800020</span>
+                  <span>Panaji, Goa 403001</span>
                 </div>
               </li>
             </ul>
@@ -61,6 +67,9 @@ export function Footer() {
               <li>
                 <Link href="/#trust" className="text-textSecondary text-sm hover:text-energy transition-colors">Why Us</Link>
               </li>
+              <li>
+                <Link href="/resources" className="text-textSecondary text-sm hover:text-energy transition-colors">Knowledge Center</Link>
+              </li>
             </ul>
           </div>
 
@@ -77,9 +86,19 @@ export function Footer() {
               <li>
                 <Link href="/contact" className="text-textSecondary text-sm hover:text-energy transition-colors">Contact Us</Link>
               </li>
+              <li>
+                <Link href="/support" className="text-textSecondary text-sm hover:text-energy transition-colors">Support & Warranty</Link>
+              </li>
             </ul>
           </div>
 
+        </div>
+
+        {/* Certifications */}
+        <div className="flex flex-wrap items-center gap-6 mb-12 opacity-80">
+          <div className="px-4 py-2 rounded border border-foreground/10 text-xs font-semibold text-textSecondary tracking-wider">ISO 9001:2015 CERTIFIED</div>
+          <div className="px-4 py-2 rounded border border-foreground/10 text-xs font-semibold text-textSecondary tracking-wider">MNRE EMPANELLED</div>
+          <div className="px-4 py-2 rounded border border-foreground/10 text-xs font-semibold text-textSecondary tracking-wider">MSME REGISTERED</div>
         </div>
 
         {/* Bottom Bar */}

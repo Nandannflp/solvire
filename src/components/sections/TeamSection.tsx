@@ -1,16 +1,22 @@
 "use client";
 import { motion } from "framer-motion";
 
+import { Linkedin, Award } from "lucide-react";
+
 const team = [
   {
     name: "Rajesh Kumar",
     role: "Technical Operator",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&h=800&fit=crop"
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&h=800&fit=crop",
+    linkedin: "#",
+    certification: "Certified Solar Engineer"
   },
   {
     name: "Anita Desai",
     role: "Operations Director",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&h=800&fit=crop"
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&h=800&fit=crop",
+    linkedin: "#",
+    certification: "MNRE Empanelled Expert"
   }
 ];
 
@@ -42,15 +48,25 @@ export function TeamSection() {
               transition={{ delay: idx * 0.2 }}
               className="w-full max-w-sm"
             >
-              <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-border mb-6 relative">
+              <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-border mb-6 relative group">
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
+                  <span className="text-white text-xs font-medium border border-white/20 px-3 py-1.5 rounded-full bg-black/50">Replace with real headshot</span>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-1">{member.name}</h3>
-              <p className="text-energy font-medium text-sm uppercase tracking-wider">{member.role}</p>
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <h3 className="text-xl font-semibold text-foreground">{member.name}</h3>
+                <a href={member.linkedin} className="text-[#0A66C2] hover:text-[#084e96] transition-colors"><Linkedin className="w-5 h-5 fill-current" /></a>
+              </div>
+              <p className="text-energy font-medium text-sm uppercase tracking-wider mb-2">{member.role}</p>
+              <div className="flex items-center justify-center gap-1 text-textSecondary text-xs">
+                <Award className="w-4 h-4 text-solar" />
+                <span>{member.certification}</span>
+              </div>
             </motion.div>
           ))}
         </div>

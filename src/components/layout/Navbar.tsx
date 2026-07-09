@@ -43,16 +43,23 @@ export function Navbar() {
           <Link href="/#industries" className="text-sm font-medium text-foreground hover:text-energy transition-colors">
             Industries
           </Link>
-          <Link href="/contact" className="text-sm font-medium text-foreground hover:text-energy transition-colors">
-            Contact
+          <Link href="/resources" className="text-sm font-medium text-foreground hover:text-energy transition-colors">
+            Resources
+          </Link>
+          <Link href="/support" className="text-sm font-medium text-foreground hover:text-energy transition-colors">
+            Support
           </Link>
         </nav>
 
         {/* Contact Info (Desktop) */}
         <div className="hidden lg:flex items-center gap-6">
-          <a href="mailto:Solvire.in@gmail.com" className="flex items-center gap-2 text-sm text-textSecondary hover:text-foreground transition-colors">
+          <a href="tel:18002120000" className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-energy transition-colors">
+            <PhoneCall className="w-4 h-4 text-energy" />
+            <span>1800-212-SOLAR</span>
+          </a>
+          <a href="mailto:sales@solvire.in" className="flex items-center gap-2 text-sm text-textSecondary hover:text-foreground transition-colors">
             <Mail className="w-4 h-4" />
-            <span>Solvire.in@gmail.com</span>
+            <span>sales@solvire.in</span>
           </a>
         </div>
       </div>

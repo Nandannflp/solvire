@@ -65,12 +65,15 @@ export function TrustSection() {
             </p>
             
             {/* Authentic High-Res Installation Photography */}
-            <div className="w-full h-64 md:h-80 rounded-2xl relative overflow-hidden border border-border mt-8 aspect-[3/4]">
+            <div className="w-full h-64 md:h-80 rounded-2xl relative overflow-hidden border border-border mt-8 aspect-[3/4] group">
               <img 
                 src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?q=80&w=600&h=800&fit=crop"
                 alt="Close-up of smart inverter and solar panels"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
+                <span className="text-white text-sm font-medium border border-white/20 px-4 py-2 rounded-full bg-black/50">Replace with real Solvire installation</span>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -109,12 +112,13 @@ export function TrustSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-24 pt-12 border-t border-white/20 w-full flex flex-col items-center"
         >
-          <p className="text-sm font-medium text-white/60 mb-8 uppercase tracking-widest text-center">Trusted by industry leaders</p>
+          <p className="text-sm font-medium text-white/60 mb-8 uppercase tracking-widest text-center">Trusted by regional enterprises</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale select-none">
-            <span className="text-xl font-bold font-display">SUNPHARMA</span>
-            <span className="text-xl font-bold font-display">ECOCORP</span>
-            <span className="text-xl font-bold font-display">TATA STEEL</span>
-            <span className="text-xl font-bold font-display">RELIANCE</span>
+            {/* TODO: Replace with real client logos */}
+            <span className="text-lg font-semibold font-display tracking-wide">[Local Manufacturing]</span>
+            <span className="text-lg font-semibold font-display tracking-wide">[Goa Tech Hub]</span>
+            <span className="text-lg font-semibold font-display tracking-wide">[Regional Healthcare]</span>
+            <span className="text-lg font-semibold font-display tracking-wide">[AgriTech Farms]</span>
           </div>
         </motion.div>
       </div>

@@ -2,17 +2,19 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Calculator, ArrowRight, Zap, PiggyBank, Clock } from "lucide-react";
+import { Calculator, ArrowRight, Zap, PiggyBank, Clock, Leaf } from "lucide-react";
 
 export function CalculatorSection() {
   const [bill, setBill] = useState<string>("");
   const [area, setArea] = useState<string>("");
   const [areaUnit, setAreaUnit] = useState<"sqft" | "sqm">("sqft");
+  const [stateLocation, setStateLocation] = useState<string>("Goa");
 
   // Calculated State
   const [systemSize, setSystemSize] = useState<number>(0);
   const [monthlySavings, setMonthlySavings] = useState<number>(0);
   const [paybackYears, setPaybackYears] = useState<number>(0);
+  const [co2Offset, setCo2Offset] = useState<number>(0);
 
   useEffect(() => {
     const billValue = parseFloat(bill) || 0;
@@ -29,8 +31,20 @@ export function CalculatorSection() {
 
       // Energy (kWh/year) = A * Efficiency * G_T * PR
       // G_T ~ 1825 kWh/m2/yr (approx 5 hours peak sun * 365), PR = 0.75
-      const energyAnnual = areaSqm * 0.21 * 1825 * 0.75;
+      const gtMap: Record<string, number> = {
+        "Goa": 1825,
+        "Maharashtra": 1850,
+        "Gujarat": 1900,
+        "Karnataka": 1800,
+        "Other": 1800
+      };
+      const gt = gtMap[stateLocation] || gtMap["Other"];
+      const energyAnnual = areaSqm * 0.21 * gt * 0.75;
       const energyMonthly = energyAnnual / 12;
+
+      // CO2 Offset
+      const co2Tons = (energyAnnual * 0.82) / 1000;
+      setCo2Offset(parseFloat(co2Tons.toFixed(1)));
 
       // 3. Savings & Payback
       // Assume grid rate of ₹8/kWh
@@ -49,8 +63,9 @@ export function CalculatorSection() {
       setSystemSize(0);
       setMonthlySavings(0);
       setPaybackYears(0);
+      setCo2Offset(0);
     }
-  }, [bill, area, areaUnit]);
+  }, [bill, area, areaUnit, stateLocation]);
 
   const handleRouteToQuote = () => {
     // Save to localStorage so the form can pick it up if needed, or simply scroll to the CTA section
@@ -145,6 +160,24 @@ export function CalculatorSection() {
                 />
               </div>
 
+              <div className="flex flex-col gap-2">
+                <label htmlFor="stateLocation" className="text-sm font-medium text-white/90">
+                  Select State Location
+                </label>
+                <select 
+                  id="stateLocation" 
+                  value={stateLocation}
+                  onChange={(e) => setStateLocation(e.target.value)}
+                  className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white focus:border-energy focus:ring-1 focus:ring-energy outline-none transition-colors [&>option]:bg-[#111]"
+                >
+                  <option value="Goa">Goa</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
             </div>
 
             {/* Right side: Results */}
@@ -180,6 +213,14 @@ export function CalculatorSection() {
                       <span className="font-semibold text-sm">Payback Period (ROI)</span>
                     </div>
                     <div className="text-2xl font-bold text-white">{paybackYears > 0 ? `${paybackYears} Years` : 'N/A'}</div>
+                  </div>
+
+                  <div className="bg-black/40 p-4 rounded-xl border border-white/5">
+                    <div className="flex items-center justify-center gap-2 text-green-400 mb-1">
+                      <Leaf className="w-5 h-5" />
+                      <span className="font-semibold text-sm">Annual CO₂ Offset</span>
+                    </div>
+                    <div className="text-2xl font-bold text-white">{co2Offset} <span className="text-sm text-white/50">Tons</span></div>
                   </div>
 
                   <button 
