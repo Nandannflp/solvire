@@ -124,9 +124,19 @@ export function IndustriesSection() {
                 variants={cardVariants}
                 className="group relative rounded-2xl bg-white/60 backdrop-blur-sm  border border-border overflow-hidden flex flex-col"
               >
-                {/* [REPLACE_ME: Authentic High-Res Installation Photography] */}
-                <div className="w-full h-48 bg-black/5 relative overflow-hidden flex items-center justify-center border-b border-border placeholder-image">
-                  <span className="text-textSecondary/50 text-sm font-medium">Image Placeholder</span>
+                {/* Authentic High-Res Installation Photography */}
+                <div className="w-full h-48 relative overflow-hidden flex items-center justify-center border-b border-border aspect-[3/4]">
+                  <img 
+                    src={
+                      industry.id === 'residential' 
+                        ? 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=600&h=800&fit=crop'
+                        : industry.id === 'commercial'
+                        ? 'https://images.unsplash.com/photo-1509391366360-5154345e69e7?q=80&w=600&h=800&fit=crop'
+                        : 'https://images.unsplash.com/photo-1548611910-b97c02bbf977?q=80&w=600&h=800&fit=crop'
+                    }
+                    alt={`${industry.title} Solar Installation`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Header Section (Always Visible) */}

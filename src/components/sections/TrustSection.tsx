@@ -54,9 +54,13 @@ export function TrustSection() {
               We go beyond standard installation. Solvire is committed to ensuring your solar infrastructure remains robust, efficient, and profitable for decades.
             </p>
             
-            {/* [REPLACE_ME: Authentic High-Res Installation Photography] */}
-            <div className="w-full h-64 md:h-80 bg-black/5 rounded-2xl relative overflow-hidden flex items-center justify-center border border-border placeholder-image mt-8">
-              <span className="text-textSecondary/50 text-sm font-medium">Image Placeholder</span>
+            {/* Authentic High-Res Installation Photography */}
+            <div className="w-full h-64 md:h-80 rounded-2xl relative overflow-hidden border border-border mt-8 aspect-[3/4]">
+              <img 
+                src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?q=80&w=600&h=800&fit=crop"
+                alt="Close-up of smart inverter and solar panels"
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
         </div>

@@ -51,26 +51,30 @@ export function SocialInsightsSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg relative"
-            >
-              <Quote className="w-10 h-10 text-energy/30 absolute top-6 right-6" />
-              <p className="text-foreground leading-relaxed mb-8 relative z-10 text-lg">
-                "{testimonial.quote}"
-              </p>
-              <div>
-                <p className="font-semibold text-foreground">{testimonial.author}</p>
-                <p className="text-sm text-textSecondary">{testimonial.role}</p>
-              </div>
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* LinkedIn Placeholder */}
+          <div className="w-full bg-white/5 backdrop-blur-sm border border-border rounded-xl p-6 flex flex-col items-center justify-center min-h-[400px]">
+            <div className="w-12 h-12 rounded-full bg-[#0A66C2]/10 flex items-center justify-center mb-4">
+              <span className="font-bold text-[#0A66C2] text-xl">in</span>
+            </div>
+            <p className="text-textSecondary font-medium mb-2">LinkedIn Post Integration</p>
+            <p className="text-sm text-textSecondary/60 text-center max-w-xs">
+              [Placeholder for embedded LinkedIn post. Recommended size: 504px x 400px]
+            </p>
+            {/* <iframe src="..." height="400" width="100%" frameBorder="0" allowFullScreen title="Embedded post"></iframe> */}
+          </div>
+
+          {/* Instagram Placeholder */}
+          <div className="w-full bg-white/5 backdrop-blur-sm border border-border rounded-xl p-6 flex flex-col items-center justify-center min-h-[400px]">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] flex items-center justify-center mb-4 opacity-80">
+              <span className="font-bold text-white text-xl">ig</span>
+            </div>
+            <p className="text-textSecondary font-medium mb-2">Instagram Carousel Integration</p>
+            <p className="text-sm text-textSecondary/60 text-center max-w-xs">
+              [Placeholder for embedded Instagram carousel. Recommended size: 400px x 400px]
+            </p>
+            {/* <iframe src="..." height="400" width="100%" frameBorder="0" allowFullScreen title="Embedded post"></iframe> */}
+          </div>
         </div>
 
       </div>

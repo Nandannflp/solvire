@@ -42,11 +42,35 @@ export function FinalCtaSection() {
             Take the first step towards a seamless, efficient, and profitable solar infrastructure.
           </p>
           
-          <Link href="/contact" className="group relative inline-flex items-center justify-center gap-3 px-10 py-5 bg-primary hover:bg-primary/90 text-white text-lg rounded-xl font-medium overflow-hidden transition-all duration-300 shadow-sm hover:shadow-sm">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.2),transparent)] -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-            Book Free Inspection
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          <form className="w-full max-w-md mx-auto flex flex-col gap-4 p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-xl text-left">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">Name</label>
+              <input type="text" id="name" placeholder="Jane Doe" className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-energy focus:ring-1 focus:ring-energy outline-none transition-colors" required />
+            </div>
+            <div>
+              <label htmlFor="property" className="block text-sm font-medium text-foreground mb-1.5">Property Type</label>
+              <select id="property" className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-energy focus:ring-1 focus:ring-energy outline-none transition-colors" required>
+                <option value="" disabled selected>Select Property Type</option>
+                <option value="residential">Residential</option>
+                <option value="commercial">Commercial</option>
+                <option value="industrial">Industrial</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="bill" className="block text-sm font-medium text-foreground mb-1.5">Monthly Bill (₹)</label>
+              <input type="number" id="bill" placeholder="e.g. 5000" className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-energy focus:ring-1 focus:ring-energy outline-none transition-colors" required />
+            </div>
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+91 00000 00000" className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-energy focus:ring-1 focus:ring-energy outline-none transition-colors" required />
+            </div>
+            
+            <button type="submit" className="mt-2 w-full group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium overflow-hidden transition-all duration-300 shadow-md">
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.2),transparent)] -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+              Submit Application
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </form>
         </motion.div>
         
       </div>

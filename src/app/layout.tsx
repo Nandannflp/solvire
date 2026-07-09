@@ -63,11 +63,14 @@ export default function RootLayout({
           <Toaster />
           
           {/* [REPLACE_ME: AI Agent Chat Widget Integration] */}
-          <div className="fixed bottom-6 right-6 z-50">
-            <button className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-full text-foreground hover:bg-white/20 transition-all duration-300">
+          <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 9999 }}>
+            {/* AI Agent Placeholder UI */}
+            <button className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-full text-foreground hover:bg-white/20 transition-all duration-300 pointer-events-none">
               <div className="w-2 h-2 rounded-full bg-solar animate-pulse" />
               <span className="text-sm font-medium">Chat with Solvire AI</span>
             </button>
+            {/* Placeholder for actual 3rd-party AI agent script injection */}
+            <script></script>
           </div>
         </GridBackground>
       </body>
