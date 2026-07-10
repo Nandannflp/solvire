@@ -131,8 +131,8 @@ export function IndustriesSection() {
                       industry.id === 'residential' 
                         ? 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=600&h=800&fit=crop'
                         : industry.id === 'commercial'
-                        ? 'https://images.unsplash.com/photo-1509391366360-5154345e69e7?q=80&w=600&h=800&fit=crop'
-                        : 'https://images.unsplash.com/photo-1548611910-b97c02bbf977?q=80&w=600&h=800&fit=crop'
+                        ? 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=600&h=800&fit=crop'
+                        : 'https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=600&h=800&fit=crop'
                     }
                     alt={`${industry.title} Solar Installation`}
                     className="w-full h-full object-cover"

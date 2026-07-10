@@ -161,7 +161,7 @@ export function FinalCtaSection() {
           >
             <div className="w-full aspect-[3/4] relative rounded-2xl overflow-hidden shadow-2xl border border-border">
               <img 
-                src="https://images.unsplash.com/photo-1509391366360-5154345e69e7?q=80&w=600&h=800&fit=crop" 
+                src="https://images.unsplash.com/photo-1592833159155-c62df1b65634?q=80&w=600&h=800&fit=crop" 
                 alt="Commercial Solar Installation Team" 
                 className="w-full h-full object-cover"
               />
