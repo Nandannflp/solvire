@@ -39,8 +39,18 @@ export function ChatWidget() {
         body: JSON.stringify({ messages: newMessages }),
       });
 
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Server returned ${response.status}: ${errorText.substring(0, 100)}`);
+      }
+
       const data = await response.json();
       let aiResponse = "I'm sorry, I couldn't generate a response.";
+      
+      if (data.error) {
+         throw new Error(data.error);
+      }
+      
       if (data.choices && data.choices.length > 0 && data.choices[0].message) {
         aiResponse = data.choices[0].message.content;
       } else if (data.reply) {
@@ -48,10 +58,11 @@ export function ChatWidget() {
       }
 
       setMessages((prev) => [...prev, { role: "assistant", content: aiResponse }]);
-    } catch (error) {
+    } catch (error: any) {
+      console.error("Chat error:", error);
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "Network error. Please try again later." }
+        { role: "assistant", content: `Error: ${error.message || "Network error. Please try again later."}` }
       ]);
     } finally {
       setIsTyping(false);
