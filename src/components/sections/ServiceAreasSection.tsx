@@ -19,7 +19,7 @@ export function ServiceAreasSection() {
             Proudly Powering Our Region
           </h2>
           <p className="text-textSecondary leading-relaxed mb-8">
-            As the premier verified solar network, Solvire is committed to accelerating the transition to clean, reliable energy across our core operational zones. We deliver end-to-end solar infrastructure and uncompromising maintenance to homes, businesses, and industrial facilities in <strong>Goa</strong>, <strong>Panaji</strong>, <strong>Madgaon</strong>, and <strong>Marcel</strong>.
+            As the premier verified solar network, Solvire is committed to accelerating the transition to clean, reliable energy across our core operational zones. We deliver end-to-end solar infrastructure and uncompromising maintenance to homes, businesses, and industrial facilities in <strong>Bihar</strong>, <strong>Patna</strong>, <strong>Gaya</strong>, and <strong>Muzaffarpur</strong>.
           </p>
         </motion.div>
       </div>

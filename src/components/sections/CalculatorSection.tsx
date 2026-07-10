@@ -8,7 +8,7 @@ export function CalculatorSection() {
   const [bill, setBill] = useState<string>("");
   const [area, setArea] = useState<string>("");
   const [areaUnit, setAreaUnit] = useState<"sqft" | "sqm">("sqft");
-  const [stateLocation, setStateLocation] = useState<string>("Goa");
+  const [stateLocation, setStateLocation] = useState<string>("Bihar");
 
   // Calculated State
   const [systemSize, setSystemSize] = useState<number>(0);
@@ -32,7 +32,7 @@ export function CalculatorSection() {
       // Energy (kWh/year) = A * Efficiency * G_T * PR
       // G_T ~ 1825 kWh/m2/yr (approx 5 hours peak sun * 365), PR = 0.75
       const gtMap: Record<string, number> = {
-        "Goa": 1825,
+        "Bihar": 1825,
         "Maharashtra": 1850,
         "Gujarat": 1900,
         "Karnataka": 1800,
@@ -170,7 +170,7 @@ export function CalculatorSection() {
                   onChange={(e) => setStateLocation(e.target.value)}
                   className="w-full px-4 py-3 rounded-xl bg-white border border-border text-foreground focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors shadow-sm [&>option]:bg-white"
                 >
-                  <option value="Goa">Goa</option>
+                  <option value="Bihar">Bihar</option>
                   <option value="Maharashtra">Maharashtra</option>
                   <option value="Gujarat">Gujarat</option>
                   <option value="Karnataka">Karnataka</option>

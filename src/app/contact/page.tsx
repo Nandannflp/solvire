@@ -60,7 +60,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="text-foreground font-medium text-sm mb-1">Headquarters</h3>
-                <p className="text-textSecondary text-lg">Panaji, Goa 403001</p>
+                <p className="text-textSecondary text-lg">Patna, Bihar 800020</p>
               </div>
             </div>
           </div>

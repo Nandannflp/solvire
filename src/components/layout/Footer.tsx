@@ -45,7 +45,7 @@ export function Footer() {
               <li>
                 <div className="flex items-start gap-3 text-white/80 text-sm">
                   <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span>Panaji, Goa 403001</span>
+                  <span>Patna, Bihar 800020</span>
                 </div>
               </li>
             </ul>
