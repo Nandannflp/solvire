@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import { GridBackground } from "@/components/ui/grid-background";
 import { Navbar } from "@/components/layout/Navbar";
+import { ChatWidget } from "@/components/ChatWidget";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://solvire.in"), // Replace with actual domain
@@ -63,16 +64,7 @@ export default function RootLayout({
           </SmoothScroll>
           <Toaster />
           
-          {/* [REPLACE_ME: AI Agent Chat Widget Integration] */}
-          <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 9999 }}>
-            {/* AI Agent Placeholder UI */}
-            <button className="flex items-center justify-center gap-2 px-4 py-3 bg-white/80 backdrop-blur-md border border-primary/20 shadow-xl rounded-full text-foreground hover:bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl pointer-events-none">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm font-medium">Chat with Solvire AI</span>
-            </button>
-            {/* Placeholder for actual 3rd-party AI agent script injection */}
-            <script></script>
-          </div>
+          <ChatWidget />
         </GridBackground>
       </body>
     </html>
